@@ -1,13 +1,21 @@
+@import url('./vendors/fonts/fonts.scss');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roboto Flex", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  --white-color: white;
+
+  --text-color: #282A2E;
+  --text-dim-color: #888;
+  --text-accent-color: #12F3AF;
+  --text-secondary-color: #D3D6D5;
+
+  --bg-light-green-color: #CDE2D9;
+  --bg-green-color: #245353;
+  --bg-black-color: #222;
+  --bg-blue-color: #3E5372;
+  --bg-hover-color: #F7FDED;
 }
