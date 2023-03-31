@@ -9,5 +9,13 @@
   &__underline {
     line-height: 150%;
     text-decoration-line: underline;
+
+    @media screen and (max-width: 744px) and (min-width: 360px) {
+      line-height: 140%;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    font-size: 22px;
   }
 }
