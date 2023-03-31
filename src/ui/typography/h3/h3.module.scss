@@ -1,0 +1,13 @@
+.h {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  color: #282A2E;
+
+  &__underline {
+    line-height: 150%;
+    text-decoration-line: underline;
+  }
+}
