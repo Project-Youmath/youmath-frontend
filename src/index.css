@@ -18,4 +18,8 @@ body {
   --bg-black-color: #222;
   --bg-blue-color: #3E5372;
   --bg-hover-color: #F7FDED;
+
+  --desktop-breakpoint: 1440;
+  --table-breakpoint: 744;
+  --mobile-breakpoint: 360;
 }
