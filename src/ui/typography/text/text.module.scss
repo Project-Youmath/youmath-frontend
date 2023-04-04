@@ -2,7 +2,6 @@
   margin: 0;
   font-family: 'Roboto Flex', serif;
   font-style: normal;
-  color: var(--text-color);
 
   &_size_small {
     font-weight: 400;
@@ -58,6 +57,18 @@
     @media screen and (max-width: 744px) {
       font-size: 14px;
     }
+  }
+
+  &_color_white {
+    color: var(--text-color);
+  }
+
+  &_color_black {
+    color: var(--white-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
   }
 
   &_decorator_underline {

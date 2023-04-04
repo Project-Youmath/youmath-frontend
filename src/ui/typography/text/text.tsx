@@ -12,9 +12,10 @@ interface ITextProps {
     decoration?: "underline";
 
     textType: "text" | "button" | "tabs" | "footer";
+    textColor: "white" | "black" | "accent"
 }
 
-export const Text:FC<ITextProps> = ({children,size, decoration, textType, extraclass}) => {
+export const Text:FC<ITextProps> = ({children,size, decoration, textType, extraclass, textColor}) => {
 
     const style = clsx({
         [styles.text] : true,
@@ -25,6 +26,9 @@ export const Text:FC<ITextProps> = ({children,size, decoration, textType, extrac
         [styles.text_size_button] : textType === "button",
         [styles.text_decorator_underline] : decoration === "underline",
         [String(extraclass)]: !!extraclass,
+        [styles.text_color_white]: textColor === "white",
+        [styles.text_color_black]: textColor === "black",
+        [styles.text_color_accent]: textColor === "accent",
     })
 
     return (
