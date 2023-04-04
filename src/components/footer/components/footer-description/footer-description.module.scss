@@ -1,0 +1,10 @@
+.footerDescription {
+  margin: 16px 0 0;
+  max-width: 550px;
+
+  @media screen and (max-width: 850px) {
+    & {
+      max-width: 400px;
+    }
+  }
+}
