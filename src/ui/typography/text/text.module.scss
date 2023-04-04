@@ -1,0 +1,77 @@
+.text {
+  margin: 0;
+  font-family: 'Roboto Flex', serif;
+  font-style: normal;
+
+  &_size_small {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+
+    @media screen and (max-width: 744px) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 360px) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+
+  &_size_large {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+
+    @media screen and (max-width: 360px) {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &_size_button {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+
+    @media screen and (max-width: 744px) {
+      font-size: 18px;
+    }
+  }
+
+  &_size_tabs {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+
+    @media screen and (max-width: 744px) {
+      font-size: 14px;
+    }
+  }
+
+  &_size_footer {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+
+    @media screen and (max-width: 744px) {
+      font-size: 14px;
+    }
+  }
+
+  &_color_white {
+    color: var(--white-color);
+  }
+
+  &_color_black {
+    color: var(--text-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
+  }
+
+  &_decorator_underline {
+    text-decoration-line: underline;
+  }
+}

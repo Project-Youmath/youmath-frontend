@@ -1,0 +1,16 @@
+.h {
+  margin: 0;
+  font-family: 'Ubuntu', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: var(--text-color);
+
+  @media screen and (max-width: 744px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 24px;
+  }
+}
