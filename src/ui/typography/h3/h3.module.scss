@@ -6,6 +6,23 @@
   line-height: 130%;
   color: var(--text-color);
 
+
+  @media screen and (max-width: 360px) {
+    font-size: 22px;
+  }
+
+  &_color_white {
+    color: var(--white-color);
+  }
+
+  &_color_black {
+    color: var(--text-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
+  }
+
   &__underline {
     line-height: 150%;
     text-decoration-line: underline;
@@ -13,9 +30,5 @@
     @media screen and (max-width: 744px) and (min-width: 360px) {
       line-height: 140%;
     }
-  }
-
-  @media screen and (max-width: 360px) {
-    font-size: 22px;
   }
 }

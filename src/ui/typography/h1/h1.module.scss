@@ -6,6 +6,18 @@
   font-size: 40px;
   line-height: 120%;
   color: var(--text-color);
+
+  &_color_white {
+    color: var(--white-color);
+  }
+
+  &_color_black {
+    color: var(--text-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
+  }
   
   @media screen and (max-width: 744px) {
     font-size: 38px;
