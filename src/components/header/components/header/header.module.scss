@@ -1,0 +1,17 @@
+.header {
+  position: sticky;
+  top: 0;
+
+
+  padding: 16px;
+  background: var(--bg-green-color);
+
+  &__content {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
