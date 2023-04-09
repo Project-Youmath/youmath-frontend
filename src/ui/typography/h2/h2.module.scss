@@ -13,4 +13,16 @@
   @media screen and (max-width: 360px) {
     font-size: 24px;
   }
+
+  &_color_white {
+    color: var(--text-secondary-color);
+  }
+
+  &_color_black {
+    color: var(--text-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
+  }
 }

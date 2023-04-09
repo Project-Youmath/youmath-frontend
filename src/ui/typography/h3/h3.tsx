@@ -7,12 +7,17 @@ interface IH3Props {
     extraClass?: string;
 
     decoration?: "underline";
+
+    textColor: "white" | "black" | "accent";
 }
 
-export const H3:FC<IH3Props> = ({children, extraClass, decoration}) => {
+export const H3:FC<IH3Props> = ({children, extraClass, decoration, textColor = "black"}) => {
     const style = clsx({
         [styles.h]: true,
         [String(extraClass)]: !!extraClass,
+        [styles.h_color_white]: textColor === "white",
+        [styles.h_color_black]: textColor === "black",
+        [styles.h_color_accent]: textColor === "accent",
         [styles.h__underline]: decoration === "underline"
     })
 
