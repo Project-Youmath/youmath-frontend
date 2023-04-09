@@ -6,7 +6,7 @@ interface IH2Props {
     children: string | number;
     extraClass?: string;
 
-    textColor: "white" | "black" | "accent";
+    textColor?: "white" | "black" | "accent";
 
 }
 

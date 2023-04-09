@@ -8,7 +8,7 @@ interface IH3Props {
 
     decoration?: "underline";
 
-    textColor: "white" | "black" | "accent";
+    textColor?: "white" | "black" | "accent";
 }
 
 export const H3:FC<IH3Props> = ({children, extraClass, decoration, textColor = "black"}) => {
