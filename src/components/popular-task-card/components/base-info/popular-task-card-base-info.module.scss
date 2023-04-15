@@ -1,0 +1,14 @@
+.popularTaskCardBaseInfo {
+  max-width: 540px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      max-width: 100%;
+    }
+  }
+}

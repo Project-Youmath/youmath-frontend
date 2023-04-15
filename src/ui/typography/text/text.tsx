@@ -12,7 +12,7 @@ interface ITextProps {
     decoration?: "underline";
 
     textType: "text" | "button" | "tabs" | "footer";
-    textColor: "white" | "black" | "accent"
+    textColor: "white" | "black" | "accent" | "dim" | "dark-green";
 }
 
 export const Text:FC<ITextProps> = ({children,size, decoration, textType, extraclass, textColor}) => {
@@ -29,6 +29,8 @@ export const Text:FC<ITextProps> = ({children,size, decoration, textType, extrac
         [styles.text_color_white]: textColor === "white",
         [styles.text_color_black]: textColor === "black",
         [styles.text_color_accent]: textColor === "accent",
+        [styles.text_color_dim]: textColor === "dim",
+        [styles.text_color_darkGreen]: textColor === "dark-green",
     })
 
     return (

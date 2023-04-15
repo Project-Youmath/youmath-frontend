@@ -6,7 +6,8 @@ interface IH1Props {
     children: string | number;
     extraClass?: string;
 
-    textColor?: "white" | "black" | "accent";
+    textColor?: "white" | "black" | "accent" | "dim" | "dark-green";
+
 }
 
 export const H1:FC<IH1Props> = ({children, extraClass, textColor = "white"}) => {
@@ -17,6 +18,8 @@ export const H1:FC<IH1Props> = ({children, extraClass, textColor = "white"}) => 
         [styles.h_color_white]: textColor === "white",
         [styles.h_color_black]: textColor === "black",
         [styles.h_color_accent]: textColor === "accent",
+        [styles.h_color_dim]: textColor === "dim",
+        [styles.h_color_darkGreen]: textColor === "dark-green",
     })
 
     return (

@@ -10,6 +10,7 @@ body {
 
   --text-color: #282A2E;
   --text-dim-color: #888;
+  --text-dark-green-color: #245353;
   --text-accent-color: #12F3AF;
   --text-secondary-color: #D3D6D5;
 
@@ -18,6 +19,7 @@ body {
   --bg-black-color: #222;
   --bg-blue-color: #3E5372;
   --bg-hover-color: #F7FDED;
+  --bg-accent-color: #12F3AF;
 
   --desktop-breakpoint: 1440;
   --table-breakpoint: 744;
