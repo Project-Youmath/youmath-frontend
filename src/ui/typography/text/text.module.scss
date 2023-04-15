@@ -70,6 +70,12 @@
   &_color_accent {
     color: var(--text-accent-color);
   }
+  &_color_dim {
+    color: var(--text-dim-color);
+  }
+  &_color_darkGreen {
+    color: var(--text-dark-green-color);
+  }
 
   &_decorator_underline {
     text-decoration-line: underline;
