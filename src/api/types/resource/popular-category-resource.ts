@@ -1,4 +1,4 @@
-export interface CategoryResource {
+export interface PopularCategoryResource {
     id: number;
     title: string;
     description: string;

@@ -1,10 +1,11 @@
 import axios from "axios";
 import {GetPopularCategoryResponse} from "./types/response/get-popular-category-response";
-import {CategoryResource} from "./types/resource/category-resource";
+import {PopularCategoryResource} from "./types/resource/popular-category-resource";
 import {GetPopularSubCategoryResponse} from "./types/response/get-popular-sub-category-response";
 import {SubCategoryResource} from "./types/resource/sub-category-resource";
 import {SearchResponse} from "./types/response/search-response";
 import {TaskResource} from "./types/resource/task-resource";
+import {GetAllCategoriesResponse} from "./types/response/get-all-categories-response";
 
 const BASEURL = "https://youmath.ru/api/v1"
 
@@ -32,7 +33,11 @@ export const api = {
         return createReguest(`/sections/popular`)
     },
 
-    getCategory(categoryId: number):Promise<CategoryResource> {
+    getAllCategories():Promise<GetAllCategoriesResponse> {
+        return createReguest(`/sections`)
+    },
+
+    getCategory(categoryId: number):Promise<PopularCategoryResource> {
         return createReguest(`/sections/${categoryId}`)
     },
 

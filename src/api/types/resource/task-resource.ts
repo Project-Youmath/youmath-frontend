@@ -1,4 +1,4 @@
-import {CategoryResource} from "./category-resource";
+import {PopularCategoryResource} from "./popular-category-resource";
 import {SubCategoryResource} from "./sub-category-resource";
 
 export interface TaskResource {
@@ -8,6 +8,6 @@ export interface TaskResource {
     file: string | null;
     read_counter: number;
 
-    section: CategoryResource;
+    section: PopularCategoryResource;
     subCategory: SubCategoryResource;
 }
