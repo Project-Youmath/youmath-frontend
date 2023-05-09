@@ -3,16 +3,22 @@ import {Text} from "../../../../ui/typography/text/text";
 import {Link} from "react-router-dom";
 import {useMatchMedia} from "../../../../hooks/use-match-media";
 import {PopularTaskCardVariants} from "../variants/popular-task-card-variants";
+import {CategoryResource} from "../../../../api/types/resource/category-resource";
+import {FC} from "react";
 
-export const PopularTaskCardExternalInfo = () => {
+interface PopularTaskCardExternalInfoProps {
+    category: CategoryResource;
+}
+
+export const PopularTaskCardExternalInfo:FC<PopularTaskCardExternalInfoProps> = ({category}) => {
     const isVariantVisible = useMatchMedia("(max-width: 1200px)")
 
     return (
         <div className={styles.popularTaskCardExternalInfo}>
             <Text size="small" textType="text" textColor="white">
-                Типовой расчет по высшей математике М.А. Евдокимова, С.Г. Афанасьева. 10 задач для студентов 1 и 2 курса гуманитарного факультета 1. Определители 2 и 3 порядка.Основные свойства, минор и алгебраическое дополнение.Система линейных уравнений. Метод Крамера...
+                {category.description}
             </Text>
-            <Link className={styles.popularTaskCardExternalInfo__link} to={"/"}>Подробнее...</Link>
+            <Link className={styles.popularTaskCardExternalInfo__link} to={`/category/${category.id}`}>Подробнее...</Link>
             {isVariantVisible && <PopularTaskCardVariants extraClass={styles.popularTaskCardExternalInfo__variants}/>}
         </div>
     );

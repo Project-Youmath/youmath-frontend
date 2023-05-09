@@ -3,17 +3,26 @@ import {H3} from "../../../../ui/typography/h3/h3";
 import {Text} from "../../../../ui/typography/text/text";
 import {PopularTaskCardVariants} from "../variants/popular-task-card-variants";
 import {useMatchMedia} from "../../../../hooks/use-match-media";
+import {CategoryResource} from "../../../../api/types/resource/category-resource";
+import {FC} from "react";
+import {Link} from "react-router-dom";
 
-export const PopularTaskCardBaseInfo = () => {
+interface PopularTaskCardBaseInfoProps {
+    category: CategoryResource;
+}
+
+export const PopularTaskCardBaseInfo:FC<PopularTaskCardBaseInfoProps> = ({category}) => {
     const isVariantVisible = !useMatchMedia("(max-width: 1200px)")
 
     return (
         <div className={styles.popularTaskCardBaseInfo}>
             <div>
-                <H3 textColor="white" decoration="underline">Высшая математика для гуманитариев</H3>
-                <Text size="small" textType="text" textColor="white">М.А. Евдокимов, С.Г. Афанасьева, 2005</Text>
+                <Link to={`/category/${category.id}`}>
+                    <H3 textColor="white" decoration="underline">{category.title}</H3>
+                </Link>
+                {category.author && <Text size="small" textType="text" textColor="white">{category.author}</Text>}
             </div>
-            {isVariantVisible && <PopularTaskCardVariants/>}
+            {isVariantVisible && <PopularTaskCardVariants extraClass={styles.popularTaskCardBaseInfo__variants}/>}
         </div>
     );
 };
