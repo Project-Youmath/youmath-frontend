@@ -34,7 +34,7 @@ const popularCategorySlice = createSlice({
                 state.isSuccess = true;
                 state.categories = action.payload;
             })
-            .addCase(getPopularCategoriesThunk.fulfilled, (state) => {
+            .addCase(getPopularCategoriesThunk.rejected, (state) => {
                 state.isLoading = false;
                 state.isError = true;
                 state.isSuccess = false;
