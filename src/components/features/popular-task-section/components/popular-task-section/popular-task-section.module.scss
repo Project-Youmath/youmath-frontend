@@ -1,0 +1,27 @@
+.popularTaskSection {
+  padding: 75px 120px;
+
+  background-image: url("../../../../../assets/images/popular-task-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      padding: 75px 24px;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  &__taskList {
+    margin-top: 56px;
+
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,4 +1,4 @@
-@import url('./vendors/fonts/fonts.scss');
+@import url("./vendors/fonts/fonts.scss");
 
 body {
   margin: 0;
@@ -8,20 +8,27 @@ body {
 
   --white-color: white;
 
-  --text-color: #282A2E;
+  --text-color: #282a2e;
   --text-dim-color: #888;
   --text-dark-green-color: #245353;
-  --text-accent-color: #12F3AF;
-  --text-secondary-color: #D3D6D5;
+  --text-accent-color: #12f3af;
+  --text-secondary-color: #d3d6d5;
 
-  --bg-light-green-color: #CDE2D9;
+  --bg-light-green-color: #cde2d9;
   --bg-green-color: #245353;
   --bg-black-color: #222;
-  --bg-blue-color: #3E5372;
-  --bg-hover-color: #F7FDED;
-  --bg-accent-color: #12F3AF;
+  --bg-blue-color: #3e5372;
+  --bg-hover-color: #f7fded;
+  --bg-accent-color: #12f3af;
 
   --desktop-breakpoint: 1440;
   --table-breakpoint: 744;
   --mobile-breakpoint: 360;
+}
+.app {
+  min-height: 100vh;
+  display: grid;
+}
+.page {
+  min-height: 60vh;
 }
