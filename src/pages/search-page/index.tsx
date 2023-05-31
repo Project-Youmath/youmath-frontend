@@ -1,13 +1,13 @@
-import Loader from "../../components/Loader";
-import SearchPageTitle from "../../components/search-page-components/title";
-import SearchPageCards from "../../components/search-page-components/cards";
-import NothingFoundCard from "../../components/search-page-components/nothing-found-card";
+import Loader from "../../components/loader";
+import SearchPageTitle from "./search-page-components/title";
+import SearchPageCards from "./search-page-components/cards";
+import NothingFoundCard from "./search-page-components/nothing-found-card";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { searchThunk } from "../../store/thunks";
-import { useAppDispatch } from "../../hooks/use-app-dispatch";
-import { useAppSelector } from "../../hooks/use-app-selector";
+import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { searchActions } from "../../store/slices/search-slice";
+import { useAppSelector } from "../../store/hooks/use-app-selector";
 
 const SearchPage = () => {
   const dispatch = useAppDispatch();

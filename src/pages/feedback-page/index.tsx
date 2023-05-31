@@ -1,5 +1,5 @@
-import FeedbackPageForm from "../../components/feedback-page-components/form";
-import { SectionMenu } from "../../components/section-menu";
+import FeedbackPageForm from "./components/form";
+import { SectionMenu } from "../../layouts/menu";
 import { H2 } from "../../components/ui/typography/h2/h2";
 
 const FeedbackPage = () => {

@@ -1,4 +1,4 @@
-import { CategorySection } from "../../components/category-page-components/category-section";
+import { CategorySection } from "./components/category-section";
 
 const CategoryPage = () => {
   return <CategorySection />;

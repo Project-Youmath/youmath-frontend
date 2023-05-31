@@ -1,5 +1,5 @@
-import AboutPageContent from "../../components/about-page-components/content";
-import { SectionMenu } from "../../components/section-menu";
+import AboutPageContent from "./components/content";
+import { SectionMenu } from "../../layouts/menu";
 
 const AboutPage = () => {
   return (

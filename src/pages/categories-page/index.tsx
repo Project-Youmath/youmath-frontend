@@ -1,7 +1,7 @@
-import Loader from "../../components/Loader";
+import Loader from "../../components/loader";
 import CategoryCard from "../../components/category-card";
 import { H2 } from "../../components/ui/typography/h2/h2";
-import { useAppSelector } from "../../hooks/use-app-selector";
+import { useAppSelector } from "../../store/hooks/use-app-selector";
 
 const CategoriesPage = () => {
   const { isLoading, categories } = useAppSelector(

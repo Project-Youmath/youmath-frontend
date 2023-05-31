@@ -1,11 +1,11 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { useAppDispatch } from "./hooks/use-app-dispatch";
+import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
 import { searchVisibleActions } from "./store/slices/search-visibility-slice";
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./layouts/header";
+import Footer from "./layouts/footer";
 import MainPage from "./pages/main-page";
 import SearchPage from "./pages/search-page";
 import CategoriesPage from "./pages/categories-page";
