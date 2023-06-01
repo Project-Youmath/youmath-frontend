@@ -3,11 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowForwardIcon } from "../../components/ui/icons/arrow-forward-icon";
 import { getLinkPatch, gеtLinkTitle } from "../../utils/nav-links-metod";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
+import { startPage } from "../../data/ constants";
 
 const Navigation = () => {
   const { category } = useAppSelector((state) => state.categoryReducer);
   const { pathname } = useLocation();
-  const navigationPages = pathname.split("/");
+  const navigationPages = pathname.replace(startPage, "").split("/");
 
   return (
     <section className={styles.navigation}>

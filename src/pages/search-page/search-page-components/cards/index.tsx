@@ -1,11 +1,11 @@
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 
 const SearchPageCards = () => {
-  const { works } = useAppSelector((state) => state.searchReducer);
+  const { tasks } = useAppSelector((state) => state.getTasksReducer);
   return (
     <>
-      {works.map((work: any) => (
-        <div key={work.title + work.id}>{work.title}</div>
+      {tasks.map((task: any) => (
+        <div key={task.title + task.id}>{task.title}</div>
       ))}
     </>
   );

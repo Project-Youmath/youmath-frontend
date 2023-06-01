@@ -4,6 +4,7 @@ import { HeaderNav } from "./components/header-nav/header-nav";
 import { HeaderSearch } from "./components/header-search/header-search";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
+import { startPage } from "../../data/ constants";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Header = () => {
         <img
           className={styles.logo}
           onClick={() => {
-            navigate("/");
+            navigate(startPage);
           }}
           src={logo}
           alt="Логотип YouMath"

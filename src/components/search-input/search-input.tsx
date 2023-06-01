@@ -2,6 +2,7 @@ import styles from "./search-input.module.scss";
 import { SearchIcon } from "../ui/icons/search-icon";
 import { ChangeEventHandler, FC, MouseEventHandler, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { startPage } from "../../data/ constants";
 
 interface ISearchInputProps {
   extraclass?: string;
@@ -22,7 +23,7 @@ export const SearchInput: FC<ISearchInputProps> = ({ extraclass }) => {
   const handleSearch = () => {
     if (inputRef.current?.value) {
       const value = inputRef.current.value;
-      navigate(`/search?q=${value}`);
+      navigate(`${startPage}/search?search=${value}`);
     }
   };
   return (

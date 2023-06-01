@@ -1,8 +1,8 @@
 import axios from "axios";
 import { GetPopularCategoryResponse } from "./types/response/get-popular-category-response";
 import { CategoryResource } from "./types/resource/category-resource";
-import { GetPopularSubCategoryResponse } from "./types/response/get-popular-sub-category-response";
-import { SubCategoryResource } from "./types/resource/sub-category-resource";
+import { GetPopularSubcategoryResponse } from "./types/response/get-popular-sub-category-response";
+import { SubcategoryResource } from "./types/resource/subcategory-resource";
 import { SearchResponse } from "./types/response/search-response";
 import { TaskResource } from "./types/resource/task-resource";
 import { GetAllCategoriesResponse } from "./types/response/get-all-categories-response";
@@ -24,11 +24,11 @@ const createReguest = async (endpoint: string, params?: any) => {
 };
 
 export const api = {
-  search(query: string): Promise<SearchResponse> {
-    return createReguest(`/articles/?search=${query}`);
+  getTasks(query: string): Promise<SearchResponse> {
+    return createReguest(`/articles/${query}`);
   },
 
-  getTask(taskId: number): Promise<TaskResource> {
+  getTask(taskId: string): Promise<TaskResource> {
     return createReguest(`/articles/${taskId}`);
   },
 
@@ -44,11 +44,11 @@ export const api = {
     return createReguest(`/sections/${categoryId}`);
   },
 
-  getPopularSubCategory(): Promise<GetPopularSubCategoryResponse> {
+  getPopularSubCategory(): Promise<GetPopularSubcategoryResponse> {
     return createReguest(`/subsections/popular`);
   },
 
-  getSubCategory(subCategoryId: number): Promise<SubCategoryResource> {
-    return createReguest(`/subsections/${subCategoryId}`);
+  getSubcategory(subcategoryId: string): Promise<SubcategoryResource> {
+    return createReguest(`/subsections/${subcategoryId}`);
   },
 };

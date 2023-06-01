@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { team } from "../../../../../data/ team";
+import { team } from "../../../../../data/ constants";
 import { TelegramIcon } from "../../../../../components/ui/icons/telegram-icon";
 import { GitIcon } from "../../../../../components/ui/icons/git-icon";
 import { LinkdnIcon } from "../../../../../components/ui/icons/linkdn-icon";

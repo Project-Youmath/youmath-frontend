@@ -13,6 +13,9 @@ import CategoryPage from "./pages/category-page";
 import AboutPage from "./pages/about-page";
 import FeedbackPage from "./pages/feedback-page";
 import ErrorPage from "./pages/error-page";
+import SubcategoryPage from "./pages/subcategory-page";
+import { startPage } from "./data/ constants";
+import TaskPage from "./pages/task-page";
 // import Pages from "./pages";
 
 export const App = () => {
@@ -34,14 +37,32 @@ export const App = () => {
       <Header />
       <section className="page">
         <Routes>
-          <Route path={""} element={<MainPage />} />
-          <Route path={"youmath-frontend"} element={<MainPage />} />
-          <Route path={"search"} element={<SearchPage />} />
-          <Route path={"categories"} element={<CategoriesPage />} />
-          <Route path={"category/:categoryId"} element={<CategoryPage />} />
-          <Route path={"about"} element={<AboutPage />} />
-          <Route path={"feedback"} element={<FeedbackPage />} />
-          <Route path={"*"} element={<ErrorPage />} />
+          <Route path={startPage} element={<MainPage />} />
+          <Route path={startPage + "/search"} element={<SearchPage />} />
+          <Route
+            path={startPage + "/categories"}
+            element={<CategoriesPage />}
+          />
+          <Route
+            path={startPage + "/category/:categoryId"}
+            element={<CategoryPage />}
+          />
+          <Route
+            path={
+              startPage + "/category/:categoryId/subcategory/:subcategoryId"
+            }
+            element={<SubcategoryPage />}
+          />
+          <Route
+            path={
+              startPage +
+              "/category/:categoryId/subcategory/:subcategoryId/:taskId"
+            }
+            element={<TaskPage />}
+          />
+          <Route path={startPage + "/about"} element={<AboutPage />} />
+          <Route path={startPage + "/feedback"} element={<FeedbackPage />} />
+          <Route path={"/*"} element={<ErrorPage />} />
         </Routes>
       </section>
       <Footer />

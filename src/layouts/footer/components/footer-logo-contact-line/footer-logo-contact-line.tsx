@@ -2,6 +2,7 @@ import styles from "./footer-logo-contact-line.module.scss";
 import logo from "../../../../assets/images/logo.png";
 import { Text } from "../../../../components/ui/typography/text/text";
 import { Link } from "react-router-dom";
+import { startPage } from "../../../../data/ constants";
 
 export const FooterLogoContactLine = () => {
   return (
@@ -11,7 +12,7 @@ export const FooterLogoContactLine = () => {
         alt="Логотип youmath"
         className={styles.logoContactLine__logo}
       />
-      <Link to={"/feedback"} style={{ textDecoration: "none" }}>
+      <Link to={startPage + "/feedback"} style={{ textDecoration: "none" }}>
         <Text
           size={"default"}
           textType={"button"}

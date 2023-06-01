@@ -1,0 +1,10 @@
+.__section {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    @media (orientation: portrait) {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+  }
+}

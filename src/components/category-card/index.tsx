@@ -4,6 +4,7 @@ import { RightArrowIcon } from "../ui/icons/right-arrow-icon";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { CategoryResource } from "../../api/types/resource/category-resource";
+import { startPage } from "../../data/ constants";
 
 interface PopularCategoryCardProps {
   category: CategoryResource;
@@ -11,7 +12,10 @@ interface PopularCategoryCardProps {
 
 const CategoryCard: FC<PopularCategoryCardProps> = ({ category }) => {
   return (
-    <Link to={`/category/${category.id}`} style={{ textDecoration: "none" }}>
+    <Link
+      to={`${startPage}/category/${category.id}`}
+      style={{ textDecoration: "none" }}
+    >
       <div className={styles.popularCategoryCard}>
         <div className={styles.popularCategoryCard__info}>
           <Text size="large" textType="text" textColor="black">

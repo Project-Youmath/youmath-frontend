@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 import Loader from "../../components/loader";
 import CategoryCard from "../../components/category-card";
 import Navigation from "../../layouts/navigation";
@@ -14,18 +15,20 @@ const CategoriesPage = () => {
     <Container>
       <>
         <Navigation />
-        <section>
+        <section className={styles.__section}>
           <H2>Разделы</H2>
-          {isLoading ? (
-            <Loader />
-          ) : (
-            categories.map((category) => (
-              <CategoryCard
-                key={category.title + category.id}
-                category={category}
-              />
-            ))
-          )}
+          <section className={styles.__section__content}>
+            {isLoading ? (
+              <Loader />
+            ) : (
+              categories.map((category) => (
+                <CategoryCard
+                  key={category.title + category.id}
+                  category={category}
+                />
+              ))
+            )}
+          </section>
         </section>
       </>
     </Container>

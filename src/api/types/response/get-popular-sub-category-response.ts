@@ -1,3 +1,3 @@
-import {SubCategoryResource} from "../resource/sub-category-resource";
+import { SubcategoryResource } from "../resource/subcategory-resource";
 
-export type GetPopularSubCategoryResponse = SubCategoryResource[]
+export type GetPopularSubcategoryResponse = SubcategoryResource[];

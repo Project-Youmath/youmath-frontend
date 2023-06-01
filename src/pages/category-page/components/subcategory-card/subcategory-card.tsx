@@ -1,18 +1,19 @@
-import styles from "./category-card.module.scss";
+import styles from "./subcategory-card.module.scss";
 import { H3 } from "../../../../components/ui/typography/h3/h3";
 import { Text } from "../../../../components/ui/typography/text/text";
 import { Link } from "react-router-dom";
 import { FC } from "react";
 import { ArrowRightSmallIcon } from "../../../../components/ui/icons/arrow-right-small-icon";
-interface ICategoryCardProps {
+interface ISubcategoryCardProps {
   subcategory: {
     id: number;
     title: string;
     description: string | null;
     read_counter: number;
+    articles_count?: number | null;
   };
 }
-export const CategoryCard: FC<ICategoryCardProps> = ({ subcategory }) => {
+export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
   return (
     <div className={styles.categoryCard}>
       <H3 textColor="white">{subcategory.title}</H3>
@@ -29,10 +30,10 @@ export const CategoryCard: FC<ICategoryCardProps> = ({ subcategory }) => {
           to={""}
           className={`${styles.categoryCard__link} ${styles.categoryCard__variantsCount}`}
         >
-          {`${25} вариантов`}
+          {`${subcategory.articles_count ?? "нет"} вариантов`}
         </Link>
         <Link
-          to={"subcategory"}
+          to={`subcategory/${subcategory.id}?subsection=${subcategory.id}`}
           className={`${styles.categoryCard__link} ${styles.categoryCard__allVariants}`}
         >
           <span> К списку вариантов</span>

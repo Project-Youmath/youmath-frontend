@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import styles from "./section-menu-item.module.scss";
 import { FC } from "react";
+import { startPage } from "../../../../data/ constants";
 
 interface SectionMenuItemProps {
   categoryIndex: number;
@@ -16,7 +17,7 @@ export const SectionMenuItem: FC<SectionMenuItemProps> = ({
   return (
     <div
       onClick={() => {
-        navigate(`/category/${categoryIndex}`);
+        navigate(`${startPage}/category/${categoryIndex}`);
       }}
       className={`${styles.sectionMenuItem} ${
         categoryId === categoryIndex.toString() ? styles.active : ""

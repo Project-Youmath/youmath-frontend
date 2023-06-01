@@ -1,4 +1,4 @@
-import { team } from "../../../../data/ team";
+import { team } from "../../../../data/ constants";
 import { H2 } from "../../../../components/ui/typography/h2/h2";
 import { H3 } from "../../../../components/ui/typography/h3/h3";
 import EmployeeСard from "../employee-card";

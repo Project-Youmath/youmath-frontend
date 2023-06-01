@@ -1,3 +1,5 @@
+import { startPage } from "../data/ constants";
+
 const linkTitle: { [key: string]: string } = {
   category: "Разделы",
   categories: "Разделы",
@@ -35,5 +37,5 @@ export const getLinkPatch = (
   if (i === 1 && navigationPage === "category") {
     result = "/categories";
   }
-  return result;
+  return startPage + result;
 };

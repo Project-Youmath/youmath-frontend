@@ -1,6 +1,6 @@
 import styles from "./category-section-content.module.scss";
 import { CategorySectionContentInfo } from "../category-section-content-info/category-section-content-info";
-import { CategoryCard } from "../category-card/category-card";
+import { SubcategoryCard } from "../subcategory-card/subcategory-card";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -18,22 +18,22 @@ export const CategorySectionContent = () => {
     dispatch(getCategoryThunk(categoryId ?? ""));
   }, [dispatch, categoryId]);
   return (
-    <div className={styles.categorySectionContent}>
+    <>
       {isLoading ? (
         <Loader />
       ) : (
-        <>
+        <div className={styles.categorySectionContent}>
           <CategorySectionContentInfo />
           <div className={styles.categorySectionContent__cards}>
             {category?.subsections?.map((subcategory) => (
-              <CategoryCard
+              <SubcategoryCard
                 key={subcategory.title + subcategory.id}
                 subcategory={subcategory}
               />
             ))}
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };

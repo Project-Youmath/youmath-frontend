@@ -1,3 +1,4 @@
+export const startPage = "/youmath-frontend";
 export const team = [
   {
     image:

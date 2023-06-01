@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { team } from "../../../../data/ team";
+import { team } from "../../../../data/ constants";
 import EmployeeСardButtons from "./buttons";
 interface IEmployeeСardProps {
   employeeСard: (typeof team)[0];

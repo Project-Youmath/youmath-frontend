@@ -1,12 +1,15 @@
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 import { H2 } from "../../../../components/ui/typography/h2/h2";
 import { H3 } from "../../../../components/ui/typography/h3/h3";
+import { useLocation } from "react-router-dom";
 
 const SearchPageTitle = () => {
-  const { query, works } = useAppSelector((state) => state.searchReducer);
+  const { search } = useLocation();
+  const query = decodeURIComponent(search.slice(8));
+  const { tasks } = useAppSelector((state) => state.getTasksReducer);
   return (
     <>
-      {works.length ? (
+      {tasks.length ? (
         <>
           <H2> "Результаты поиска по запросу" </H2>
           <H3>{`«${query}»`}</H3>
