@@ -1,22 +1,28 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./section-menu-item.module.scss";
 import { FC } from "react";
 
 interface SectionMenuItemProps {
-  id: number;
-  children: string;
+  categoryIndex: number;
+  categoryTitle: string;
 }
 
-export const SectionMenuItem: FC<SectionMenuItemProps> = ({ id, children }) => {
+export const SectionMenuItem: FC<SectionMenuItemProps> = ({
+  categoryIndex,
+  categoryTitle,
+}) => {
   const navigate = useNavigate();
+  const { categoryId } = useParams();
   return (
     <div
       onClick={() => {
-        navigate(`/category/${id}`);
+        navigate(`/category/${categoryIndex}`);
       }}
-      className={styles.sectionMenuItem}
+      className={`${styles.sectionMenuItem} ${
+        categoryId === categoryIndex.toString() ? styles.active : ""
+      }`}
     >
-      {children}
+      {categoryTitle}
     </div>
   );
 };

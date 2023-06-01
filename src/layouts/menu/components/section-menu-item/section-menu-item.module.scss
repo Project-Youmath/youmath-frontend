@@ -11,8 +11,14 @@
   color: #282a2e;
   box-shadow: 0px 0px 3px rgba(28, 158, 119, 0.25);
   border-radius: 16px;
+
   &:hover {
     background: #f7fded;
+    color: #282a2e;
     cursor: pointer;
   }
+}
+.active {
+  background: #245353;
+  color: #fff;
 }

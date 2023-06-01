@@ -3,7 +3,7 @@ import { Text } from "../ui/typography/text/text";
 import { RightArrowIcon } from "../ui/icons/right-arrow-icon";
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { CategoryResource } from "../../server/types/resource/category-resource";
+import { CategoryResource } from "../../api/types/resource/category-resource";
 
 interface PopularCategoryCardProps {
   category: CategoryResource;

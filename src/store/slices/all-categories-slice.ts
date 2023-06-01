@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CategoryResource } from "../../server/types/resource/category-resource";
+import { CategoryResource } from "../../api/types/resource/category-resource";
 import { getAllCategoriesThunk } from "../thunks";
 
 interface IAllCategoryReducerInitialState {

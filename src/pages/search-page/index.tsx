@@ -8,6 +8,8 @@ import { searchThunk } from "../../store/thunks";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { searchActions } from "../../store/slices/search-slice";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
+import Container from "../../layouts/container/insex";
+import Navigation from "../../layouts/navigation";
 
 const SearchPage = () => {
   const dispatch = useAppDispatch();
@@ -26,16 +28,19 @@ const SearchPage = () => {
     dispatch(searchThunk(query));
   }, [dispatch, query]);
   return (
-    <>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <section style={{ width: "80%", margin: "auto" }}>
-          <SearchPageTitle />
-          {works.length ? <SearchPageCards /> : <NothingFoundCard />}
-        </section>
-      )}
-    </>
+    <Container>
+      <>
+        <Navigation />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <section>
+            <SearchPageTitle />
+            {works.length ? <SearchPageCards /> : <NothingFoundCard />}
+          </section>
+        )}
+      </>
+    </Container>
   );
 };
 export default SearchPage;

@@ -3,7 +3,7 @@ import { Text } from "../../../ui/typography/text/text";
 import { Link } from "react-router-dom";
 import { useMatchMedia } from "../../../../hooks/use-match-media";
 import { PopularTaskCardVariants } from "../variants/popular-task-card-variants";
-import { CategoryResource } from "../../../../server/types/resource/category-resource";
+import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC } from "react";
 
 interface PopularTaskCardExternalInfoProps {

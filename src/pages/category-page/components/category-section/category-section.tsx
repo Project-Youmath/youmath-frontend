@@ -1,5 +1,5 @@
 import styles from "./category-section.module.scss";
-import { SectionMenu } from "../../../../../../layouts/menu";
+import { SectionMenu } from "../../../../layouts/menu";
 import { CategorySectionContent } from "../category-section-content/category-section-content";
 
 export const CategorySection = () => {

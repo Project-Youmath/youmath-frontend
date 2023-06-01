@@ -40,7 +40,7 @@ export const api = {
     return createReguest(`/sections`);
   },
 
-  getCategory(categoryId: number): Promise<CategoryResource> {
+  getCategory(categoryId: string): Promise<CategoryResource> {
     return createReguest(`/sections/${categoryId}`);
   },
 

@@ -1,0 +1,20 @@
+.error_page {
+  height: max-content;
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+  margin-top: 40px;
+  &_button {
+    display: flex;
+    margin: auto;
+    width: 284px;
+    height: 48px;
+    background: #12f3af;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

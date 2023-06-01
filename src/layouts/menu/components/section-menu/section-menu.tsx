@@ -14,9 +14,11 @@ export const SectionMenu = () => {
         <Loader />
       ) : (
         categories.map((category) => (
-          <SectionMenuItem key={category.title + category.id} id={category.id}>
-            {category.title}
-          </SectionMenuItem>
+          <SectionMenuItem
+            key={category.title + category.id}
+            categoryTitle={category.title}
+            categoryIndex={category.id}
+          />
         ))
       )}
     </div>

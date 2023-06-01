@@ -3,7 +3,7 @@ import { H3 } from "../../../ui/typography/h3/h3";
 import { Text } from "../../../ui/typography/text/text";
 import { PopularTaskCardVariants } from "../variants/popular-task-card-variants";
 import { useMatchMedia } from "../../../../hooks/use-match-media";
-import { CategoryResource } from "../../../../server/types/resource/category-resource";
+import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 

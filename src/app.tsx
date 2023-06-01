@@ -13,6 +13,7 @@ import CategoryPage from "./pages/category-page";
 import AboutPage from "./pages/about-page";
 import FeedbackPage from "./pages/feedback-page";
 import ErrorPage from "./pages/error-page";
+// import Pages from "./pages";
 
 export const App = () => {
   const location = useLocation();
@@ -33,14 +34,14 @@ export const App = () => {
       <Header />
       <section className="page">
         <Routes>
-          <Route path={"/"} element={<MainPage />} />
-          <Route path={"/youmath-frontend"} element={<MainPage />} />
-          <Route path={"/search"} element={<SearchPage />} />
-          <Route path={"/categories"} element={<CategoriesPage />} />
-          <Route path={"/category/:id"} element={<CategoryPage />} />
-          <Route path={"/about"} element={<AboutPage />} />
-          <Route path={"/feedback"} element={<FeedbackPage />} />
-          <Route path={"/*"} element={<ErrorPage />} />
+          <Route path={""} element={<MainPage />} />
+          <Route path={"youmath-frontend"} element={<MainPage />} />
+          <Route path={"search"} element={<SearchPage />} />
+          <Route path={"categories"} element={<CategoriesPage />} />
+          <Route path={"category/:categoryId"} element={<CategoryPage />} />
+          <Route path={"about"} element={<AboutPage />} />
+          <Route path={"feedback"} element={<FeedbackPage />} />
+          <Route path={"*"} element={<ErrorPage />} />
         </Routes>
       </section>
       <Footer />
