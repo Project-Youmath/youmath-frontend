@@ -16,7 +16,9 @@ const CategoriesPage = () => {
       <>
         <Navigation />
         <section className={styles.__section}>
-          <H2>Разделы</H2>
+          <div className={styles.__section__title}>
+            <H2>Разделы</H2>
+          </div>
           <section className={styles.__section__content}>
             {isLoading ? (
               <Loader />
