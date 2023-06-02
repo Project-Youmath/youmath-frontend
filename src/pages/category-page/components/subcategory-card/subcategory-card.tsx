@@ -28,12 +28,9 @@ export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
         {subcategory.description ?? ""}
       </Text>
       <div className={styles.categoryCard__links}>
-        <Link
-          to={""}
-          className={`${styles.categoryCard__link} ${styles.categoryCard__variantsCount}`}
-        >
+        <div className={`${styles.categoryCard__taskCount}`}>
           {`${subcategory.articles_count ?? "нет"} вариантов`}
-        </Link>
+        </div>
         <Link
           to={`${startPage}/categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
           className={`${styles.categoryCard__link} ${styles.categoryCard__allVariants}`}
@@ -45,8 +42,3 @@ export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
     </div>
   );
 };
-// https://youmath.ru/api/v1/sections/1/
-
-// в     "subsections": [
-//         {
-//             нет  "articles_count": 1, он нужен чтобы лишние запросы не делать ради цифры
