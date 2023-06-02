@@ -1,9 +1,7 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
-import { searchVisibleActions } from "./store/slices/search-visibility-slice";
-
 import Header from "./layouts/header";
 import Footer from "./layouts/footer";
 import MainPage from "./pages/main-page";
@@ -16,21 +14,12 @@ import ErrorPage from "./pages/error-page";
 import SubcategoryPage from "./pages/subcategory-page";
 import { startPage } from "./data/ constants";
 import TaskPage from "./pages/task-page";
-// import Pages from "./pages";
 
 export const App = () => {
-  const location = useLocation();
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getAllCategoriesThunk());
   }, [dispatch]);
-  useEffect(() => {
-    if (/^(\/|\/youmath-frontend)$/.test(location.pathname)) {
-      dispatch(searchVisibleActions.changeVisible(true));
-    } else {
-      dispatch(searchVisibleActions.changeVisible(false));
-    }
-  }, [dispatch, location.pathname]);
 
   return (
     <section className="app">
