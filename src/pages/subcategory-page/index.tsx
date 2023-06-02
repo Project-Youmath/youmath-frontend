@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import { SectionMenu } from "../../layouts/menu";
 import Navigation from "../../layouts/navigation";
 import SectionSubcategory from "./subcategory-section";

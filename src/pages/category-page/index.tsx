@@ -1,4 +1,4 @@
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
 import { CategorySection } from "./components/category-section/category-section";
 

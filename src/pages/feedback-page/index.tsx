@@ -1,7 +1,7 @@
 import FeedbackPageForm from "./components/form";
 import { SectionMenu } from "../../layouts/menu";
 import { H2 } from "../../components/ui/typography/h2/h2";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
 
 const FeedbackPage = () => {

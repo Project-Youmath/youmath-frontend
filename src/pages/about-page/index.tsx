@@ -1,6 +1,6 @@
 import AboutPageContent from "./components/content";
 import { SectionMenu } from "../../layouts/menu";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
 
 const AboutPage = () => {

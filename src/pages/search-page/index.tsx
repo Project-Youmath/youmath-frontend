@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { getTasksThunk } from "../../store/thunks";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
 
 const SearchPage = () => {

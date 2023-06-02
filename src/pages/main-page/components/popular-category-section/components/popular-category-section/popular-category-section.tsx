@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
 import { getPopularCategoriesThunk } from "../../../../../../store/thunks";
 import { useAppSelector } from "../../../../../../store/hooks/use-app-selector";
+import { startPage } from "../../../../../../data/ constants";
 
 export const PopularCategorySection = () => {
   const dispatch = useAppDispatch();
@@ -31,10 +32,10 @@ export const PopularCategorySection = () => {
         ))}
       </div>
       <Link
-        to={"/sections"}
+        to={startPage + "/categories"}
         className={styles.popularCategorySection__allCategoriesLink}
       >
-        Смотреть все{" "}
+        Смотреть все
         <RightArrowIcon
           classname={styles.popularCategorySection__allCategoriesLinkICon}
         />

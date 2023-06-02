@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 import Loader from "../../components/loader";
 import CategoryCard from "../../components/category-card";
 import Navigation from "../../layouts/navigation";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import { H2 } from "../../components/ui/typography/h2/h2";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 

@@ -11,8 +11,8 @@
 
     cursor: pointer;
 
-    @media screen and (max-width: 780px) {
-      &:nth-of-type(1) {
+    &:nth-of-type(1) {
+      @media (orientation: portrait) {
         display: none;
       }
     }

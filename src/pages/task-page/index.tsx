@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import Navigation from "../../layouts/navigation";
-import Container from "../../layouts/container/insex";
+import Container from "../../layouts/container";
 import { SectionMenu } from "../../layouts/menu";
 import { useParams } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
