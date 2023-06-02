@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 import Container from "../../layouts/container/insex";
 import { SectionMenu } from "../../layouts/menu";
 import Navigation from "../../layouts/navigation";
-import SectionSubcategory from "./section-subcategory";
+import SectionSubcategory from "./subcategory-section";
 import { useLocation, useParams } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useEffect } from "react";

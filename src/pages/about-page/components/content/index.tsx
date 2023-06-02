@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 import { team } from "../../../../data/ constants";
 import { H2 } from "../../../../components/ui/typography/h2/h2";
 import { H3 } from "../../../../components/ui/typography/h3/h3";
@@ -5,7 +6,7 @@ import EmployeeСard from "../employee-card";
 
 const AboutPageContent = () => {
   return (
-    <section style={{ marginLeft: 24, display: "grid", width: 792, gap: 20 }}>
+    <section className={styles.__section}>
       <H2>О проекте</H2>
       <H3>Цель проекта</H3>
       <p>
@@ -20,7 +21,7 @@ const AboutPageContent = () => {
         студентов, которые любят математику.
       </p>
       <H3>Команда проекта</H3>
-      <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+      <section className={styles.__employeeCards}>
         {team.map((employeeСard, i) => (
           <EmployeeСard
             key={employeeСard.fullName + i}

@@ -1,0 +1,7 @@
+.__section {
+  width: 80%;
+  margin: auto;
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+}
