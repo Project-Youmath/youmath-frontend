@@ -44,19 +44,20 @@ export const App = () => {
             element={<CategoriesPage />}
           />
           <Route
-            path={startPage + "/category/:categoryId"}
+            path={startPage + "/categories/category/:categoryId"}
             element={<CategoryPage />}
           />
           <Route
             path={
-              startPage + "/category/:categoryId/subcategory/:subcategoryId"
+              startPage +
+              "/categories/category/:categoryId/subcategory/:subcategoryId"
             }
             element={<SubcategoryPage />}
           />
           <Route
             path={
               startPage +
-              "/category/:categoryId/subcategory/:subcategoryId/:taskId"
+              "/categories/category/:categoryId/subcategory/:subcategoryId/task/:taskId"
             }
             element={<TaskPage />}
           />

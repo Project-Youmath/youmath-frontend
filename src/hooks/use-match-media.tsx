@@ -1,21 +1,21 @@
-import {useLayoutEffect, useState} from "react";
+import { useLayoutEffect, useState } from "react";
 
 export const useMatchMedia = (query: string) => {
-    const mediaQuery = matchMedia(query)
+  const mediaQuery = matchMedia(query);
 
-    const getValue = () => mediaQuery.matches
+  const getValue = () => mediaQuery.matches;
 
-    const [matchState, setMatchState] = useState<boolean>(getValue())
+  const [matchState, setMatchState] = useState<boolean>(getValue());
 
-    useLayoutEffect(() => {
-        mediaQuery.onchange = () => {
-            setMatchState(getValue())
-        }
+  useLayoutEffect(() => {
+    mediaQuery.onchange = () => {
+      setMatchState(getValue());
+    };
 
-        return () => {
-            mediaQuery.onchange = null
-        }
-    })
+    return () => {
+      mediaQuery.onchange = null;
+    };
+  });
 
-    return matchState
-}
+  return matchState;
+};

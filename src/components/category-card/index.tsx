@@ -13,7 +13,7 @@ interface PopularCategoryCardProps {
 const CategoryCard: FC<PopularCategoryCardProps> = ({ category }) => {
   return (
     <Link
-      to={`${startPage}/category/${category.id}`}
+      to={`${startPage}/categories/category/${category.id}`}
       style={{ textDecoration: "none" }}
     >
       <div className={styles.popularCategoryCard}>

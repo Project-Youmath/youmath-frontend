@@ -8,11 +8,11 @@ const SectionSubcategory = () => {
   const { isLoading, tasks } = useAppSelector((state) => state.getTasksReducer);
 
   return (
-    <section className={styles.__section}>
+    <>
       {isLoading ? (
         <Loader />
       ) : (
-        <>
+        <section className={styles.__section}>
           <H2>{subcategory?.title ?? ""}</H2>
           <p>{subcategory?.description} </p>
           <section className={styles.__section__cards}>
@@ -20,9 +20,9 @@ const SectionSubcategory = () => {
               <TaskCard key={task.title + task.id} task={task}></TaskCard>
             ))}
           </section>
-        </>
+        </section>
       )}
-    </section>
+    </>
   );
 };
 export default SectionSubcategory;
