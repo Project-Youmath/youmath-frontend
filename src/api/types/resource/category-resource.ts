@@ -1,3 +1,10 @@
+type ArticleArray = {
+  id: number;
+  title: string;
+  subtitle: string | null;
+  description: string;
+  read_counter: number;
+}[];
 export interface CategoryResource {
   id: number;
   title: string;
@@ -13,11 +20,6 @@ export interface CategoryResource {
     description: string | null;
     read_counter: number;
   }[];
-  articles: {
-    id: number;
-    title: string;
-    subtitle: string | null;
-    description: string;
-    read_counter: number;
-  }[];
+  articles: ArticleArray;
+  popular_articles: ArticleArray;
 }

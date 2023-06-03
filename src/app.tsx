@@ -27,32 +27,29 @@ export const App = () => {
       <section className="page">
         <Routes>
           <Route path={startPage} element={<MainPage />} />
-          <Route path={startPage + "/search"} element={<SearchPage />} />
+          <Route path={startPage + "search"} element={<SearchPage />} />
+          <Route path={startPage + "categories"} element={<CategoriesPage />} />
           <Route
-            path={startPage + "/categories"}
-            element={<CategoriesPage />}
-          />
-          <Route
-            path={startPage + "/categories/category/:categoryId"}
+            path={startPage + "categories/category/:categoryId"}
             element={<CategoryPage />}
           />
           <Route
             path={
               startPage +
-              "/categories/category/:categoryId/subcategory/:subcategoryId"
+              "categories/category/:categoryId/subcategory/:subcategoryId"
             }
             element={<SubcategoryPage />}
           />
           <Route
             path={
               startPage +
-              "/categories/category/:categoryId/subcategory/:subcategoryId/task/:taskId"
+              "categories/category/:categoryId/subcategory/:subcategoryId/task/:taskId"
             }
             element={<TaskPage />}
           />
-          <Route path={startPage + "/about"} element={<AboutPage />} />
-          <Route path={startPage + "/feedback"} element={<FeedbackPage />} />
-          <Route path={"/*"} element={<ErrorPage />} />
+          <Route path={startPage + "about"} element={<AboutPage />} />
+          <Route path={startPage + "feedback"} element={<FeedbackPage />} />
+          <Route path={"*"} element={<ErrorPage />} />
         </Routes>
       </section>
       <Footer />

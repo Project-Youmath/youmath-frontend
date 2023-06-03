@@ -11,7 +11,7 @@ const TaskCard: FC<ITaskCardProps> = ({ task }) => {
   const { categoryId, subcategoryId } = useParams();
   return (
     <Link
-      to={`${startPage}/categories/category/${categoryId}/subcategory/${subcategoryId}/task/${task.id}`}
+      to={`${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${task.id}`}
       className={styles.__link}
     >
       <section className={styles.__card}>

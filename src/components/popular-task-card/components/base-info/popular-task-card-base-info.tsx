@@ -19,7 +19,7 @@ export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
   return (
     <div className={styles.popularTaskCardBaseInfo}>
       <div>
-        <Link to={`/category/${category.id}`}>
+        <Link to={`categories/category/${category.id}`}>
           <H3 textColor="white" decoration="underline">
             {category.title}
           </H3>
@@ -32,6 +32,7 @@ export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
       </div>
       {isVariantVisible && (
         <PopularTaskCardVariants
+          category={category}
           extraClass={styles.popularTaskCardBaseInfo__variants}
         />
       )}

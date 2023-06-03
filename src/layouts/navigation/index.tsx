@@ -31,10 +31,10 @@ const Navigation = () => {
           to={
             [
               startPage,
-              `${startPage}/${navigationPage}`,
-              `${startPage}/categories/category/${categoryId}`,
-              `${startPage}/categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
-              `${startPage}/categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
+              `${startPage}${navigationPage}`,
+              `${startPage}categories/category/${categoryId}`,
+              `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
+              `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
             ][i]
           }
         >

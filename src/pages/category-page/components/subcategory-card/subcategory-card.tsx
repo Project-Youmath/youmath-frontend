@@ -32,7 +32,7 @@ export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
           {`${subcategory.articles_count ?? "нет"} вариантов`}
         </div>
         <Link
-          to={`${startPage}/categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
+          to={`${startPage}categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
           className={`${styles.categoryCard__link} ${styles.categoryCard__allVariants}`}
         >
           <span> К списку вариантов</span>

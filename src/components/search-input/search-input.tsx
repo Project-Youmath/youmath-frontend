@@ -23,7 +23,7 @@ export const SearchInput: FC<ISearchInputProps> = ({ extraclass }) => {
   const handleSearch = () => {
     if (inputRef.current?.value) {
       const value = inputRef.current.value;
-      navigate(`${startPage}/search?search=${value}`);
+      navigate(`${startPage}search?search=${value}`);
     }
   };
   return (

@@ -4,7 +4,19 @@
   gap: 10px;
   display: flex;
   flex-direction: column;
-
+  .p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.2em;
+  }
+  .more {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .overflowed {
+    overflow: hidden;
+    max-height: 7.2em;
+  }
   @media screen and (max-width: 1200px) {
     & {
       max-width: 100%;

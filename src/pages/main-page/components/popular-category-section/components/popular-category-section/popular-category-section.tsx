@@ -32,7 +32,7 @@ export const PopularCategorySection = () => {
         ))}
       </div>
       <Link
-        to={startPage + "/categories"}
+        to={startPage + "categories"}
         className={styles.popularCategorySection__allCategoriesLink}
       >
         Смотреть все

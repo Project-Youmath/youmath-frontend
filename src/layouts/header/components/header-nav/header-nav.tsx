@@ -6,7 +6,7 @@ import { startPage } from "../../../../data/ constants";
 export const HeaderNav = () => {
   return (
     <nav className={styles.headerNav}>
-      <Link to={startPage + "/categories"} className={styles.Link}>
+      <Link to={startPage + "categories"} className={styles.Link}>
         <Text
           size={"default"}
           textType={"button"}
@@ -16,7 +16,7 @@ export const HeaderNav = () => {
           Разделы
         </Text>
       </Link>
-      <Link to={startPage + "/about"} className={styles.Link}>
+      <Link to={startPage + "about"} className={styles.Link}>
         <Text
           size={"default"}
           textType={"button"}

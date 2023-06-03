@@ -12,7 +12,7 @@ export const FooterLogoContactLine = () => {
         alt="Логотип youmath"
         className={styles.logoContactLine__logo}
       />
-      <Link to={startPage + "/feedback"} style={{ textDecoration: "none" }}>
+      <Link to={startPage + "feedback"} style={{ textDecoration: "none" }}>
         <Text
           size={"default"}
           textType={"button"}

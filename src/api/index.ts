@@ -16,7 +16,7 @@ const BASEURL = "https://youmath.ru/api/v1";
 // popularSubCategory -- v1/subsections/popular
 // getSubCategory -- v1/subsections/{id}
 
-const createReguest = async (endpoint: string, params?: any) => {
+const createRequest = async (endpoint: string, params?: any) => {
   const data = await axios.get(`${BASEURL}${endpoint}`, {
     params: { ...params },
   });
@@ -25,30 +25,30 @@ const createReguest = async (endpoint: string, params?: any) => {
 
 export const api = {
   getTasks(query: string): Promise<SearchResponse> {
-    return createReguest(`/articles/${query}`);
+    return createRequest(`/articles/${query}`);
   },
 
   getTask(taskId: string): Promise<TaskResource> {
-    return createReguest(`/articles/${taskId}`);
+    return createRequest(`/articles/${taskId}`);
   },
 
   getPopularCategory(): Promise<GetPopularCategoryResponse> {
-    return createReguest(`/sections/popular`);
+    return createRequest(`/sections/popular`);
   },
 
   getAllCategories(): Promise<GetAllCategoriesResponse> {
-    return createReguest(`/sections`);
+    return createRequest(`/sections`);
   },
 
   getCategory(categoryId: string): Promise<CategoryResource> {
-    return createReguest(`/sections/${categoryId}`);
+    return createRequest(`/sections/${categoryId}`);
   },
 
   getPopularSubCategory(): Promise<GetPopularSubcategoryResponse> {
-    return createReguest(`/subsections/popular`);
+    return createRequest(`/subsections/popular`);
   },
 
   getSubcategory(subcategoryId: string): Promise<SubcategoryResource> {
-    return createReguest(`/subsections/${subcategoryId}`);
+    return createRequest(`/subsections/${subcategoryId}`);
   },
 };

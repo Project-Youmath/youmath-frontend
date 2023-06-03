@@ -17,7 +17,7 @@ export const SectionMenuItem: FC<SectionMenuItemProps> = ({
   return (
     <div
       onClick={() => {
-        navigate(`${startPage}/categories/category/${categoryIndex}`);
+        navigate(`${startPage}categories/category/${categoryIndex}`);
       }}
       className={`${styles.sectionMenuItem} ${
         categoryId === categoryIndex.toString() ? styles.active : ""
