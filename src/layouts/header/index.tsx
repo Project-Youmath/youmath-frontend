@@ -10,13 +10,17 @@ const Header = () => {
   const { pathname } = useLocation();
   return (
     <header
-      className={pathname === startPage ? styles.mainHeader : styles.header}
+      className={
+        [startPage, startPage.slice(0, -1)].includes(pathname)
+          ? styles.mainHeader
+          : styles.header
+      }
     >
       <Container>
         <section className={styles.header__content}>
           <div
             className={
-              pathname === startPage
+              [startPage, startPage.slice(0, -1)].includes(pathname)
                 ? styles.gradientMask
                 : styles.gradientMaskInactive
             }
@@ -27,7 +31,7 @@ const Header = () => {
               </Link>
               <div
                 className={`${styles.search} ${
-                  pathname === startPage
+                  [startPage, startPage.slice(0, -1)].includes(pathname)
                     ? styles.mainSearchTop
                     : styles.searchTop
                 }`}
@@ -39,7 +43,7 @@ const Header = () => {
             </div>
           </div>
 
-          {pathname === startPage && (
+          {[startPage, startPage.slice(0, -1)].includes(pathname) && (
             <>
               <div className={styles.title}>
                 Примеры решения задач по высшей математике
@@ -52,7 +56,7 @@ const Header = () => {
 
           <div
             className={`${styles.search} ${
-              pathname === startPage
+              [startPage, startPage.slice(0, -1)].includes(pathname)
                 ? styles.mainSearchBottom
                 : styles.searchBottom
             }`}

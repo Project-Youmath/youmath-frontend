@@ -1,24 +1,30 @@
-.buttons {
+.section {
   display: flex;
-
-  border: 0.7px solid #282a2e;
-  border-radius: 24px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  &_resume {
-    font-size: 20em;
-    width: 5em;
-    height: 2.5em;
-    color: #282a2e;
-  }
-  &_links {
+  justify-content: space-evenly;
+  gap: 8em;
+  flex-wrap: wrap;
+  .buttons {
     display: flex;
-    width: 48em;
-    height: 48em;
-    background: #12f3af;
-    border-radius: 24;
+
+    border: 0.7px solid #282a2e;
+    border-radius: 24px;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    &_resume {
+      font-size: 20em;
+      width: 5em;
+      height: 2.5em;
+      color: #282a2e;
+    }
+    &_links {
+      display: flex;
+      width: 48em;
+      height: 48em;
+      background: #12f3af;
+      border-radius: 24;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

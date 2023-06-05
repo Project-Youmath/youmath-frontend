@@ -8,10 +8,12 @@
     max-width: 65%;
   }
 
-  &__links {
+  .links {
     margin-top: 24em;
 
     display: flex;
+    flex-wrap: wrap;
+    gap: 40em;
     justify-content: space-between;
   }
 
@@ -23,7 +25,7 @@
     text-decoration: none;
   }
 
-  &__taskCount {
+  .taskCount {
     padding: 0.2em 1em;
 
     color: white;
@@ -37,7 +39,7 @@
     border: solid 1px white;
   }
 
-  &__allVariants {
+  .allVariants {
     padding: 12px 30px;
 
     color: var(--text-color);

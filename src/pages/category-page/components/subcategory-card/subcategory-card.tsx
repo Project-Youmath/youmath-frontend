@@ -27,13 +27,13 @@ export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
       >
         {subcategory.description ?? ""}
       </Text>
-      <div className={styles.categoryCard__links}>
-        <div className={`${styles.categoryCard__taskCount}`}>
+      <div className={styles.links}>
+        <div className={`${styles.taskCount}`}>
           {`${subcategory.articles_count ?? "нет"} вариантов`}
         </div>
         <Link
           to={`${startPage}categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
-          className={`${styles.categoryCard__link} ${styles.categoryCard__allVariants}`}
+          className={`${styles.categoryCard__link} ${styles.allVariants}`}
         >
           <span> К списку вариантов</span>
           <ArrowRightSmallIcon />

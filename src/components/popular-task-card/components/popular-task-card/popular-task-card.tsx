@@ -12,7 +12,7 @@ export const PopularTaskCard: FC<PopularTaskCardProps> = ({ category }) => {
   return (
     <div className={styles.popularTaskCard}>
       <PopularTaskCardBaseInfo category={category} />
-      <PopularTaskCardExternalInfo category={category} />
+      <PopularTaskCardExternalInfo landscape={true} category={category} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { PopularTaskCardVariants } from "../variants/popular-task-card-variants"
 import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import { PopularTaskCardExternalInfo } from "../external-info/popular-task-card-external-info";
 
 interface PopularTaskCardBaseInfoProps {
   category: CategoryResource;
@@ -27,6 +28,7 @@ export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
           </Text>
         )}
       </div>
+      <PopularTaskCardExternalInfo landscape={false} category={category} />
 
       <PopularTaskCardVariants
         category={category}

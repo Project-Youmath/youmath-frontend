@@ -1,8 +1,29 @@
+import Anastasia_Shchepotina from "../assets/images/Anastasia_Shchepotina.jpg";
+import Andrey_Smirnov from "../assets/images/Andrey_Smirnov.jpg";
+import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
+import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 export const startPage = "/youmath-frontend/";
+
 export const team = [
   {
-    image:
-      "https://sun9-14.userapi.com/impg/_LnsTrpVtc4zTf9R6kVQ9OCm3OTr_YPsQ0hXPA/cVR8PxIFgws.jpg?size=2560x1707&quality=95&sign=25bf6603b8d438beb2c8b0caff9fa6de&type=album",
+    image: Anastasia_Shchepotina,
+    fullName: "Анастасия Щепотина",
+    jobTitle: "Project Manager",
+    phone: "tel:+79688892210",
+    mail: "shchepad@ya.ru",
+    telegram: "https://t.me/ShchepotA",
+    linkedin: "https://www.linkedin.com/in/anastasia-shchepotina-566728252/",
+  },
+  {
+    image: Anastasia_Girenko,
+    fullName: "Анастасия Гиренко",
+    jobTitle: "UX/UI-дизайнер",
+    telegram: "https://t.me/Izorgadina",
+    linkedin: "https://www.linkedin.com/in/anastasia-girenko-98534851/",
+    Behance: "https://www.behance.net/izorgadina",
+  },
+  {
+    image: Alexandr_Goykhfis,
     fullName: "Александр Гойхфис",
     jobTitle: "Frontend-разработчик",
     resume:
@@ -12,7 +33,7 @@ export const team = [
     gitHub: "https://github.com/GoykfisAlexander",
   },
   {
-    image: "https://avatars.githubusercontent.com/u/108524029?v=4",
+    image: Andrey_Smirnov,
     fullName: "Андрей Смирнов",
     jobTitle: "Backend-разработчик",
     resume: "https://hh.ru/resume/294dcdeaff02946eac0039ed1f756f4a4b3166",

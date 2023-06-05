@@ -1,9 +1,11 @@
 .__section {
   display: grid;
-  gap: 48px;
+  gap: 48em;
+  margin-bottom: 64em;
+
   &__title {
     @media (orientation: portrait) {
-      margin-left: 24px;
+      margin-left: 24em;
     }
   }
 }

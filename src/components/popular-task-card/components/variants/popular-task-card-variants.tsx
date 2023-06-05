@@ -33,15 +33,17 @@ export const PopularTaskCardVariants: FC<PopularTaskCardVariantsProps> = ({
             </Text>
           )}
           <div className={styles.popularTaskCardVariants__variants}>
-            {category?.popular_articles.map((popular_article) => (
-              <Link
-                key={`popular_article${popular_article.id}`}
-                to={`${startPage}categories/category/${category.id}/subcategory/none/task/${popular_article.id}`}
-                className={styles.popularTaskCardVariants__variantLink}
-              >
-                {popular_article.title}
-              </Link>
-            ))}
+            {category?.popular_articles
+              .map((popular_article) => (
+                <Link
+                  key={`popular_article${popular_article.id}`}
+                  to={`${startPage}categories/category/${category.id}/subcategory/none/task/${popular_article.id}`}
+                  className={styles.popularTaskCardVariants__variantLink}
+                >
+                  {popular_article.title}
+                </Link>
+              ))
+              .slice(0, 3)}
           </div>
         </>
       )}

@@ -1,4 +1,4 @@
-.popularTaskSection {
+.section {
   background-image: url("../../../../../../assets/images/popular-task-bg.jpg");
   .content {
     padding: 24em 0 24em 0;
@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 24em;
   }
-  &__taskList {
+  .taskList {
     display: flex;
     flex-direction: column;
     gap: 40em;

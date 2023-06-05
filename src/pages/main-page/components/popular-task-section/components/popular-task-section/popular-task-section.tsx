@@ -21,17 +21,19 @@ export const PopularTaskSection = () => {
   }, []);
 
   return (
-    <section className={styles.popularTaskSection}>
+    <section className={styles.section}>
       <Container>
         <div className={styles.content}>
           <H2>Популярные задачи</H2>
-          <div className={styles.popularTaskSection__taskList}>
-            {categories.map((category, i) => (
-              <PopularTaskCard
-                key={"popularTaskSection__task-" + i}
-                category={category}
-              />
-            ))}
+          <div className={styles.taskList}>
+            {categories
+              .map((category, i) => (
+                <PopularTaskCard
+                  key={"popularTaskSection__task-" + i}
+                  category={category}
+                />
+              ))
+              .slice(0, 3)}
           </div>
         </div>
       </Container>

@@ -4,11 +4,12 @@ import { FC, useEffect, useRef, useState } from "react";
 
 interface PopularTaskCardExternalInfoProps {
   category: CategoryResource;
+  landscape: boolean;
 }
 
 export const PopularTaskCardExternalInfo: FC<
   PopularTaskCardExternalInfoProps
-> = ({ category }) => {
+> = ({ category, landscape }) => {
   const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const textRef = useRef<HTMLParagraphElement | null>(null);
@@ -21,10 +22,6 @@ export const PopularTaskCardExternalInfo: FC<
         getComputedStyle(textElement).lineHeight || "0"
       );
       const maxHeight = maxLines * lineHeight;
-      console.log(textElement.offsetHeight > maxHeight);
-      console.log(textElement.offsetHeight);
-      console.log(maxHeight);
-      console.log(lineHeight);
       if (textElement.offsetHeight > maxHeight) {
         setIsOverflowed(true);
         setIsOpen(false);
@@ -34,7 +31,11 @@ export const PopularTaskCardExternalInfo: FC<
     }
   }, []);
   return (
-    <div className={styles.popularTaskCardExternalInfo}>
+    <div
+      className={`${styles.ExternalInfo} ${
+        landscape ? styles.ExternalInfoLandscape : styles.ExternalInfoPortrait
+      }`}
+    >
       <p
         ref={textRef}
         className={`${styles.p} ${!isOpen ? styles.overflowed : ""} `}

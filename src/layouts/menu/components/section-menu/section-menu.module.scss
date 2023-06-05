@@ -1,9 +1,10 @@
 .sectionMenu {
-  gap: 8px;
+  gap: 8em;
   display: flex;
   flex-direction: column;
+  margin-bottom: 68em;
 
-  @media screen and (max-width: 1200px) {
+  @media (orientation: portrait) {
     & {
       display: none;
     }
