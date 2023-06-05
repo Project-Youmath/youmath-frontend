@@ -2,7 +2,6 @@ import styles from "./popular-task-card-base-info.module.scss";
 import { H3 } from "../../../ui/typography/h3/h3";
 import { Text } from "../../../ui/typography/text/text";
 import { PopularTaskCardVariants } from "../variants/popular-task-card-variants";
-import { useMatchMedia } from "../../../../hooks/use-match-media";
 import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC } from "react";
 import { Link } from "react-router-dom";
@@ -14,8 +13,6 @@ interface PopularTaskCardBaseInfoProps {
 export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
   category,
 }) => {
-  const isVariantVisible = !useMatchMedia("(max-width: 1200px)");
-
   return (
     <div className={styles.popularTaskCardBaseInfo}>
       <div>
@@ -30,12 +27,11 @@ export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
           </Text>
         )}
       </div>
-      {isVariantVisible && (
-        <PopularTaskCardVariants
-          category={category}
-          extraClass={styles.popularTaskCardBaseInfo__variants}
-        />
-      )}
+
+      <PopularTaskCardVariants
+        category={category}
+        extraClass={styles.popularTaskCardBaseInfo__variants}
+      />
     </div>
   );
 };

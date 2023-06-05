@@ -1,23 +1,25 @@
 .popularCategoryCard {
-  padding: 16px;
+  padding: 16em;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-top: 1px solid #D3D6D5;
+  border-top: 1em solid #d3d6d5;
 
   &__info {
-    gap: 10px;
+    gap: 10em;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   &__arrow {
-    fill: #D3D6D5;
+    width: 40em;
+    height: 40em;
+    fill: #d3d6d5;
 
-    @media screen and (max-width: 1200px) {
+    @media (orientation: portrait) {
       display: none;
     }
   }

@@ -5,7 +5,9 @@ const SearchPageCards = () => {
   return (
     <>
       {tasks.map((task: any) => (
-        <div key={task.title + task.id}>{task.title}</div>
+        <div style={{ fontSize: "20em" }} key={task.title + task.id}>
+          {task.title}
+        </div>
       ))}
     </>
   );

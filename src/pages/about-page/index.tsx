@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 import AboutPageContent from "./components/content";
 import { SectionMenu } from "../../layouts/menu";
 import Container from "../../layouts/container";
@@ -8,7 +9,7 @@ const AboutPage = () => {
     <Container>
       <>
         <Navigation />
-        <section style={{ display: "flex" }}>
+        <section className={styles.section}>
           <SectionMenu /> <AboutPageContent />
         </section>
       </>

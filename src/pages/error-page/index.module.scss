@@ -1,20 +1,24 @@
-.error_page {
+.section {
+  padding: 40em 40em 40em 40em;
   height: max-content;
   display: grid;
-  grid-template-columns: max-content;
   justify-content: center;
-  margin-top: 40px;
-  &_button {
+  .title {
+    font-weight: 700;
+    font-size: 32em;
+    text-align: center;
+  }
+  .button {
     display: flex;
     margin: auto;
-    width: 284px;
-    height: 48px;
+    width: 20em;
+    height: 4em;
     background: #12f3af;
-    border-radius: 24px;
+    border-radius: 2em;
     border: none;
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 1em;
   }
 }

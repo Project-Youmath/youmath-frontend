@@ -1,62 +1,43 @@
 .text {
   margin: 0;
-  font-family: 'Roboto Flex', serif;
+  font-family: "Roboto Flex", serif;
   font-style: normal;
 
   &_size_small {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 20em;
     line-height: 140%;
 
-    @media screen and (max-width: 744px) {
-      font-size: 18px;
-    }
-
     @media screen and (max-width: 360px) {
-      font-size: 16px;
       line-height: 130%;
     }
   }
 
   &_size_large {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 24em;
     line-height: 140%;
 
     @media screen and (max-width: 360px) {
-      font-size: 20px;
       line-height: 130%;
     }
   }
 
   &_size_button {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 20em;
     line-height: 120%;
-
-    @media screen and (max-width: 744px) {
-      font-size: 18px;
-    }
   }
-
   &_size_tabs {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 16em;
     line-height: 120%;
-
-    @media screen and (max-width: 744px) {
-      font-size: 14px;
-    }
   }
 
   &_size_footer {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 16em;
     line-height: 120%;
-
-    @media screen and (max-width: 744px) {
-      font-size: 14px;
-    }
   }
 
   &_color_white {

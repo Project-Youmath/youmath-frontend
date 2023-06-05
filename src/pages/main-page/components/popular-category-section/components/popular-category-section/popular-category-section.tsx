@@ -8,6 +8,7 @@ import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
 import { getPopularCategoriesThunk } from "../../../../../../store/thunks";
 import { useAppSelector } from "../../../../../../store/hooks/use-app-selector";
 import { startPage } from "../../../../../../data/ constants";
+import Container from "../../../../../../layouts/container";
 
 export const PopularCategorySection = () => {
   const dispatch = useAppDispatch();
@@ -25,21 +26,25 @@ export const PopularCategorySection = () => {
 
   return (
     <section className={styles.popularCategorySection}>
-      <H2>Популярные разделы</H2>
-      <div className={styles.popularCategorySection__categories}>
-        {categories.map((category, i) => (
-          <CategoryCard key={category.title + i} category={category} />
-        ))}
-      </div>
-      <Link
-        to={startPage + "categories"}
-        className={styles.popularCategorySection__allCategoriesLink}
-      >
-        Смотреть все
-        <RightArrowIcon
-          classname={styles.popularCategorySection__allCategoriesLinkICon}
-        />
-      </Link>
+      <Container>
+        <div className={styles.content}>
+          <H2>Популярные разделы</H2>
+          <div className={styles.popularCategorySection__categories}>
+            {categories.map((category, i) => (
+              <CategoryCard key={category.title + i} category={category} />
+            ))}
+          </div>
+          <Link
+            to={startPage + "categories"}
+            className={styles.popularCategorySection__allCategoriesLink}
+          >
+            Смотреть все
+            <RightArrowIcon
+              classname={styles.popularCategorySection__allCategoriesLinkICon}
+            />
+          </Link>
+        </div>
+      </Container>
     </section>
   );
 };

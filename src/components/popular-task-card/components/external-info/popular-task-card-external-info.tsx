@@ -1,7 +1,4 @@
 import styles from "./popular-task-card-external-info.module.scss";
-import { Link } from "react-router-dom";
-import { useMatchMedia } from "../../../../hooks/use-match-media";
-import { PopularTaskCardVariants } from "../variants/popular-task-card-variants";
 import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC, useEffect, useRef, useState } from "react";
 
@@ -12,7 +9,6 @@ interface PopularTaskCardExternalInfoProps {
 export const PopularTaskCardExternalInfo: FC<
   PopularTaskCardExternalInfoProps
 > = ({ category }) => {
-  const isVariantVisible = useMatchMedia("(max-width: 1200px)");
   const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const textRef = useRef<HTMLParagraphElement | null>(null);
@@ -25,7 +21,10 @@ export const PopularTaskCardExternalInfo: FC<
         getComputedStyle(textElement).lineHeight || "0"
       );
       const maxHeight = maxLines * lineHeight;
-
+      console.log(textElement.offsetHeight > maxHeight);
+      console.log(textElement.offsetHeight);
+      console.log(maxHeight);
+      console.log(lineHeight);
       if (textElement.offsetHeight > maxHeight) {
         setIsOverflowed(true);
         setIsOpen(false);
@@ -49,11 +48,6 @@ export const PopularTaskCardExternalInfo: FC<
         >
           Подробнее...
         </p>
-      )}
-      {isVariantVisible && (
-        <PopularTaskCardVariants
-          extraClass={styles.popularTaskCardExternalInfo__variants}
-        />
       )}
     </div>
   );

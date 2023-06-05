@@ -2,15 +2,9 @@
   margin: 0;
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 28em;
   line-height: 130%;
   color: var(--text-color);
-
-
-  @media screen and (max-width: 360px) {
-    font-size: 22px;
-  }
-
   &_color_white {
     color: var(--white-color);
   }

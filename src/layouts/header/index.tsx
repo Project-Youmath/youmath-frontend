@@ -4,7 +4,6 @@ import { HeaderNav } from "./components/header-nav/header-nav";
 import { Link, useLocation } from "react-router-dom";
 import { startPage } from "../../data/ constants";
 import { SearchInput } from "../../components/search-input/search-input";
-import { H1 } from "../../components/ui/typography/h1/h1";
 import Container from "../container";
 
 const Header = () => {
@@ -22,8 +21,8 @@ const Header = () => {
                 : styles.gradientMaskInactive
             }
           >
-            <div className={styles.header__topColumn}>
-              <Link className={styles.header__topColumn__logo} to={startPage}>
+            <div className={styles.topColumn}>
+              <Link className={styles.topColumn__logo} to={startPage}>
                 <img src={logo} alt="Логотип YouMath" />
               </Link>
               <div
@@ -42,10 +41,10 @@ const Header = () => {
 
           {pathname === startPage && (
             <>
-              <div className={styles.header__title}>
-                <H1>Примеры решения задач по высшей математике</H1>
+              <div className={styles.title}>
+                Примеры решения задач по высшей математике
               </div>
-              <div className={styles.header__description}>
+              <div className={styles.description}>
                 Не думай — качай, типовик — сдавай!
               </div>
             </>

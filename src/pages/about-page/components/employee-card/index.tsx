@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 import { FC } from "react";
 import { team } from "../../../../data/ constants";
 import EmployeeСardButtons from "./buttons";
@@ -6,32 +7,14 @@ interface IEmployeeСardProps {
 }
 const EmployeeСard: FC<IEmployeeСardProps> = ({ employeeСard }) => {
   return (
-    <section
-      style={{
-        width: 300,
-        height: 350,
-        display: "grid",
-        justifyContent: "center",
-        gap: 15,
-      }}
-    >
+    <section className={styles.section}>
       <img
-        style={{
-          margin: "auto",
-          width: 200,
-          height: 200,
-          borderRadius: 200,
-          objectFit: "cover",
-        }}
+        className={styles.avatar}
         src={employeeСard.image}
         alt="Моё изображение"
       />
-      <h4 style={{ textAlign: "center", margin: 0, padding: 0 }}>
-        {employeeСard.fullName}
-      </h4>
-      <p style={{ textAlign: "center", margin: 0, padding: 0 }}>
-        {employeeСard.jobTitle}
-      </p>
+      <span className={styles.fullName}>{employeeСard.fullName}</span>
+      <span className={styles.jobTitle}>{employeeСard.jobTitle}</span>
       <EmployeeСardButtons employeeСard={employeeСard} />
     </section>
   );

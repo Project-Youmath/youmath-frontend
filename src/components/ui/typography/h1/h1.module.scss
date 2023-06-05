@@ -1,9 +1,9 @@
 .h {
   margin: 0;
-  font-family: 'Ubuntu', serif;
+  font-family: "Ubuntu", serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 40em;
   line-height: 120%;
   color: var(--text-color);
 
@@ -21,12 +21,5 @@
   }
   &_color_darkGreen {
     color: var(--text-dark-green-color);
-  }
-  
-  @media screen and (max-width: 744px) {
-    font-size: 38px;
-  }
-  @media screen and (max-width: 360px) {
-    font-size: 28px;
   }
 }

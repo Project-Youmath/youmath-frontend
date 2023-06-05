@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
 import { useEffect } from "react";
 import { getPopularCategoriesThunk } from "../../../../../../store/thunks";
 import { useAppSelector } from "../../../../../../store/hooks/use-app-selector";
+import Container from "../../../../../../layouts/container";
 
 export const PopularTaskSection = () => {
   const dispatch = useAppDispatch();
@@ -20,18 +21,20 @@ export const PopularTaskSection = () => {
   }, []);
 
   return (
-    <div className={styles.popularTaskSection}>
-      <div className={styles.popularTaskSection__content}>
-        <H2>Популярные задачи</H2>
-        <div className={styles.popularTaskSection__taskList}>
-          {categories.map((category, i) => (
-            <PopularTaskCard
-              key={"popularTaskSection__task-" + i}
-              category={category}
-            />
-          ))}
+    <section className={styles.popularTaskSection}>
+      <Container>
+        <div className={styles.content}>
+          <H2>Популярные задачи</H2>
+          <div className={styles.popularTaskSection__taskList}>
+            {categories.map((category, i) => (
+              <PopularTaskCard
+                key={"popularTaskSection__task-" + i}
+                category={category}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </section>
   );
 };

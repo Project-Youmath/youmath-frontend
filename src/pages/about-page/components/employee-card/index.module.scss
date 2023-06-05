@@ -1,0 +1,23 @@
+.section {
+  width: 300em;
+  height: 350em;
+  display: grid;
+  justify-content: center;
+  gap: 15em;
+  .avatar {
+    margin: auto;
+    width: 200em;
+    height: 200em;
+    border-radius: 200em;
+    object-fit: cover;
+  }
+  .fullName {
+    text-align: center;
+    font-size: 24em;
+    font-weight: 500;
+  }
+  .jobTitle {
+    text-align: center;
+    font-size: 20em;
+  }
+}

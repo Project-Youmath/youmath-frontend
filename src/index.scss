@@ -28,6 +28,10 @@ body {
 .app {
   min-height: 100vh;
   display: grid;
+  font-size: 1px;
+  @media (orientation: portrait) {
+    font-size: 0.8px;
+  }
 }
 .page {
   min-height: 60vh;

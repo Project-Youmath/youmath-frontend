@@ -31,25 +31,16 @@
     font-family: "Roboto Flex", serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 20em;
     line-height: 140%;
     color: var(--text-dim-color);
 
     @media screen and (max-width: 744px) {
       & {
         font-weight: 300;
-        font-size: 18px;
         line-height: 130%;
       }
     }
-
-    @media screen and (max-width: 425px) {
-      & {
-        font-size: 16px;
-        line-height: 130%;
-      }
-    }
-
     &:focus {
       outline: none;
     }
