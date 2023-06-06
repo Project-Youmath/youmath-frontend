@@ -1,14 +1,14 @@
-import styles from "./popular-category-section.module.scss";
-import { H2 } from "../../../../../../components/ui/typography/h2/h2";
-import CategoryCard from "../../../../../../components/category-card";
+import styles from "./index.module.scss";
+import { H2 } from "../../../../components/ui/typography/h2/h2";
+import CategoryCard from "../../../../components/category-card";
 import { Link } from "react-router-dom";
-import { RightArrowIcon } from "../../../../../../components/ui/icons/right-arrow-icon";
+import { RightArrowIcon } from "../../../../components/ui/icons/right-arrow-icon";
 import { useEffect } from "react";
-import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
-import { getPopularCategoriesThunk } from "../../../../../../store/thunks";
-import { useAppSelector } from "../../../../../../store/hooks/use-app-selector";
-import { startPage } from "../../../../../../data/ constants";
-import Container from "../../../../../../layouts/container";
+import { useAppDispatch } from "../../../../store/hooks/use-app-dispatch";
+import { getPopularCategoriesThunk } from "../../../../store/thunks";
+import { useAppSelector } from "../../../../store/hooks/use-app-selector";
+import { startPage } from "../../../../data/ constants";
+import Container from "../../../../layouts/container";
 
 export const PopularCategorySection = () => {
   const dispatch = useAppDispatch();

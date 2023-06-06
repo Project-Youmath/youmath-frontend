@@ -12,12 +12,12 @@ const TaskCard: FC<ITaskCardProps> = ({ task }) => {
   return (
     <Link
       to={`${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${task.id}`}
-      className={styles.__link}
+      className={styles.link}
     >
-      <section className={styles.__card}>
-        <div className={styles.__card__title}>{task.title}</div>
-        <div>{task.title}</div>
-        <div className={styles.__card__icon}>
+      <section className={styles.section}>
+        <div className={styles.title}>{task.title}</div>
+        <div className={styles.description}>{task.description}</div>
+        <div className={styles.icon}>
           <ArrowRightSmallIcon />
         </div>
       </section>

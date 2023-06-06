@@ -1,11 +1,17 @@
-.popularTaskCardBaseInfo {
+.section {
   min-width: 50%;
   max-width: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  gap: 16em;
+  .author {
+    font-size: 20em;
+  }
+  .darkBlue,
+  .darkGreen {
+    color: #d3d6d5;
+  }
   @media (orientation: portrait) {
     & {
       max-width: 100%;

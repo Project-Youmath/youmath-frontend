@@ -1,6 +1,6 @@
-import styles from "./category-section-content.module.scss";
-import { CategorySectionContentInfo } from "../category-section-content-info/category-section-content-info";
-import { SubcategoryCard } from "../subcategory-card/subcategory-card";
+import styles from "./index.module.scss";
+import { CategorySectionContentInfo } from "./content-info";
+import { SubcategoryCard } from "./subcategory-card";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -14,17 +14,19 @@ export const CategorySectionContent = () => {
     (state) => state.categoryReducer
   );
   const { categoryId } = useParams();
+
   useEffect(() => {
     dispatch(getCategoryThunk(categoryId ?? ""));
   }, [dispatch, categoryId]);
+
   return (
     <>
       {isLoading ? (
         <Loader />
       ) : (
-        <div className={styles.categorySectionContent}>
+        <section className={styles.section}>
           <CategorySectionContentInfo />
-          <div className={styles.categorySectionContent__cards}>
+          <div className={styles.cards}>
             {category?.subsections?.map((subcategory) => (
               <SubcategoryCard
                 key={subcategory.title + subcategory.id}
@@ -32,7 +34,7 @@ export const CategorySectionContent = () => {
               />
             ))}
           </div>
-        </div>
+        </section>
       )}
     </>
   );

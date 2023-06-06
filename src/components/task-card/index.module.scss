@@ -1,32 +1,34 @@
-.__link {
+.link {
   text-decoration: none;
 }
-.__card {
+.section {
   display: grid;
-  width: 100%;
-  max-width: 300px;
+  width: 180em;
   height: 100%;
   background: #cde2d9;
-  border-radius: 16px;
+  border-radius: 16em;
   justify-content: center;
   align-items: center;
   grid-template-columns: 80%;
-  gap: 8px;
+  gap: 8em;
   cursor: pointer;
-
+  overflow: hidden;
   div {
     text-align: center;
     color: #245353;
   }
-  &__title {
+  .title {
     margin-top: 10px;
     font-size: 24em;
     font-weight: bold;
   }
-  &__icon {
+  .description {
+    font-size: 24em;
+  }
+  .icon {
     margin-left: auto;
   }
-  &__icon * {
+  .icon * {
     fill: #245353;
   }
   &:hover {

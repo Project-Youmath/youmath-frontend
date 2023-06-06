@@ -1,15 +1,16 @@
-import styles from "./popular-task-card-external-info.module.scss";
+import styles from "./index.module.scss";
 import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC, useEffect, useRef, useState } from "react";
 
 interface PopularTaskCardExternalInfoProps {
   category: CategoryResource;
   landscape: boolean;
+  extraClass: string;
 }
 
 export const PopularTaskCardExternalInfo: FC<
   PopularTaskCardExternalInfoProps
-> = ({ category, landscape }) => {
+> = ({ category, landscape, extraClass }) => {
   const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const textRef = useRef<HTMLParagraphElement | null>(null);
@@ -31,25 +32,25 @@ export const PopularTaskCardExternalInfo: FC<
     }
   }, []);
   return (
-    <div
-      className={`${styles.ExternalInfo} ${
-        landscape ? styles.ExternalInfoLandscape : styles.ExternalInfoPortrait
+    <section
+      className={`${styles.section} ${
+        landscape ? styles.landscape : styles.portrait
       }`}
     >
       <p
         ref={textRef}
-        className={`${styles.p} ${!isOpen ? styles.overflowed : ""} `}
+        className={`${styles.description} ${!isOpen ? styles.overflowed : ""} `}
       >
         {category.description}
       </p>
       {isOverflowed && (
         <p
-          className={`${styles.p} ${styles.more}`}
+          className={`${styles.description} ${styles.more} ${styles[extraClass]}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           Подробнее...
         </p>
       )}
-    </div>
+    </section>
   );
 };

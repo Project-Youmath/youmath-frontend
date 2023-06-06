@@ -1,0 +1,48 @@
+import styles from "./index.module.scss";
+import { DownArrowIcon } from "../../../../../components/ui/icons/down-arrow-icon";
+import { useAppSelector } from "../../../../../store/hooks/use-app-selector";
+import { useEffect, useRef, useState } from "react";
+
+export const CategorySectionContentInfo = () => {
+  const { category } = useAppSelector((state) => state.categoryReducer);
+
+  const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const textRef = useRef<HTMLParagraphElement | null>(null);
+  useEffect(() => {
+    const textElement = textRef.current;
+    if (textElement) {
+      const maxLines = 6;
+      const lineHeight = parseInt(
+        getComputedStyle(textElement).lineHeight || "0"
+      );
+      const maxHeight = maxLines * lineHeight;
+      if (textElement.offsetHeight > maxHeight) {
+        setIsOverflowed(true);
+        setIsOpen(false);
+      } else {
+        setIsOverflowed(false);
+      }
+      console.log(textElement.offsetHeight > maxHeight);
+      console.log(maxHeight);
+      console.log(textElement.offsetHeight);
+    }
+  }, []);
+  return (
+    <section className={styles.section}>
+      <div className={styles.title}>{category?.title}</div>
+      <div
+        ref={textRef}
+        className={`${styles.description} ${!isOpen ? styles.overflowed : ""}`}
+      >
+        {category?.description}
+      </div>
+      {isOverflowed && (
+        <div className={styles.more} onClick={() => setIsOpen(!isOpen)}>
+          Подробнее
+          <DownArrowIcon classname={styles.icon} />
+        </div>
+      )}
+    </section>
+  );
+};

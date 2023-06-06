@@ -3,7 +3,16 @@
   gap: 24em;
   display: flex;
   align-items: center;
-
+  .darkBlue {
+    color: #3e5372;
+  }
+  .white {
+    color: white;
+    background-color: #245353;
+  }
+  .darkGreen {
+    color: #245353;
+  }
   @media (orientation: portrait) {
     flex-direction: column;
   }

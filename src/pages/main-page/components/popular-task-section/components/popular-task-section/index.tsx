@@ -1,4 +1,4 @@
-import styles from "./popular-task-section.module.scss";
+import styles from "./index.module.scss";
 import { H2 } from "../../../../../../components/ui/typography/h2/h2";
 import { PopularTaskCard } from "../../../../../../components/popular-task-card";
 import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
@@ -29,6 +29,7 @@ export const PopularTaskSection = () => {
             {categories
               .map((category, i) => (
                 <PopularTaskCard
+                  extraClass={["darkBlue", "white", "darkGreen"][i]}
                   key={"popularTaskSection__task-" + i}
                   category={category}
                 />

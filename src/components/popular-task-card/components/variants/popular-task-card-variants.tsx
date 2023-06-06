@@ -7,7 +7,7 @@ import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 import { startPage } from "../../../../data/ constants";
 
 interface PopularTaskCardVariantsProps {
-  extraClass?: string;
+  extraClass: string;
   category?: CategoryResource;
 }
 
@@ -34,11 +34,11 @@ export const PopularTaskCardVariants: FC<PopularTaskCardVariantsProps> = ({
           )}
           <div className={styles.popularTaskCardVariants__variants}>
             {category?.popular_articles
-              .map((popular_article) => (
+              .map((popular_article, i) => (
                 <Link
                   key={`popular_article${popular_article.id}`}
                   to={`${startPage}categories/category/${category.id}/subcategory/none/task/${popular_article.id}`}
-                  className={styles.popularTaskCardVariants__variantLink}
+                  className={`${styles[extraClass]} ${styles.popularTaskCardVariants__variantLink}`}
                 >
                   {popular_article.title}
                 </Link>

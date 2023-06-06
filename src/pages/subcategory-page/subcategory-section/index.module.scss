@@ -1,10 +1,11 @@
-.__section {
-  &__cards {
+.section {
+  margin-bottom: 95em;
+  .description {
+    font-size: 20em;
+  }
+  .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180em, 1fr));
     gap: 24px;
-    @media (orientation: portrait) {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
   }
 }

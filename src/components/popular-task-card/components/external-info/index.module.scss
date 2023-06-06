@@ -1,10 +1,9 @@
-.ExternalInfo {
+.section {
   width: 50%;
   gap: 10em;
   display: none;
   flex-direction: column;
-  .p {
-    color: white;
+  .description {
     font-size: 20em;
     line-height: 1.2em;
   }
@@ -12,24 +11,25 @@
     text-decoration: underline;
     cursor: pointer;
   }
+  .darkBlue,
+  .darkGreen {
+    color: #d3d6d5;
+  }
   .overflowed {
     overflow: hidden;
     max-height: 7.2em;
   }
-  &__link {
-    color: var(--white-color);
-  }
 }
 @media (orientation: portrait) {
-  .ExternalInfo {
+  .section {
     width: 100%;
   }
-  .ExternalInfoPortrait {
+  .portrait {
     display: flex;
   }
 }
 @media (orientation: landscape) {
-  .ExternalInfoLandscape {
+  .landscape {
     display: flex;
   }
 }

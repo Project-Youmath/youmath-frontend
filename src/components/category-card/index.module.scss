@@ -1,20 +1,19 @@
-.popularCategoryCard {
+.link {
+  text-decoration: none;
+}
+.section {
   padding: 16em;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-top: 1em solid #d3d6d5;
-
-  &__info {
+  .info {
     gap: 10em;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-  &__arrow {
+  .arrow {
     width: 40em;
     height: 40em;
     fill: #d3d6d5;

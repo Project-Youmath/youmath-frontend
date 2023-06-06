@@ -12,14 +12,14 @@ const SectionSubcategory = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className={styles.__section}>
+        <section className={styles.section}>
           <H2>{subcategory?.title ?? ""}</H2>
-          <p>{subcategory?.description} </p>
-          <section className={styles.__section__cards}>
+          <p className={styles.description}>{subcategory?.description} </p>
+          <div className={styles.cards}>
             {tasks.map((task) => (
               <TaskCard key={task.title + task.id} task={task}></TaskCard>
             ))}
-          </section>
+          </div>
         </section>
       )}
     </>

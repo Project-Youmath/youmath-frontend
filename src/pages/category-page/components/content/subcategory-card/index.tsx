@@ -1,10 +1,8 @@
-import styles from "./subcategory-card.module.scss";
-import { H3 } from "../../../../components/ui/typography/h3/h3";
-import { Text } from "../../../../components/ui/typography/text/text";
+import styles from "./index.module.scss";
 import { Link, useParams } from "react-router-dom";
 import { FC } from "react";
-import { ArrowRightSmallIcon } from "../../../../components/ui/icons/arrow-right-small-icon";
-import { startPage } from "../../../../data/ constants";
+import { ArrowRightSmallIcon } from "../../../../../components/ui/icons/arrow-right-small-icon";
+import { startPage } from "../../../../../data/ constants";
 interface ISubcategoryCardProps {
   subcategory: {
     id: number;
@@ -17,28 +15,21 @@ interface ISubcategoryCardProps {
 export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
   const { categoryId } = useParams();
   return (
-    <div className={styles.categoryCard}>
-      <H3 textColor="white">{subcategory.title}</H3>
-      <Text
-        size="small"
-        textType="text"
-        textColor="white"
-        extraclass={styles.categoryCard__description}
-      >
-        {subcategory.description ?? ""}
-      </Text>
+    <section className={styles.section}>
+      <div className={styles.title}>{subcategory.title}</div>
+      <div className={styles.description}>{subcategory.description ?? ""}</div>
       <div className={styles.links}>
         <div className={`${styles.taskCount}`}>
           {`${subcategory.articles_count ?? "нет"} вариантов`}
         </div>
         <Link
           to={`${startPage}categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
-          className={`${styles.categoryCard__link} ${styles.allVariants}`}
+          className={`${styles.link} ${styles.allVariants}`}
         >
           <span> К списку вариантов</span>
           <ArrowRightSmallIcon />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };

@@ -1,0 +1,13 @@
+.section {
+  width: 60%;
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+  .cards {
+    margin-top: 48px;
+
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+}

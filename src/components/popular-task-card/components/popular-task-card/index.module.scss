@@ -3,7 +3,7 @@
 
   width: 100%;
   box-sizing: border-box;
-  gap: 50px;
+  gap: 50em;
   display: flex;
 
   border-radius: 16px;
@@ -16,9 +16,21 @@
       flex-direction: column;
     }
   }
-
+  &:nth-of-type(1) * {
+    .button {
+      color: #3e5372;
+    }
+    color: white;
+  }
   &:nth-of-type(2) {
     background: var(--bg-light-green-color);
+  }
+
+  &:nth-of-type(2) * {
+    color: #245353;
+  }
+  &:nth-of-type(3) * {
+    color: white;
   }
 
   &:nth-of-type(3) {

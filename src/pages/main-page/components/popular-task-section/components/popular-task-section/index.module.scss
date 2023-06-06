@@ -1,11 +1,11 @@
 .section {
   background-image: url("../../../../../../assets/images/popular-task-bg.jpg");
   .content {
-    padding: 24em 0 24em 0;
+    padding: 48em 0 24em 0;
     display: flex;
+    gap: 36em;
 
     flex-direction: column;
-    gap: 24em;
   }
   .taskList {
     display: flex;

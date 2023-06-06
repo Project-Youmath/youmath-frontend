@@ -1,0 +1,49 @@
+.section {
+  padding: 24em;
+  box-sizing: border-box;
+  background: var(--bg-blue-color);
+  width: 100%;
+  border-radius: 16em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24em;
+  .title {
+    font-weight: 600;
+    font-size: 28em;
+  }
+  .description {
+    width: 65%;
+    font-weight: 400;
+    font-size: 20em;
+    @media (orientation: portrait) {
+      width: 100%;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 24em;
+  }
+  .link {
+    padding: 0.4em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    text-decoration: none;
+    background: #12f3af;
+    border-radius: 25em;
+    color: var(--text-color);
+  }
+  .taskCount {
+    padding: 0.4em 1em;
+    color: white;
+    border-radius: 25em;
+    border: solid 1px white;
+  }
+}

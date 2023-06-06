@@ -6,6 +6,7 @@ import { GitIcon } from "../../../../../components/ui/icons/git-icon";
 import { LinkdnIcon } from "../../../../../components/ui/icons/linkdn-icon";
 import { PhoneIcon } from "../../../../../components/ui/icons/phone-icon";
 import { BehanceIcon } from "../../../../../components/ui/icons/behance-icon";
+import { EmailIcon } from "../../../../../components/ui/icons/email-icon";
 interface IEmployeeСardProps {
   employeeСard: (typeof team)[0];
 }
@@ -15,7 +16,7 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
     <section className={styles.section}>
       {employeeСard.resume ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_resume}`}
+          className={`${styles.buttons} ${styles.resume}`}
           href={employeeСard.resume}
           target="_blank"
           rel="noopener noreferrer"
@@ -27,7 +28,7 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
       )}
       {employeeСard.phone ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_links}`}
+          className={`${styles.buttons} ${styles.links}`}
           href={employeeСard.phone}
           target="_blank"
           rel="noopener noreferrer"
@@ -39,7 +40,7 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
       )}
       {employeeСard.telegram ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_links}`}
+          className={`${styles.buttons} ${styles.links}`}
           href={employeeСard.telegram}
           target="_blank"
           rel="noopener noreferrer"
@@ -51,7 +52,7 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
       )}
       {employeeСard.linkedin ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_links}`}
+          className={`${styles.buttons} ${styles.links}`}
           href={employeeСard.linkedin}
           target="_blank"
           rel="noopener noreferrer"
@@ -63,7 +64,7 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
       )}
       {employeeСard.gitHub ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_links}`}
+          className={`${styles.buttons} ${styles.links}`}
           href={employeeСard.gitHub}
           target="_blank"
           rel="noopener noreferrer"
@@ -75,12 +76,24 @@ const EmployeeСardButtons: FC<IEmployeeСardProps> = ({ employeeСard }) => {
       )}
       {employeeСard.Behance ? (
         <a
-          className={`${styles.buttons} ${styles.buttons_links}`}
+          className={`${styles.buttons} ${styles.links}`}
           href={employeeСard.Behance}
           target="_blank"
           rel="noopener noreferrer"
         >
           <BehanceIcon />
+        </a>
+      ) : (
+        ""
+      )}
+      {employeeСard.mail ? (
+        <a
+          className={`${styles.buttons} ${styles.links}`}
+          href={employeeСard.mail}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <EmailIcon />
         </a>
       ) : (
         ""

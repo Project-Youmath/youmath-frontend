@@ -13,8 +13,8 @@ export const BurgerIcon: FC<IIconProps> = ({ classname }) => {
       <path
         d="M6 13L36 13M6 21L36 21M6 29L36 29"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );

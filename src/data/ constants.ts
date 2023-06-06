@@ -10,7 +10,7 @@ export const team = [
     fullName: "Анастасия Щепотина",
     jobTitle: "Project Manager",
     phone: "tel:+79688892210",
-    mail: "shchepad@ya.ru",
+    mail: "mailto:shchepad@ya.ru",
     telegram: "https://t.me/ShchepotA",
     linkedin: "https://www.linkedin.com/in/anastasia-shchepotina-566728252/",
   },
@@ -28,6 +28,8 @@ export const team = [
     jobTitle: "Frontend-разработчик",
     resume:
       "https://docs.google.com/document/d/1Yo3MPrucYscV7STEnrqpGAsSksaKidnZWSIqfDrr8II/edit?usp=sharing",
+    mail: "mailto:agoykhfis@gmail.com",
+
     telegram: "https://t.me/Aleksandr_Goykhfis",
     linkedin: "",
     gitHub: "https://github.com/GoykfisAlexander",
