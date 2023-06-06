@@ -7,14 +7,14 @@ import { FooterLogoContactLine } from "./components/footer-logo-contact-line/foo
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer__content}>
+      <div className={styles.content}>
         <FooterLogoContactLine />
         <FooterDescription />
         <Text
           size={"small"}
           textType={"text"}
           textColor={"white"}
-          extraclass={styles.footer__year}
+          extraclass={styles.year}
         >
           2023
         </Text>

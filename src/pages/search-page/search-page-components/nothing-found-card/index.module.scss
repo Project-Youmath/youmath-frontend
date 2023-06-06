@@ -1,0 +1,11 @@
+.section {
+  display: flex;
+  margin: 80em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 24em;
+    color: #888888;
+  }
+}

@@ -1,3 +1,4 @@
+import styles from "./index.module.scss";
 import Loader from "../../components/loader";
 import SearchPageTitle from "./search-page-components/title";
 import SearchPageCards from "./search-page-components/cards";
@@ -9,6 +10,7 @@ import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
+import SearchFilter from "./search-page-components/filter";
 
 const SearchPage = () => {
   const dispatch = useAppDispatch();
@@ -22,12 +24,21 @@ const SearchPage = () => {
     <Container>
       <>
         <Navigation />
+
         {isLoading ? (
           <Loader />
         ) : (
-          <section>
+          <section className={styles.section}>
             <SearchPageTitle />
-            {tasks.length ? <SearchPageCards /> : <NothingFoundCard />}
+
+            {tasks.length ? (
+              <>
+                <SearchFilter />
+                <SearchPageCards />
+              </>
+            ) : (
+              <NothingFoundCard />
+            )}
           </section>
         )}
       </>

@@ -48,7 +48,7 @@ export const PopularTaskCardExternalInfo: FC<
           className={`${styles.description} ${styles.more} ${styles[extraClass]}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          Подробнее...
+          {isOpen ? "Скрыть" : "Подробнее..."}
         </p>
       )}
     </section>

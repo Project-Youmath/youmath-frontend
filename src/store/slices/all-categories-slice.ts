@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { CategoryResource } from "../../api/types/resource/category-resource";
 import { getAllCategoriesThunk } from "../thunks";
 
@@ -27,15 +27,12 @@ const allCategorySlice = createSlice({
         state.isError = false;
         state.isSuccess = false;
       })
-      .addCase(
-        getAllCategoriesThunk.fulfilled,
-        (state, action: PayloadAction<CategoryResource[]>) => {
-          state.isLoading = false;
-          state.isError = false;
-          state.isSuccess = true;
-          state.categories = action.payload;
-        }
-      )
+      .addCase(getAllCategoriesThunk.fulfilled, (state, action: any) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.isSuccess = true;
+        state.categories = action.payload.results;
+      })
       .addCase(getAllCategoriesThunk.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;

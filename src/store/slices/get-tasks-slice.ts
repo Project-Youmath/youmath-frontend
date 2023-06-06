@@ -7,6 +7,7 @@ interface IGetTasksReducerInitialState {
   isSuccess: boolean;
   isError: boolean;
   tasks: TaskResource[];
+  countTasks: number;
 }
 
 const getTasksReducerInitialState: IGetTasksReducerInitialState = {
@@ -14,6 +15,7 @@ const getTasksReducerInitialState: IGetTasksReducerInitialState = {
   isSuccess: false,
   isError: false,
   tasks: [],
+  countTasks: 0,
 };
 
 const getTasksSlice = createSlice({
@@ -31,7 +33,8 @@ const getTasksSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.tasks = action.payload;
+        state.tasks = action.payload.results;
+        state.countTasks = action.payload.count;
       })
       .addCase(getTasksThunk.rejected, (state) => {
         state.isLoading = false;

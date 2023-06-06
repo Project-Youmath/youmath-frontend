@@ -1,6 +1,5 @@
+import styles from "./index.module.scss";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
-import { H2 } from "../../../../components/ui/typography/h2/h2";
-import { H3 } from "../../../../components/ui/typography/h3/h3";
 import { useLocation } from "react-router-dom";
 
 const SearchPageTitle = () => {
@@ -11,11 +10,19 @@ const SearchPageTitle = () => {
     <>
       {tasks.length ? (
         <>
-          <H2> "Результаты поиска по запросу" </H2>
-          <H3>{`«${query}»`}</H3>
+          <div className={styles.title}> "Результаты поиска по запросу" </div>
+          <div
+            className={`${styles.title} ${styles.query}`}
+          >{`«${query}»`}</div>
         </>
       ) : (
-        <H2>{`По запросу «${query}» ничего не найдено`}</H2>
+        <>
+          <span className={styles.title}>По запросу</span>
+          <span
+            className={`${styles.title} ${styles.query}`}
+          >{` «${query}» `}</span>
+          <span className={styles.title}>ничего не найдено</span>
+        </>
       )}
     </>
   );

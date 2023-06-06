@@ -20,7 +20,7 @@ const createRequest = async (endpoint: string, params?: any) => {
   const data = await axios.get(`${BASEURL}${endpoint}`, {
     params: { ...params },
   });
-  return data.data.results ?? data.data;
+  return data.data;
 };
 
 export const api = {

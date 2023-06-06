@@ -2,6 +2,8 @@ import Anastasia_Shchepotina from "../assets/images/Anastasia_Shchepotina.jpg";
 import Andrey_Smirnov from "../assets/images/Andrey_Smirnov.jpg";
 import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
 import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
+import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
+
 export const startPage = "/youmath-frontend/";
 
 export const team = [
@@ -21,6 +23,16 @@ export const team = [
     telegram: "https://t.me/Izorgadina",
     linkedin: "https://www.linkedin.com/in/anastasia-girenko-98534851/",
     Behance: "https://www.behance.net/izorgadina",
+  },
+  {
+    image: Olga_Dondukova,
+    fullName: "Ольга Дондукова",
+    jobTitle: "QA инженер",
+    resume:
+      "https://docs.google.com/document/d/1P0Vt9J8_oNopIgRP8_95WBkUitrlBKx791RLC8UWT9Y/edit",
+    phone: "tel:+79063469770",
+    mail: "mailto:dondukovaolya@yandex.ru",
+    telegram: "https://t.me/dolka14",
   },
   {
     image: Alexandr_Goykhfis,

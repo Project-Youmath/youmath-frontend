@@ -2,6 +2,7 @@ import styles from "./index.module.scss";
 import { DownArrowIcon } from "../../../../../components/ui/icons/down-arrow-icon";
 import { useAppSelector } from "../../../../../store/hooks/use-app-selector";
 import { useEffect, useRef, useState } from "react";
+import { UpArrowIcon } from "../../../../../components/ui/icons/up-arrow-icon";
 
 export const CategorySectionContentInfo = () => {
   const { category } = useAppSelector((state) => state.categoryReducer);
@@ -23,9 +24,6 @@ export const CategorySectionContentInfo = () => {
       } else {
         setIsOverflowed(false);
       }
-      console.log(textElement.offsetHeight > maxHeight);
-      console.log(maxHeight);
-      console.log(textElement.offsetHeight);
     }
   }, []);
   return (
@@ -39,8 +37,8 @@ export const CategorySectionContentInfo = () => {
       </div>
       {isOverflowed && (
         <div className={styles.more} onClick={() => setIsOpen(!isOpen)}>
-          Подробнее
-          <DownArrowIcon classname={styles.icon} />
+          {isOpen ? "Скрыть" : "Подробнее..."}
+          {isOpen ? <UpArrowIcon /> : <DownArrowIcon classname={styles.icon} />}
         </div>
       )}
     </section>

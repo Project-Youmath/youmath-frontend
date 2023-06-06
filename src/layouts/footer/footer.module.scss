@@ -1,13 +1,13 @@
 .footer {
   background: var(--bg-black-color);
 
-  &__content {
+  .content {
     margin: 0 auto;
-    padding: 30px 24px 50px;
-    max-width: 1200px;
+    padding: 30em 24em 50em;
+    width: 80%;
   }
 
-  &__year {
-    margin: 48px 0 0;
+  .year {
+    margin: 2em 0 0;
   }
 }

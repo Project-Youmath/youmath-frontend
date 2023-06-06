@@ -22,7 +22,7 @@ const TaskPage = () => {
     <Container>
       <>
         <Navigation />
-        <section className={styles.__section}>
+        <section className={styles.section}>
           <SectionMenu />
           {isLoading ? <Loader /> : <TaskSection />}
         </section>
