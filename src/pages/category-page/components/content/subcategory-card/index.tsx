@@ -20,7 +20,15 @@ export const SubcategoryCard: FC<ISubcategoryCardProps> = ({ subcategory }) => {
       <div className={styles.description}>{subcategory.description ?? ""}</div>
       <div className={styles.links}>
         <div className={`${styles.taskCount}`}>
-          {`${subcategory.articles_count ?? "нет"} вариантов`}
+          {`${subcategory.articles_count ?? "нет"} вариант${
+            subcategory.articles_count
+              ? subcategory.articles_count === 1
+                ? ""
+                : [2, 3, 4].includes(subcategory.articles_count)
+                ? "а"
+                : "ов"
+              : "ов"
+          }`}
         </div>
         <Link
           to={`${startPage}categories/category/${categoryId}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
