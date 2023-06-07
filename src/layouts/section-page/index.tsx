@@ -1,3 +1,4 @@
+import { ButtonUp } from "../../components/ui/icons/button-up";
 import Container from "../container";
 import { SectionMenu } from "../menu";
 import Navigation from "../navigation";
@@ -16,6 +17,7 @@ const SectionPage: FC<IContainerProps> = ({ children }) => {
           <SectionMenu />
           <SectionContent>{children}</SectionContent>
         </section>
+        <ButtonUp classname={styles.ButtonUp} />
       </>
     </Container>
   );

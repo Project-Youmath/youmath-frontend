@@ -39,6 +39,14 @@ const searchSlice = createSlice({
     changeFilter: (state, action) => {
       state.filter = action.payload;
     },
+    searchReset: (state) => {
+      state.categories = [];
+      state.subcategories = [];
+      state.tasks = [];
+      state.countCategories = 0;
+      state.countSubcategories = 0;
+      state.countTasks = 0;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -51,7 +59,7 @@ const searchSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.tasks = action.payload.results;
+        state.tasks.push(...action.payload.results);
         state.countTasks = action.payload.count;
       })
       .addCase(searchTasksThunk.rejected, (state) => {
@@ -69,7 +77,7 @@ const searchSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.categories = action.payload.results;
+        state.categories.push(...action.payload.results);
         state.countCategories = action.payload.count;
       })
       .addCase(searchCategoriesThunk.rejected, (state) => {
@@ -87,7 +95,7 @@ const searchSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.subcategories = action.payload.results;
+        state.subcategories.push(...action.payload.results);
         state.countSubcategories = action.payload.count;
       })
       .addCase(searchSubcategoriesThunk.rejected, (state) => {

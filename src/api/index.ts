@@ -27,14 +27,16 @@ export const api = {
   getTasks(query: string): Promise<SearchResponse> {
     return createRequest(`/articles/${query}`);
   },
-  searchSubcategories(query: string): Promise<SearchResponse> {
-    return createRequest(`/subsections/${query}`);
+  searchSubcategories(query: string, offset = 0): Promise<SearchResponse> {
+    return createRequest(
+      `/subsections/${query}&limit=10&offset=${offset * 10}`
+    );
   },
-  searchCategories(query: string): Promise<SearchResponse> {
-    return createRequest(`/sections/${query}`);
+  searchCategories(query: string, offset = 0): Promise<SearchResponse> {
+    return createRequest(`/sections/${query}&limit=10&offset=${offset * 10}`);
   },
-  searchTasks(query: string): Promise<SearchResponse> {
-    return createRequest(`/articles/${query}`);
+  searchTasks(query: string, offset = 0): Promise<SearchResponse> {
+    return createRequest(`/articles/${query}&limit=10&offset=${offset * 10}`);
   },
 
   getTask(taskId: string): Promise<TaskResource> {

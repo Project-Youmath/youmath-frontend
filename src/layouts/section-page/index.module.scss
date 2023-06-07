@@ -3,3 +3,11 @@
   gap: 24em;
   margin-bottom: 60em;
 }
+.ButtonUp {
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+  @media (orientation: portrait) {
+    width: 90em;
+  }
+}

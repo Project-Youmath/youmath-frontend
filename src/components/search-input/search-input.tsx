@@ -3,6 +3,8 @@ import { SearchIcon } from "../ui/icons/search-icon";
 import { ChangeEventHandler, FC, MouseEventHandler, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { startPage } from "../../data/ constants";
+import { searchActions } from "../../store/slices/search-slice";
+import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 
 interface ISearchInputProps {
   extraclass?: string;
@@ -12,6 +14,7 @@ interface ISearchInputProps {
 }
 
 export const SearchInput: FC<ISearchInputProps> = ({ extraclass }) => {
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
   const handleKeyDown = (event: any) => {
@@ -21,6 +24,7 @@ export const SearchInput: FC<ISearchInputProps> = ({ extraclass }) => {
   };
 
   const handleSearch = () => {
+    dispatch(searchActions.searchReset());
     if (inputRef.current?.value) {
       const value = inputRef.current.value;
       navigate(`${startPage}search?search=${value}`);

@@ -8,7 +8,7 @@ const SearchPageCards = () => {
     <>
       {[0, 3].includes(filter) &&
         categories.map((category: any) => (
-          <div style={{ fontSize: "20em" }} key={category.title + category.id}>
+          <div key={category.title + category.id} style={{ fontSize: "20em" }}>
             {category.title}
           </div>
         ))}
