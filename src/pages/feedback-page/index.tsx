@@ -1,23 +1,15 @@
 import FeedbackPageForm from "./components/form";
-import { SectionMenu } from "../../layouts/menu";
 import { H2 } from "../../components/ui/typography/h2/h2";
-import Container from "../../layouts/container";
-import Navigation from "../../layouts/navigation";
+import SectionPage from "../../layouts/section-page";
 
 const FeedbackPage = () => {
   return (
-    <Container>
+    <SectionPage>
       <>
-        <Navigation />
-        <section style={{ display: "flex" }}>
-          <SectionMenu />
-          <section style={{ marginLeft: 24 }}>
-            <H2>Связаться с нами</H2>
-            <FeedbackPageForm />
-          </section>
-        </section>
+        <H2>Связаться с нами</H2>
+        <FeedbackPageForm />
       </>
-    </Container>
+    </SectionPage>
   );
 };
 export default FeedbackPage;

@@ -5,6 +5,19 @@ export const getTasksThunk = createAsyncThunk(
   "thunk/getTasks",
   (query: string) => api.getTasks(query)
 );
+export const searchTasksThunk = createAsyncThunk(
+  "thunk/searchTasks",
+  (query: string) => api.searchTasks(query)
+);
+export const searchCategoriesThunk = createAsyncThunk(
+  "thunk/searchCategories",
+  (query: string) => api.searchCategories(query)
+);
+export const searchSubcategoriesThunk = createAsyncThunk(
+  "thunk/searchSubcategories",
+  (query: string) => api.searchSubcategories(query)
+);
+
 export const getTaskThunk = createAsyncThunk(
   "thunk/getTask",
   (taskId: string) => api.getTasks(taskId)

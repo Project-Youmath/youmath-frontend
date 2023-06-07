@@ -1,31 +1,24 @@
-import styles from "./index.module.scss";
-import Container from "../../layouts/container";
-import { SectionMenu } from "../../layouts/menu";
-import Navigation from "../../layouts/navigation";
 import SectionSubcategory from "./subcategory-section";
 import { useLocation, useParams } from "react-router-dom";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useEffect } from "react";
 import { getSubcategoryThunk, getTasksThunk } from "../../store/thunks";
+import SectionPage from "../../layouts/section-page";
+import { useAppSelector } from "../../store/hooks/use-app-selector";
+import Loader from "../../components/loader";
 
 const SubcategoryPage = () => {
   const dispatch = useAppDispatch();
   const { search } = useLocation();
   const { subcategoryId } = useParams();
+  const { isLoading } = useAppSelector((state) => state.getTasksReducer);
+
   useEffect(() => {
     dispatch(getSubcategoryThunk(subcategoryId ?? ""));
     dispatch(getTasksThunk(search));
   }, [dispatch, subcategoryId, search]);
   return (
-    <Container>
-      <>
-        <Navigation />
-        <section className={styles.__section}>
-          <SectionMenu />
-          <SectionSubcategory />
-        </section>
-      </>
-    </Container>
+    <SectionPage>{isLoading ? <Loader /> : <SectionSubcategory />}</SectionPage>
   );
 };
 export default SubcategoryPage;

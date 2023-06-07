@@ -1,11 +1,12 @@
-.__section {
+.section {
   display: grid;
   gap: 48em;
   margin-bottom: 64em;
-
-  &__title {
-    @media (orientation: portrait) {
-      margin-left: 24em;
-    }
+  .title {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32em;
+    line-height: 120%;
   }
 }

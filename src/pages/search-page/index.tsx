@@ -5,7 +5,11 @@ import SearchPageCards from "./search-page-components/cards";
 import NothingFoundCard from "./search-page-components/nothing-found-card";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { getTasksThunk } from "../../store/thunks";
+import {
+  searchCategoriesThunk,
+  searchSubcategoriesThunk,
+  searchTasksThunk,
+} from "../../store/thunks";
 import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 import Container from "../../layouts/container";
@@ -15,10 +19,13 @@ import SearchFilter from "./search-page-components/filter";
 const SearchPage = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();
-  const { isLoading, tasks } = useAppSelector((state) => state.getTasksReducer);
+  const { isLoading, countTasks, countCategories, countSubcategories } =
+    useAppSelector((state) => state.searchReducer);
 
   useEffect(() => {
-    dispatch(getTasksThunk(location.search));
+    dispatch(searchTasksThunk(location.search));
+    dispatch(searchSubcategoriesThunk(location.search));
+    dispatch(searchCategoriesThunk(location.search));
   }, [dispatch, location.search]);
   return (
     <Container>
@@ -31,7 +38,7 @@ const SearchPage = () => {
           <section className={styles.section}>
             <SearchPageTitle />
 
-            {tasks.length ? (
+            {countTasks + countCategories + countSubcategories !== 0 ? (
               <>
                 <SearchFilter />
                 <SearchPageCards />

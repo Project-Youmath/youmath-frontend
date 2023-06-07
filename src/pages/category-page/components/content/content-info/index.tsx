@@ -29,6 +29,7 @@ export const CategorySectionContentInfo = () => {
   return (
     <section className={styles.section}>
       <div className={styles.title}>{category?.title}</div>
+      <div className={styles.author}>{category?.author}</div>
       <div
         ref={textRef}
         className={`${styles.description} ${!isOpen ? styles.overflowed : ""}`}

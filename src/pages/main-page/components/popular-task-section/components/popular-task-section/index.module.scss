@@ -1,13 +1,19 @@
 .section {
   background-image: url("../../../../../../assets/images/popular-task-bg.jpg");
   .content {
-    padding: 48em 0 24em 0;
+    padding: 72em 0 60em 0;
     display: flex;
-    gap: 36em;
-
     flex-direction: column;
+    .title {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+    }
   }
   .taskList {
+    margin-top: 56em;
     display: flex;
     flex-direction: column;
     gap: 40em;

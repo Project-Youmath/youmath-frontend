@@ -1,4 +1,4 @@
-.navigation {
+.section {
   min-height: 60em;
   height: max-content;
   margin: 24em 0 32em 0;
@@ -6,15 +6,12 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8em;
-  &__link {
+  .link {
     height: 100%;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #888;
     font-size: 20em;
-  }
-  @media (orientation: portrait) {
-    margin-left: 24em;
   }
 }

@@ -8,6 +8,7 @@ const TaskSection = () => {
   return (
     <section className={styles.section}>
       <div className={styles.title}>{task?.title}</div>
+      <div className={styles.subtitle}>{task?.subtitle} </div>
       <div className={styles.description}>{task?.description} </div>
       <embed
         className={styles.pdf}

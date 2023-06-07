@@ -1,4 +1,4 @@
 const FeedbackPageForm = () => {
-  return <div>56756</div>;
+  return <div></div>;
 };
 export default FeedbackPageForm;

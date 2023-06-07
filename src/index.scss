@@ -29,6 +29,8 @@ body {
   min-height: 100vh;
   display: grid;
   font-size: 1px;
+  color: #282a2e;
+
   @media (orientation: portrait) {
     font-size: 0.8px;
   }

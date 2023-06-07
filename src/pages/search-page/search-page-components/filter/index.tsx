@@ -1,32 +1,31 @@
+import { useAppDispatch } from "../../../../store/hooks/use-app-dispatch";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
+import { searchActions } from "../../../../store/slices/search-slice";
 import styles from "./index.module.scss";
 import { useEffect, useState } from "react";
 const SearchFilter = () => {
-  const { countTasks } = useAppSelector((state) => state.getTasksReducer);
+  const dispatch = useAppDispatch();
+  const { countTasks, countCategories, countSubcategories } = useAppSelector(
+    (state) => state.searchReducer
+  );
   const [active, setActive] = useState(0);
-  const [count, setCount] = useState([0, 0, 0, 0]);
   useEffect(() => {
-    setCount([countTasks, countTasks, 0, 0]);
-  }, [countTasks]);
-  useEffect(() => {
-    switch (active) {
-      case 0:
-        break;
-      case 1:
-        break;
-      case 2:
-        break;
-      case 3:
-        break;
-    }
-  }, [active]);
+    dispatch(searchActions.changeFilter(active));
+  }, [active, dispatch]);
   return (
     <section className={styles.section}>
       {["Все", "Решение", "Подразделы", "Разделы"].map((title, i) => (
         <div
           className={active === i ? styles.active : ""}
           onClick={() => setActive(i)}
-        >{`${title} (${count[i]})`}</div>
+        >{`${title} (${
+          [
+            countTasks + countCategories + countSubcategories,
+            countTasks,
+            countSubcategories,
+            countCategories,
+          ][i]
+        })`}</div>
       ))}
     </section>
   );

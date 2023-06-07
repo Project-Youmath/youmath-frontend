@@ -30,11 +30,9 @@ export const PopularCategorySection = () => {
         <div className={styles.content}>
           <H2>Популярные разделы</H2>
           <div className={styles.popularCategorySection__categories}>
-            {categories
-              .map((category, i) => (
-                <CategoryCard key={category.title + i} category={category} />
-              ))
-              .slice(0, 3)}
+            {categories.map((category, i) => (
+              <CategoryCard key={category.title + i} category={category} />
+            ))}
           </div>
           <Link
             to={startPage + "categories"}

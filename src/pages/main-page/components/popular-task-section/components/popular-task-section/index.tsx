@@ -1,5 +1,4 @@
 import styles from "./index.module.scss";
-import { H2 } from "../../../../../../components/ui/typography/h2/h2";
 import { PopularTaskCard } from "../../../../../../components/popular-task-card";
 import { useAppDispatch } from "../../../../../../store/hooks/use-app-dispatch";
 import { useEffect } from "react";
@@ -24,7 +23,7 @@ export const PopularTaskSection = () => {
     <section className={styles.section}>
       <Container>
         <div className={styles.content}>
-          <H2>Популярные задачи</H2>
+          <div className={styles.title}>Популярные задачи</div>
           <div className={styles.taskList}>
             {categories
               .map((category, i) => (

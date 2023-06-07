@@ -23,42 +23,39 @@ const Navigation = () => {
     .filter((page) => !["category", "subcategory", "task"].includes(page));
 
   return (
-    <section className={styles.navigation}>
-      {
-        navigationPages.map((navigationPage, i) =>
-          navigationPage !== "none" ? (
-            <Link
-              key={navigationPage + i}
-              className={styles.navigation__link}
-              to={
+    <section className={styles.section}>
+      {navigationPages.map((navigationPage, i) =>
+        navigationPage !== "none" ? (
+          <Link
+            key={navigationPage + i}
+            className={styles.link}
+            to={
+              [
+                startPage,
+                `${startPage}${navigationPage}`,
+                `${startPage}categories/category/${categoryId}`,
+                `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
+                `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
+              ][i]
+            }
+          >
+            <span>
+              {
                 [
-                  startPage,
-                  `${startPage}${navigationPage}`,
-                  `${startPage}categories/category/${categoryId}`,
-                  `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
-                  `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
+                  "Главная",
+                  linkTitle[navigationPage],
+                  category?.title,
+                  subcategory?.title,
+                  task?.title,
                 ][i]
               }
-            >
-              <span>
-                {
-                  [
-                    "Главная",
-                    linkTitle[navigationPage],
-                    category?.title,
-                    subcategory?.title,
-                    task?.title,
-                  ][i]
-                }
-              </span>
-              <ArrowForwardIcon />
-            </Link>
-          ) : (
-            <></>
-          )
+            </span>
+            <ArrowForwardIcon />
+          </Link>
+        ) : (
+          <></>
         )
-        // .filter((link) => !/none/.test(link.key + ""))
-      }
+      )}
     </section>
   );
 };

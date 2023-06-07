@@ -1,16 +1,33 @@
-.__section {
-  margin-left: 24em;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 20em;
-  .description {
-    font-size: 20em;
+.section {
+  .title {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32em;
+    line-height: 120%;
   }
-  .__employeeCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300em, 1fr));
-    gap: 40em;
-    margin-bottom: 40em;
+  .subtitle {
+    margin: 2em 0 1em 0;
+    font-family: "Roboto Flex";
+    font-size: 28em;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .description {
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20em;
+    line-height: 140%;
+  }
+  .employeeCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 32em 0 48em 0;
+    gap: 32em;
+    @media (orientation: portrait) {
+      justify-content: center;
+    }
   }
 }

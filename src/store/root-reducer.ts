@@ -5,6 +5,7 @@ import { getTasksReducer } from "./slices/get-tasks-slice";
 import { getTaskReducer } from "./slices/get-task-slice";
 import { categoryReducer } from "./slices/category-slice";
 import { subcategoryReducer } from "./slices/subcategory-slice";
+import { searchReducer } from "./slices/search-slice";
 
 export const rootReducer = combineReducers({
   getTasksReducer,
@@ -13,4 +14,5 @@ export const rootReducer = combineReducers({
   popularCategoryReducer,
   categoryReducer,
   subcategoryReducer,
+  searchReducer,
 });

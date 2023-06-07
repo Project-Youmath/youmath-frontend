@@ -1,21 +1,11 @@
-import styles from "./index.module.scss";
-
-import Container from "../../layouts/container";
-import Navigation from "../../layouts/navigation";
-import { SectionMenu } from "../../layouts/menu";
 import { CategorySectionContent } from "./components/content";
+import SectionPage from "../../layouts/section-page";
 
 const CategoryPage = () => {
   return (
-    <Container>
-      <>
-        <Navigation />
-        <section className={styles.section}>
-          <SectionMenu />
-          <CategorySectionContent />
-        </section>
-      </>
-    </Container>
+    <SectionPage>
+      <CategorySectionContent />
+    </SectionPage>
   );
 };
 export default CategoryPage;

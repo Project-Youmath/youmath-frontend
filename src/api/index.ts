@@ -3,9 +3,9 @@ import { GetPopularCategoryResponse } from "./types/response/get-popular-categor
 import { CategoryResource } from "./types/resource/category-resource";
 import { GetPopularSubcategoryResponse } from "./types/response/get-popular-sub-category-response";
 import { SubcategoryResource } from "./types/resource/subcategory-resource";
-import { SearchResponse } from "./types/response/search-response";
 import { TaskResource } from "./types/resource/task-resource";
 import { GetAllCategoriesResponse } from "./types/response/get-all-categories-response";
+import { SearchResponse } from "./types/response/search-response";
 
 const BASEURL = "https://youmath.ru/api/v1";
 
@@ -25,6 +25,15 @@ const createRequest = async (endpoint: string, params?: any) => {
 
 export const api = {
   getTasks(query: string): Promise<SearchResponse> {
+    return createRequest(`/articles/${query}`);
+  },
+  searchSubcategories(query: string): Promise<SearchResponse> {
+    return createRequest(`/subsections/${query}`);
+  },
+  searchCategories(query: string): Promise<SearchResponse> {
+    return createRequest(`/sections/${query}`);
+  },
+  searchTasks(query: string): Promise<SearchResponse> {
     return createRequest(`/articles/${query}`);
   },
 

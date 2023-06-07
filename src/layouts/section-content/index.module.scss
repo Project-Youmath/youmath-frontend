@@ -1,12 +1,8 @@
-.sectionMenu {
-  gap: 8em;
+.section {
   display: flex;
   flex-direction: column;
-  width: 25vw;
-
+  width: 55vw;
   @media (orientation: portrait) {
-    & {
-      display: none;
-    }
+    width: 100%;
   }
 }
