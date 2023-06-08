@@ -17,19 +17,26 @@ interface ISearchInitialState {
   subcategories: SearchResultResponse[];
   countSubcategories: number;
   filter: number;
+  lengthCategories: number;
+  lengthSubcategories: number;
+  lengthTasks: number;
 }
 
 const searchInitialState: ISearchInitialState = {
   isLoading: false,
   isSuccess: false,
   isError: false,
-  tasks: [],
-  countTasks: 0,
-  categories: [],
-  countCategories: 0,
-  subcategories: [],
-  countSubcategories: 0,
   filter: 0,
+
+  tasks: [],
+  categories: [],
+  subcategories: [],
+  countTasks: 0,
+  countCategories: 0,
+  countSubcategories: 0,
+  lengthCategories: 0,
+  lengthSubcategories: 0,
+  lengthTasks: 0,
 };
 
 const searchSlice = createSlice({
@@ -46,6 +53,9 @@ const searchSlice = createSlice({
       state.countCategories = 0;
       state.countSubcategories = 0;
       state.countTasks = 0;
+      state.lengthCategories = 0;
+      state.lengthSubcategories = 0;
+      state.lengthTasks = 0;
     },
   },
   extraReducers: (builder) => {
@@ -61,6 +71,7 @@ const searchSlice = createSlice({
         state.isSuccess = true;
         state.tasks.push(...action.payload.results);
         state.countTasks = action.payload.count;
+        state.lengthTasks = state.tasks.length;
       })
       .addCase(searchTasksThunk.rejected, (state) => {
         state.isLoading = false;
@@ -78,7 +89,9 @@ const searchSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.categories.push(...action.payload.results);
+        console.log(action.payload.results);
         state.countCategories = action.payload.count;
+        state.lengthCategories = state.categories.length;
       })
       .addCase(searchCategoriesThunk.rejected, (state) => {
         state.isLoading = false;
@@ -97,6 +110,7 @@ const searchSlice = createSlice({
         state.isSuccess = true;
         state.subcategories.push(...action.payload.results);
         state.countSubcategories = action.payload.count;
+        state.lengthSubcategories = state.subcategories.length;
       })
       .addCase(searchSubcategoriesThunk.rejected, (state) => {
         state.isLoading = false;

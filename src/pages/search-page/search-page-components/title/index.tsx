@@ -5,10 +5,12 @@ import { useLocation } from "react-router-dom";
 const SearchPageTitle = () => {
   const { search } = useLocation();
   const query = decodeURIComponent(search.slice(8));
-  const { tasks } = useAppSelector((state) => state.getTasksReducer);
+  const { countCategories, countTasks, countSubcategories } = useAppSelector(
+    (state) => state.searchReducer
+  );
   return (
     <>
-      {tasks.length ? (
+      {countTasks + countCategories + countSubcategories !== 0 ? (
         <>
           <div className={styles.title}> "Результаты поиска по запросу" </div>
           <div

@@ -7,15 +7,18 @@ export const getTasksThunk = createAsyncThunk(
 );
 export const searchTasksThunk = createAsyncThunk(
   "thunk/searchTasks",
-  (query: string) => api.searchTasks(query)
+  ({ query, offset }: { query: string; offset: number }) =>
+    api.searchTasks(query, offset)
 );
 export const searchCategoriesThunk = createAsyncThunk(
   "thunk/searchCategories",
-  (query: string) => api.searchCategories(query)
+  ({ query, offset }: { query: string; offset: number }) =>
+    api.searchCategories(query, offset)
 );
 export const searchSubcategoriesThunk = createAsyncThunk(
   "thunk/searchSubcategories",
-  (query: string) => api.searchSubcategories(query)
+  ({ query, offset }: { query: string; offset: number }) =>
+    api.searchSubcategories(query, offset)
 );
 
 export const getTaskThunk = createAsyncThunk(

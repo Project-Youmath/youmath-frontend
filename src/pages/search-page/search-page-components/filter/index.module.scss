@@ -1,4 +1,5 @@
 .section {
+  width: 90vw;
   height: 132em;
   display: flex;
   align-items: center;
@@ -6,7 +7,7 @@
   overflow: scroll;
 
   div {
-    height: max-content;
+    min-width: max-content;
     cursor: pointer;
     padding: 8px 20px;
     box-shadow: 0px 0px 3px rgba(28, 158, 119, 0.25);
