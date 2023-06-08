@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import { H3 } from "../../../ui/typography/h3/h3";
-import { PopularTaskCardVariants } from "../variants/popular-task-card-variants";
+import { PopularTaskCardVariants } from "../variants";
 import { CategoryResource } from "../../../../api/types/resource/category-resource";
 import { FC } from "react";
 import { Link } from "react-router-dom";

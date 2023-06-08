@@ -7,11 +7,14 @@ import { startPage } from "../../../../data/ constants";
 export const FooterLogoContactLine = () => {
   return (
     <div className={styles.logoContactLine}>
-      <img
-        src={logo}
-        alt="Логотип youmath"
-        className={styles.logoContactLine__logo}
-      />
+      <Link to={startPage}>
+        {" "}
+        <img
+          src={logo}
+          alt="Логотип youmath"
+          className={styles.logoContactLine__logo}
+        />
+      </Link>
       <Link to={startPage + "feedback"} style={{ textDecoration: "none" }}>
         <Text
           size={"default"}

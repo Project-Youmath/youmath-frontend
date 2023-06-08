@@ -1,8 +1,14 @@
 .section {
-  .cards {
+  .cardsSubsections {
     margin-top: 48em;
     gap: 24em;
     display: flex;
     flex-direction: column;
+  }
+  .cardsTasks {
+    margin: 48em 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24em;
   }
 }

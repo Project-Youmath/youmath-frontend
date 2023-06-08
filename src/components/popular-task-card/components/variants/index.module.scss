@@ -1,4 +1,4 @@
-.popularTaskCardVariants {
+.section {
   margin-top: 50em;
   gap: 24em;
   display: flex;
@@ -17,24 +17,23 @@
     flex-direction: column;
   }
 
-  &__variants {
+  .variants {
     gap: 24em;
     display: flex;
     flex-wrap: wrap;
   }
 
-  &__variantLink {
+  .link {
     padding: 0.2em 1em;
-    min-height: 2em;
+    width: 2em;
+    height: 2em;
     border-radius: 2em;
     font-size: 20em;
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: #222222;
     text-decoration: none;
-
     background: #ffffff;
   }
 }

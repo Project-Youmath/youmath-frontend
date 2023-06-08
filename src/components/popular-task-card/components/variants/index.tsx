@@ -1,4 +1,4 @@
-import styles from "./popular-task-card-varians.module.scss";
+import styles from "./index.module.scss";
 import { Text } from "../../../ui/typography/text/text";
 import { Link } from "react-router-dom";
 import { FC } from "react";
@@ -18,11 +18,9 @@ export const PopularTaskCardVariants: FC<PopularTaskCardVariantsProps> = ({
   const { isSuccess } = useAppSelector((state) => state.popularCategoryReducer);
 
   return (
-    <div
+    <section
       className={
-        extraClass
-          ? `${styles.popularTaskCardVariants} ${extraClass}`
-          : styles.popularTaskCardVariants
+        extraClass ? `${styles.section} ${extraClass}` : styles.section
       }
     >
       {isSuccess && (
@@ -32,21 +30,21 @@ export const PopularTaskCardVariants: FC<PopularTaskCardVariantsProps> = ({
               Варианты
             </Text>
           )}
-          <div className={styles.popularTaskCardVariants__variants}>
+          <div className={styles.variants}>
             {category?.popular_articles
               .map((popular_article, i) => (
                 <Link
                   key={`popular_article${popular_article.id}`}
                   to={`${startPage}categories/category/${category.id}/subcategory/none/task/${popular_article.id}`}
-                  className={`${styles[extraClass]} ${styles.popularTaskCardVariants__variantLink}`}
+                  className={`${styles[extraClass]} ${styles.link}`}
                 >
-                  {popular_article.title}
+                  {popular_article.title.split(" ").slice(1, 2).join(" ")}
                 </Link>
               ))
               .slice(0, 3)}
           </div>
         </>
       )}
-    </div>
+    </section>
   );
 };

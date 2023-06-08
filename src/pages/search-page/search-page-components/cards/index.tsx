@@ -1,6 +1,9 @@
 import styles from "./index.module.scss";
 
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
+import SubcategorySearchCard from "./subcategory";
+import TaskSearchCard from "./task";
+import CategorySearchCard from "./category";
 
 const SearchPageCards = () => {
   const {
@@ -17,39 +20,24 @@ const SearchPageCards = () => {
     <section className={styles.section}>
       {[0, 3].includes(filter) &&
         categories.map((category: any) => (
-          <div
-            className={`${styles.cards} ${styles.categories}`}
+          <CategorySearchCard
             key={`search${category.title + category.id}`}
-          >
-            <div className={styles.title}>{category.title}</div>
-            <div className={styles.subtitle}>{category.title}</div>
-            <div className={styles.description}>{category.description}</div>
-          </div>
+            category={category}
+          />
         ))}
       {(filter === 2 || (!filter && lengthCategories === countCategories)) &&
         subcategories.map((subcategory: any) => (
-          <div
-            className={`${styles.cards} ${styles.subcategories}`}
+          <SubcategorySearchCard
             key={`search${subcategory.title + subcategory.id}`}
-          >
-            <div className={styles.title}>{subcategory.title}</div>
-            <div className={styles.subtitle}>{subcategory.title}</div>
-            <div className={styles.description}>{subcategory.description}</div>
-          </div>
+            subcategory={subcategory}
+          ></SubcategorySearchCard>
         ))}
       {(filter === 1 ||
         (!filter &&
           lengthCategories === countCategories &&
           lengthSubcategories === countSubcategories)) &&
         tasks.map((task: any) => (
-          <div
-            className={`${styles.cards} ${styles.tasks}`}
-            key={`search${task.title + task.id}`}
-          >
-            <div className={styles.title}>{task.title}</div>
-            <div className={styles.subtitle}>{task.title}</div>
-            <div className={styles.description}>{task.description}</div>
-          </div>
+          <TaskSearchCard key={`search${task.title + task.id}`} task={task} />
         ))}
     </section>
   );
