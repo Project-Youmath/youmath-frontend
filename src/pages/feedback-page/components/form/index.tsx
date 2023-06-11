@@ -8,6 +8,9 @@ const EmailForm: React.FC = () => {
   const [senderName, setSenderName] = useState("");
   const [message, setMessage] = useState("");
   const [captchaValue, setCaptchaValue] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [verificationError, setVerificationError] = useState("");
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,14 +23,22 @@ const EmailForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    setEmailError("");
+    setMessageError("");
+    setVerificationError("");
     if (!validateEmail(email)) {
-      alert("Введите корректный адрес электронной почты!");
+      setEmailError("Укажите почту в формате address@example.com ");
+      return;
+    }
+    if (message.length < 4) {
+      setMessageError(
+        "Текст слишком короткий, минимальная допустимая длина - 4 символа"
+      );
       return;
     }
 
     if (!captchaValue) {
-      alert("Подтвердите, что вы не робот!");
+      setVerificationError("Подтвердите, что вы не робот!");
       return;
     }
 
@@ -57,7 +68,7 @@ const EmailForm: React.FC = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <label htmlFor="email"></label>
+        <label htmlFor="email">{emailError}</label>
       </div>
 
       <div className={styles.input}>
@@ -81,10 +92,12 @@ const EmailForm: React.FC = () => {
           onChange={(e) => setMessage(e.target.value)}
           required
         />
-        <label htmlFor="message"></label>
+        <label htmlFor="message">{messageError}</label>
       </div>
-
-      <ReCAPTCHA sitekey="Ваш siteKey" onChange={handleCaptchaChange} />
+      <div className={styles.ReCAPTCHA}>
+        <ReCAPTCHA sitekey="Ваш siteKey" onChange={handleCaptchaChange} />
+        <label htmlFor="ReCAPTCHA">{verificationError}</label>
+      </div>
       {/* Перейдите на сайт reCAPTCHA и нажмите на кнопку "Начать использование".
 Вам будет предложено войти в свою учетную запись Google. Если у вас нет учетной записи, создайте новую.
 После входа вам будет предложено зарегистрировать свой сайт. Введите название вашего сайта в поле "Метка", выберите тип reCAPTCHA (в данном случае выберите "reCAPTCHA v2"), а затем введите домен вашего сайта в поле "Домены".
@@ -97,6 +110,7 @@ const EmailForm: React.FC = () => {
       <button type="submit" className={styles.button}>
         Отправить
       </button>
+
       <div className={styles.link}>
         Нажимая на кнопку «Отправить», вы соглашаетесь с обработкой персональных
         данных и с &nbsp;
