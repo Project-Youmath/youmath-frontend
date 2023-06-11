@@ -14,7 +14,7 @@ export const PopularTaskCard: FC<PopularTaskCardProps> = ({
   extraClass,
 }) => {
   return (
-    <div className={styles.popularTaskCard}>
+    <div className={`${styles.section} ${styles[extraClass]}`}>
       <PopularTaskCardBaseInfo category={category} extraClass={extraClass} />
       <PopularTaskCardExternalInfo
         landscape={true}

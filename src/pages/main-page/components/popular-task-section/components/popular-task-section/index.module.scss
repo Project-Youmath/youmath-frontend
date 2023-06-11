@@ -11,6 +11,28 @@
       font-size: 32px;
       line-height: 120%;
     }
+    .landscape {
+      @media (orientation: portrait) {
+        display: none;
+      }
+    }
+    .portrait {
+      @media (orientation: landscape) {
+        display: none;
+      }
+    }
+    .points {
+      display: flex;
+      justify-content: center;
+      gap: 8em;
+      .point {
+        font-size: 40em;
+        opacity: 0.5;
+      }
+      .active {
+        opacity: 1;
+      }
+    }
   }
   .taskList {
     margin-top: 56em;

@@ -32,7 +32,7 @@ export const PopularTaskCardVariants: FC<PopularTaskCardVariantsProps> = ({
           )}
           <div className={styles.variants}>
             {category?.popular_articles
-              .map((popular_article, i) => (
+              .map((popular_article) => (
                 <Link
                   key={`popular_article${popular_article.id}`}
                   to={`${startPage}categories/category/${category.id}/subcategory/none/task/${popular_article.id}`}
