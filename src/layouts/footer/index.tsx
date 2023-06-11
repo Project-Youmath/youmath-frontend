@@ -1,8 +1,8 @@
-import styles from "./footer.module.scss";
+import styles from "./index.module.scss";
 import { Text } from "../../components/ui/typography/text/text";
-import { FooterDescription } from "./components/footer-description/footer-description";
-import { FooterInfo } from "./components/footer-info/footer-info";
-import { FooterLogoContactLine } from "./components/footer-logo-contact-line/footer-logo-contact-line";
+import { FooterDescription } from "./components/footer-description";
+import { FooterInfo } from "./components/footer-info";
+import FooterLogoContactLine from "./components/footer-logo-contact-line";
 
 const Footer = () => {
   return (

@@ -1,5 +1,4 @@
 import styles from "./index.module.scss";
-
 import { useNavigate } from "react-router-dom";
 import { ErrorPageIcon } from "../../components/ui/icons/error-page-icon";
 import { ArrowRightSmallIcon } from "../../components/ui/icons/arrow-right-small-icon";

@@ -1,10 +1,10 @@
-import styles from "./footer-logo-contact-line.module.scss";
+import styles from "./index.module.scss";
 import logo from "../../../../assets/images/logo.png";
 import { Text } from "../../../../components/ui/typography/text/text";
 import { Link } from "react-router-dom";
 import { startPage } from "../../../../data/ constants";
 
-export const FooterLogoContactLine = () => {
+const FooterLogoContactLine = () => {
   return (
     <div className={styles.logoContactLine}>
       <Link to={startPage}>
@@ -28,3 +28,4 @@ export const FooterLogoContactLine = () => {
     </div>
   );
 };
+export default FooterLogoContactLine;

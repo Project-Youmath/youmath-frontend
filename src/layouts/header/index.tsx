@@ -1,6 +1,6 @@
-import styles from "./header.module.scss";
+import styles from "./index.module.scss";
 import logo from "../../assets/images/logo.png";
-import { HeaderNav } from "./components/header-nav/header-nav";
+import { HeaderNav } from "./components/header-nav";
 import { Link, useLocation } from "react-router-dom";
 import { startPage } from "../../data/ constants";
 import { SearchInput } from "../../components/search-input/search-input";

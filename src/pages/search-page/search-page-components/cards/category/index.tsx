@@ -23,9 +23,11 @@ const CategorySearchCard: FC<IProps> = ({ category }) => {
         <div className={styles.count}>
           {`Вариантов ${category.articles_count}`}
         </div>
-        <div className={styles.count}>
-          {`Подразделов ${category.subsections_count}`}
-        </div>
+        {category.subsection_exist && (
+          <div className={styles.count}>
+            {`Подразделов ${category.subsections_count}`}
+          </div>
+        )}
         <Link
           to={`${startPage}categories/category/${"none"}/category/${
             category.id

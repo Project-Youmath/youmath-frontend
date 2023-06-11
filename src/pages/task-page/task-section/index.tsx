@@ -10,6 +10,7 @@ const TaskSection = () => {
       <div className={styles.title}>{task?.title}</div>
       <div className={styles.subtitle}>{task?.subtitle} </div>
       <div className={styles.description}>{task?.description} </div>
+
       <embed
         className={styles.pdf}
         src={`https://youmath.ru${task?.file}`}

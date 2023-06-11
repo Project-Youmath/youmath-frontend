@@ -1,4 +1,4 @@
-import styles from "./header-nav.module.scss";
+import styles from "./index.module.scss";
 import { Link } from "react-router-dom";
 import { startPage } from "../../../../data/ constants";
 import { BurgerIcon } from "../../../../components/ui/icons/burger-icon";

@@ -17,7 +17,9 @@ const SectionPage: FC<IContainerProps> = ({ children }) => {
           <SectionMenu />
           <SectionContent>{children}</SectionContent>
         </section>
-        <ButtonUp classname={styles.ButtonUp} />
+        <section className={styles.ButtonUpContainer}>
+          <ButtonUp classname={styles.ButtonUp} />
+        </section>
       </>
     </Container>
   );

@@ -1,4 +1,4 @@
-import styles from "./footer-description.module.scss";
+import styles from "./index.module.scss";
 import { Text } from "../../../../components/ui/typography/text/text";
 
 export const FooterDescription = () => {
