@@ -16,10 +16,10 @@ export const PopularTaskSection = () => {
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      activeCard && setActiveCard((p) => p - 1);
+      activeCard < 2 && setActiveCard((p) => p + 1);
     },
     onSwipedRight: () => {
-      activeCard < 2 && setActiveCard((p) => p + 1);
+      activeCard && setActiveCard((p) => p - 1);
     },
   });
   useEffect(() => {
