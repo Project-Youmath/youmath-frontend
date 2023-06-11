@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/youmath-frontend/static/css/main.34916519.css",
-    "main.js": "/youmath-frontend/static/js/main.f5e6caac.js",
+    "main.css": "/youmath-frontend/static/css/main.9db38509.css",
+    "main.js": "/youmath-frontend/static/js/main.fbff9f41.js",
     "static/js/787.dda74066.chunk.js": "/youmath-frontend/static/js/787.dda74066.chunk.js",
     "static/media/popular-task-bg.jpg": "/youmath-frontend/static/media/popular-task-bg.1a288b9e62705f3c34b7.jpg",
     "static/media/Ubuntu-Bold.ttf": "/youmath-frontend/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
@@ -12,12 +12,12 @@
     "static/media/Andrey_Smirnov.jpg": "/youmath-frontend/static/media/Andrey_Smirnov.0bf639908a0824b102b3.jpg",
     "static/media/Olga_Dondukova.jpg": "/youmath-frontend/static/media/Olga_Dondukova.d2b40ce2e0f856b9c449.jpg",
     "index.html": "/youmath-frontend/index.html",
-    "main.34916519.css.map": "/youmath-frontend/static/css/main.34916519.css.map",
-    "main.f5e6caac.js.map": "/youmath-frontend/static/js/main.f5e6caac.js.map",
+    "main.9db38509.css.map": "/youmath-frontend/static/css/main.9db38509.css.map",
+    "main.fbff9f41.js.map": "/youmath-frontend/static/js/main.fbff9f41.js.map",
     "787.dda74066.chunk.js.map": "/youmath-frontend/static/js/787.dda74066.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34916519.css",
-    "static/js/main.f5e6caac.js"
+    "static/css/main.9db38509.css",
+    "static/js/main.fbff9f41.js"
   ]
 }
