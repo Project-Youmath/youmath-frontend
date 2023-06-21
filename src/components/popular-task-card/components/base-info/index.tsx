@@ -19,11 +19,11 @@ export const PopularTaskCardBaseInfo: FC<PopularTaskCardBaseInfoProps> = ({
       <Link to={`categories/category/${category.id}`} className={styles.title}>
         {category.title}
       </Link>
-      {category.author && (
-        <span className={`${styles.author} ${styles[extraClass]}`}>
-          {category.author}
-        </span>
-      )}
+
+      <span className={`${styles.author} ${styles[extraClass]}`}>
+        {category.subtitle}
+      </span>
+
       <PopularTaskCardExternalInfo
         landscape={false}
         category={category}

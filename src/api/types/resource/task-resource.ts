@@ -5,8 +5,14 @@ export interface TaskResource {
   read_counter: number;
   subtitle: string | null;
   title: string;
-  section_title?: string;
-  section_id?: number;
-  subsection_title?: string | null;
-  subsection_id?: number | null;
+  section?: {
+    id: number;
+    title: string;
+    subtitle: string | null;
+  };
+  subsection?: {
+    id: number;
+    title: string;
+    subtitle: string | null;
+  } | null;
 }

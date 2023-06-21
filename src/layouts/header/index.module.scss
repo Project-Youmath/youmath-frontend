@@ -13,7 +13,7 @@
     top: 0;
     box-sizing: border-box;
   }
-  .topColumn {
+  .topRow {
     position: sticky;
   }
   .search {
@@ -22,7 +22,7 @@
     top: 15em;
   }
 
-  .topColumn {
+  .topRow {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -93,12 +93,12 @@
   margin-bottom: 17em;
 }
 @media (orientation: landscape) {
-  .topColumn {
+  .topRow {
     top: 17em;
   }
 }
 @media (orientation: portrait) {
-  .topColumn {
+  .topRow {
     top: 3em;
   }
   .search {

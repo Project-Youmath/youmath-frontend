@@ -1,7 +1,6 @@
 import axios from "axios";
 import { GetPopularCategoryResponse } from "./types/response/get-popular-category-response";
 import { CategoryResource } from "./types/resource/category-resource";
-import { GetPopularSubcategoryResponse } from "./types/response/get-popular-sub-category-response";
 import { SubcategoryResource } from "./types/resource/subcategory-resource";
 import { TaskResource } from "./types/resource/task-resource";
 import { GetAllCategoriesResponse } from "./types/response/get-all-categories-response";
@@ -26,6 +25,12 @@ const createRequest = async (endpoint: string, params?: any) => {
 export const api = {
   getTasks(query: string): Promise<SearchResponse> {
     return createRequest(`/articles/${query}`);
+  },
+  getCategoryTasks(sectionId: string): Promise<SearchResponse> {
+    return createRequest(`/articles/?section=${sectionId}`);
+  },
+  getSubcategoryTasks(subsectionId: string): Promise<SearchResponse> {
+    return createRequest(`/articles/?subsection=${subsectionId}`);
   },
   searchSubcategories(query: string, offset = 0): Promise<SearchResponse> {
     return createRequest(
@@ -55,8 +60,8 @@ export const api = {
     return createRequest(`/sections/${categoryId}`);
   },
 
-  getPopularSubCategory(): Promise<GetPopularSubcategoryResponse> {
-    return createRequest(`/subsections/popular`);
+  getSubcategories(sectionId: string): Promise<SubcategoryResource> {
+    return createRequest(`/subsections/?section=${sectionId}`);
   },
 
   getSubcategory(subcategoryId: string): Promise<SubcategoryResource> {

@@ -1,3 +1,4 @@
+import axios from "axios";
 import styles from "./index.module.scss";
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const EmailForm: React.FC = () => {
   const [email, setEmail] = useState("");
-  const [senderName, setSenderName] = useState("");
+  const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [captchaValue, setCaptchaValue] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -21,7 +22,7 @@ const EmailForm: React.FC = () => {
     setCaptchaValue(value || "");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEmailError("");
     setMessageError("");
@@ -41,17 +42,20 @@ const EmailForm: React.FC = () => {
       setVerificationError("Подтвердите, что вы не робот!");
       return;
     }
+    console.log({
+      email,
+      name,
+      message,
+    });
+    const axi = await axios.post("https://youmath.ru/api/v1/contact/", {
+      email,
+      name,
+      message,
+    });
+    console.log(axi);
 
-    // Действия при отправке формы
-    console.log("Отправка формы...");
-    console.log("Почта:", email);
-    console.log("Имя отправителя:", senderName);
-    console.log("Текст письма:", message);
-    console.log("reCAPTCHA value:", captchaValue);
-
-    // Сброс значений полей формы
     setEmail("");
-    setSenderName("");
+    setName("");
     setMessage("");
     setCaptchaValue("");
   };
@@ -75,12 +79,12 @@ const EmailForm: React.FC = () => {
         <input
           type="text"
           placeholder="Имя"
-          id="senderName"
-          value={senderName}
-          onChange={(e) => setSenderName(e.target.value)}
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           required
         />
-        <label htmlFor="senderName"></label>
+        <label htmlFor="name"></label>
       </div>
 
       <div className={styles.input}>
@@ -111,7 +115,7 @@ const EmailForm: React.FC = () => {
         Отправить
       </button>
 
-      <div className={styles.link}>
+      <div className={styles.linkBox}>
         Нажимая на кнопку «Отправить», вы соглашаетесь с обработкой персональных
         данных и с &nbsp;
         <Link className={styles.link} to="#">

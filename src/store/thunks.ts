@@ -5,6 +5,14 @@ export const getTasksThunk = createAsyncThunk(
   "thunk/getTasks",
   (query: string) => api.getTasks(query)
 );
+export const getCategoryTasksThunk = createAsyncThunk(
+  "thunk/getCategoryTasks",
+  (sectionId: string) => api.getCategoryTasks(sectionId)
+);
+export const getSubcategoryTasksThunk = createAsyncThunk(
+  "thunk/getSubcategoryTasks",
+  (subsectionId: string) => api.getSubcategoryTasks(subsectionId)
+);
 export const searchTasksThunk = createAsyncThunk(
   "thunk/searchTasks",
   ({ query, offset }: { query: string; offset: number }) =>
@@ -23,7 +31,7 @@ export const searchSubcategoriesThunk = createAsyncThunk(
 
 export const getTaskThunk = createAsyncThunk(
   "thunk/getTask",
-  (taskId: string) => api.getTasks(taskId)
+  (taskId: string) => api.getTask(taskId)
 );
 export const getAllCategoriesThunk = createAsyncThunk(
   "thunk/getAllCategories",
@@ -41,5 +49,9 @@ export const getCategoryThunk = createAsyncThunk(
 );
 export const getSubcategoryThunk = createAsyncThunk(
   "thunk/getSubcategory",
-  (subcategoryId: string) => api.getSubcategory(subcategoryId)
+  (query: string) => api.getSubcategory(query)
+);
+export const getSubcategoriesThunk = createAsyncThunk(
+  "thunk/getSubcategories",
+  (categoryId: string) => api.getSubcategories(categoryId)
 );

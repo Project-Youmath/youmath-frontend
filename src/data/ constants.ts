@@ -41,9 +41,7 @@ export const team = [
     resume:
       "https://docs.google.com/document/d/1Yo3MPrucYscV7STEnrqpGAsSksaKidnZWSIqfDrr8II/edit?usp=sharing",
     mail: "mailto:agoykhfis@gmail.com",
-
     telegram: "https://t.me/Aleksandr_Goykhfis",
-    linkedin: "",
     gitHub: "https://github.com/GoykfisAlexander",
   },
   {

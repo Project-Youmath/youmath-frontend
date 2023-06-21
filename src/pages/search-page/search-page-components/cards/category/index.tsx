@@ -29,9 +29,7 @@ const CategorySearchCard: FC<IProps> = ({ category }) => {
           </div>
         )}
         <Link
-          to={`${startPage}categories/category/${"none"}/category/${
-            category.id
-          }?subsection=${category.id}`}
+          to={`${startPage}categories/category/${category.id}`}
           className={styles.arrow}
         >
           <ArrowRightIcon />

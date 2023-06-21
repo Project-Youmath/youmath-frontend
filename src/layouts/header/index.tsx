@@ -25,8 +25,8 @@ const Header = () => {
                 : styles.gradientMaskInactive
             }
           >
-            <div className={styles.topColumn}>
-              <Link className={styles.topColumn__logo} to={startPage}>
+            <div className={styles.topRow}>
+              <Link className={styles.topRow__logo} to={startPage}>
                 <img src={logo} alt="Логотип YouMath" />
               </Link>
               <div

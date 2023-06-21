@@ -21,9 +21,9 @@ const CategoryCard: FC<PopularCategoryCardProps> = ({ category }) => {
           <Text size="large" textType="text" textColor="black">
             {category.title}
           </Text>
-          {category.author && (
+          {category.subtitle && (
             <Text size="small" textType="text" textColor="dim">
-              {category.author}
+              {category.subtitle}
             </Text>
           )}
         </div>

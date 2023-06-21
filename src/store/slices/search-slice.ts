@@ -89,7 +89,6 @@ const searchSlice = createSlice({
         state.isError = false;
         state.isSuccess = true;
         state.categories.push(...action.payload.results);
-        console.log(action.payload.results);
         state.countCategories = action.payload.count;
         state.lengthCategories = state.categories.length;
       })

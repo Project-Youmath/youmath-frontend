@@ -9,7 +9,7 @@ export interface CategoryResource {
   id: number;
   title: string;
   description: string;
-  author: string | null;
+  subtitle: string | null;
   read_counter: number;
   subsection_exist: boolean;
   subsections_count: number;

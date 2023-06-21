@@ -13,16 +13,17 @@ const SubcategorySearchCard: FC<IProps> = ({ subcategory }) => {
     <section className={styles.section}>
       <div className={`${styles.info}`}>
         <Link
-          to={`${startPage}categories/category/${"none"}/subcategory/${
-            subcategory.id
-          }?subsection=${subcategory.id}`}
+          to={`${startPage}categories/category/${subcategory.section.id}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
           className={styles.title}
         >
           {subcategory.title}
         </Link>
-        <Link to={""} className={styles.categoryLink}>
+        <Link
+          to={`${startPage}categories/category/${subcategory.section.id}`}
+          className={styles.categoryLink}
+        >
           <IcDotIcon />
-          {subcategory.title}
+          {subcategory.section.title}
         </Link>
         <div className={styles.description}>{subcategory.description}</div>
       </div>
@@ -31,9 +32,7 @@ const SubcategorySearchCard: FC<IProps> = ({ subcategory }) => {
           {`Вариантов ${subcategory.articles_count}`}
         </div>
         <Link
-          to={`${startPage}categories/category/${"none"}/subcategory/${
-            subcategory.id
-          }?subsection=${subcategory.id}`}
+          to={`${startPage}categories/category/${subcategory.section.id}/subcategory/${subcategory.id}?subsection=${subcategory.id}`}
           className={styles.arrow}
         >
           <ArrowRightIcon />
