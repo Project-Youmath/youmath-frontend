@@ -9,7 +9,7 @@ import {
   getCategoryThunk,
   getSubcategoriesThunk,
 } from "../../store/thunks";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 
 const CategoryPage = () => {
   const dispatch = useAppDispatch();

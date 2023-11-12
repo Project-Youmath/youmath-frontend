@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { getSubcategoryThunk, getTasksThunk } from "../../store/thunks";
 import SectionPage from "../../layouts/section-page";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 
 const SubcategoryPage = () => {
   const dispatch = useAppDispatch();

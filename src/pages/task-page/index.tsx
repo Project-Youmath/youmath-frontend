@@ -3,7 +3,7 @@ import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
 import { useEffect } from "react";
 import { getTaskThunk } from "../../store/thunks";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 import TaskSection from "./task-section";
 import SectionPage from "../../layouts/section-page";
 

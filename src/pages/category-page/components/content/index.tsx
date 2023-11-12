@@ -3,7 +3,7 @@ import { CategorySectionContentInfo } from "./content-info";
 import { SubcategoryCard } from "./subcategory-card";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 
-import Loader from "../../../../components/loader";
+import Loader from "../../../../components/Loader";
 import TaskCard from "../../../../components/task-card";
 
 export const CategorySectionContent = () => {

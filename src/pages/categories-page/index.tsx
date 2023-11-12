@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 import CategoryCard from "../../components/category-card";
 import Navigation from "../../layouts/navigation";
 import Container from "../../layouts/container";

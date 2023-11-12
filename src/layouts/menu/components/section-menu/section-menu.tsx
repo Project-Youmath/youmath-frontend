@@ -1,7 +1,7 @@
 import styles from "./section-menu.module.scss";
 import { SectionMenuItem } from "../section-menu-item/section-menu-item";
 
-import Loader from "../../../../components/loader";
+import Loader from "../../../../components/Loader";
 import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 
 export const SectionMenu = () => {

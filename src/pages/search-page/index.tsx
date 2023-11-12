@@ -1,5 +1,5 @@
 import styles from "./index.module.scss";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 import SearchPageTitle from "./search-page-components/title";
 import SearchPageCards from "./search-page-components/cards";
 import NothingFoundCard from "./search-page-components/nothing-found-card";
