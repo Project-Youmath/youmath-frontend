@@ -1,0 +1,33 @@
+.section {
+  .title {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32em;
+    line-height: 120%;
+  }
+  .subtitle {
+    margin: 2em 0 1em 0;
+    font-family: "Roboto Flex";
+    font-size: 28em;
+    font-weight: 600;
+    line-height: 130%;
+  }
+  .description {
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20em;
+    line-height: 140%;
+  }
+  .employeeCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 32em 0 48em 0;
+    gap: 32em;
+    @media (orientation: portrait) {
+      justify-content: center;
+    }
+  }
+}

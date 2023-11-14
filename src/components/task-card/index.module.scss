@@ -1,0 +1,41 @@
+.link {
+  text-decoration: none;
+  width: 22%;
+  @media (orientation: portrait) {
+    width: 46%;
+  }
+}
+.section {
+  display: grid;
+  width: 100%;
+  height: 128em;
+  background: #cde2d9;
+  border-radius: 16em;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 80%;
+  gap: 8em;
+  cursor: pointer;
+  overflow: hidden;
+  div {
+    text-align: center;
+    color: #245353;
+  }
+  .title {
+    margin-top: 10px;
+    font-size: 24em;
+    font-weight: bold;
+  }
+  .subtitle {
+    font-size: 16em;
+  }
+  .icon {
+    margin-left: auto;
+  }
+  .icon * {
+    fill: #245353;
+  }
+  &:hover {
+    background: #f7fded;
+  }
+}

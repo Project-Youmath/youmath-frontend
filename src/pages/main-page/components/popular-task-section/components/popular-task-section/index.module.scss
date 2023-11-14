@@ -1,0 +1,43 @@
+.section {
+  background-image: url("../../../../../../assets/images/popular-task-bg.jpg");
+  .content {
+    padding: 72em 0 60em 0;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 120%;
+    }
+    .landscape {
+      @media (orientation: portrait) {
+        display: none;
+      }
+    }
+    .portrait {
+      @media (orientation: landscape) {
+        display: none;
+      }
+    }
+    .points {
+      display: flex;
+      justify-content: center;
+      gap: 8em;
+      .point {
+        font-size: 40em;
+        color: #282a2e77;
+      }
+      .active {
+        color: #282a2e;
+      }
+    }
+  }
+  .taskList {
+    margin-top: 56em;
+    display: flex;
+    flex-direction: column;
+    gap: 40em;
+  }
+}

@@ -1,0 +1,27 @@
+.popularCategorySection {
+  .content {
+    margin: 40em 0 40em 0;
+    display: grid;
+    gap: 40em;
+  }
+  &__allCategoriesLink {
+    width: 10em;
+    height: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20em;
+    line-height: 120%;
+    color: #282a2e;
+    border-radius: 25em;
+    background: var(--text-accent-color);
+    text-decoration: none;
+    &ICon {
+      stroke: black;
+      fill: black;
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

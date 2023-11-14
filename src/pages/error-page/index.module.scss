@@ -1,0 +1,24 @@
+.section {
+  padding: 40em 40em 40em 40em;
+  height: max-content;
+  display: grid;
+  justify-content: center;
+  .title {
+    font-weight: 700;
+    font-size: 32em;
+    text-align: center;
+  }
+  .button {
+    display: flex;
+    margin: auto;
+    width: 20em;
+    height: 4em;
+    background: #12f3af;
+    border-radius: 2em;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+}

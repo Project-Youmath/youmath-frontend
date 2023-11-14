@@ -1,0 +1,40 @@
+.section {
+  margin-top: 50em;
+  gap: 24em;
+  display: flex;
+  align-items: center;
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
+
+  .variants {
+    gap: 24em;
+    display: flex;
+    flex-wrap: wrap;
+
+    .link {
+      display: flex;
+      padding: 0.2em 1em;
+      width: 2em;
+      height: 2em;
+      border-radius: 2em;
+      font-size: 20em;
+      justify-content: center;
+      align-items: center;
+      color: #222222;
+      text-decoration: none;
+      background: #ffffff;
+    }
+    .darkBlue {
+      color: #3e5372;
+    }
+    .white {
+      color: white;
+      background-color: #245353;
+    }
+    .darkGreen {
+      color: #245353;
+    }
+  }
+}

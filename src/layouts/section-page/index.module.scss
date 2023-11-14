@@ -1,0 +1,15 @@
+.section {
+  display: flex;
+  gap: 24em;
+  margin-bottom: 60em;
+}
+.ButtonUpContainer {
+  display: flex;
+  justify-content: flex-end;
+  .ButtonUp {
+    cursor: pointer;
+    @media (orientation: portrait) {
+      width: 90em;
+    }
+  }
+}

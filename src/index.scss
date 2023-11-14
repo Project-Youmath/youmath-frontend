@@ -1,0 +1,40 @@
+@import url("./vendors/fonts/fonts.scss");
+
+body {
+  margin: 0;
+  font-family: "Roboto Flex", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --white-color: white;
+
+  --text-color: #282a2e;
+  --text-dim-color: #888;
+  --text-dark-green-color: #245353;
+  --text-accent-color: #12f3af;
+  --text-secondary-color: #d3d6d5;
+
+  --bg-light-green-color: #cde2d9;
+  --bg-green-color: #245353;
+  --bg-black-color: #222;
+  --bg-blue-color: #3e5372;
+  --bg-hover-color: #f7fded;
+  --bg-accent-color: #12f3af;
+
+  --desktop-breakpoint: 1440;
+  --table-breakpoint: 744;
+  --mobile-breakpoint: 360;
+}
+.app {
+  min-height: 100vh;
+  display: grid;
+  font-size: 1px;
+  color: #282a2e;
+
+  @media (orientation: portrait) {
+    font-size: 0.8px;
+  }
+}
+.page {
+  min-height: 60vh;
+}

@@ -1,0 +1,64 @@
+.text {
+  margin: 0;
+  font-family: "Roboto Flex", serif;
+  font-style: normal;
+
+  &_size_small {
+    font-weight: 400;
+    font-size: 20em;
+    line-height: 140%;
+
+    @media screen and (max-width: 360px) {
+      line-height: 130%;
+    }
+  }
+
+  &_size_large {
+    font-weight: 500;
+    font-size: 24em;
+    line-height: 140%;
+
+    @media screen and (max-width: 360px) {
+      line-height: 130%;
+    }
+  }
+
+  &_size_button {
+    font-weight: 500;
+    font-size: 20em;
+    line-height: 120%;
+  }
+  &_size_tabs {
+    font-weight: 300;
+    font-size: 16em;
+    line-height: 120%;
+  }
+
+  &_size_footer {
+    font-weight: 300;
+    font-size: 16em;
+    line-height: 120%;
+  }
+
+  &_color_white {
+    color: var(--white-color);
+  }
+
+  &_color_black {
+    color: var(--text-color);
+  }
+
+  &_color_accent {
+    color: var(--text-accent-color);
+  }
+  &_color_dim {
+    color: var(--text-dim-color);
+  }
+  &_color_darkGreen {
+    color: var(--text-dark-green-color);
+  }
+
+  &_decorator_underline {
+    text-decoration-line: underline;
+  }
+}
