@@ -1,0 +1,28 @@
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24em;
+  margin-bottom: 40em;
+
+  @media (orientation: portrait) {
+    height: 70vh;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 32em;
+  }
+  .subtitle {
+    color: #888888;
+    font-size: 18em;
+  }
+  .description {
+    font-size: 18em;
+    font-size: 20em;
+  }
+  .pdf {
+    width: 100%;
+    height: 80vh;
+  }
+}

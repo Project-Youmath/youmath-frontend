@@ -1,13 +1,18 @@
-import {PopularCategoryResource} from "./popular-category-resource";
-import {SubCategoryResource} from "./sub-category-resource";
-
 export interface TaskResource {
+  description: string;
+  file?: null;
+  id: number;
+  read_counter: number;
+  subtitle: string | null;
+  title: string;
+  section?: {
     id: number;
     title: string;
-    description: string;
-    file: string | null;
-    read_counter: number;
-
-    section: PopularCategoryResource;
-    subCategory: SubCategoryResource;
+    subtitle: string | null;
+  };
+  subsection?: {
+    id: number;
+    title: string;
+    subtitle: string | null;
+  } | null;
 }

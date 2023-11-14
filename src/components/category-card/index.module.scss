@@ -1,0 +1,29 @@
+.link {
+  text-decoration: none;
+}
+.section {
+  padding: 16em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1em solid #d3d6d5;
+  .info {
+    gap: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .arrow {
+    width: 40em;
+    height: 40em;
+    fill: #d3d6d5;
+
+    @media (orientation: portrait) {
+      display: none;
+    }
+  }
+  &:hover {
+    background: #f7fded;
+    color: #282a2e;
+  }
+}

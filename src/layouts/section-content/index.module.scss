@@ -1,0 +1,8 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  @media (orientation: portrait) {
+    width: 100%;
+  }
+}

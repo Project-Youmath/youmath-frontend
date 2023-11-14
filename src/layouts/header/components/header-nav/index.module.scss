@@ -1,0 +1,31 @@
+.headerNav {
+  gap: 24em;
+  display: flex;
+  align-items: center;
+  .link {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 20em;
+    color: white;
+    text-decoration-color: #245353;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.3em;
+    transition: text-decoration 0.3s ease;
+    &:hover {
+      text-decoration-color: #12f3af;
+    }
+  }
+}
+@media (orientation: landscape) {
+  .categories_burger {
+    display: none;
+  }
+}
+@media (orientation: portrait) {
+  .categories {
+    display: none;
+  }
+  .categories_burger {
+    display: flex;
+  }
+}

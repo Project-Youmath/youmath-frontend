@@ -1,0 +1,32 @@
+.section {
+  margin-bottom: 95em;
+
+  .title {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+  }
+  .subtitle,
+  .description {
+    padding: 8px 0 8px 0;
+  }
+  .subtitle {
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20em;
+    line-height: 140%;
+    color: #888888;
+  }
+  .description {
+    font-size: 20em;
+  }
+  .cards {
+    margin: 48em 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24em;
+  }
+}

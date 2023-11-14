@@ -1,3 +1,3 @@
-import {PopularCategoryResource} from "../resource/popular-category-resource";
+import { CategoryResource } from "../resource/category-resource";
 
-export type GetPopularCategoryResponse = PopularCategoryResource[]
+export type GetPopularCategoryResponse = CategoryResource[];

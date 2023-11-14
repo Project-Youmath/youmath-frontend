@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16em;
+  .title {
+    width: 80%;
+    font-weight: 700;
+    font-size: 32em;
+    color: #282a2e;
+  }
+  .subtitle {
+    font-family: "Roboto Flex";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20em;
+    line-height: 140%;
+    color: #888888;
+  }
+  .description {
+    font-size: 20em;
+    line-height: 1.2em;
+    width: 80%;
+  }
+  .overflowed {
+    overflow: hidden;
+    max-height: 7.2em;
+  }
+  .more {
+    cursor: pointer;
+    width: max-content;
+    display: flex;
+    gap: 1em;
+    font-weight: 500;
+    font-size: 20em;
+    color: #282a2e;
+
+    .icon {
+      fill: black;
+    }
+  }
+}

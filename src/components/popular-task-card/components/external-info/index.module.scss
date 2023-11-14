@@ -1,0 +1,35 @@
+.section {
+  width: 50%;
+  gap: 10em;
+  display: none;
+  flex-direction: column;
+  .description {
+    font-size: 20em;
+    line-height: 1.2em;
+  }
+  .more {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .darkBlue,
+  .darkGreen {
+    color: #d3d6d5;
+  }
+  .overflowed {
+    overflow: hidden;
+    max-height: 7.2em;
+  }
+}
+@media (orientation: portrait) {
+  .section {
+    width: 100%;
+  }
+  .portrait {
+    display: flex;
+  }
+}
+@media (orientation: landscape) {
+  .landscape {
+    display: flex;
+  }
+}
