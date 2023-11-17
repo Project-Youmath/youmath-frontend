@@ -16,7 +16,8 @@ import Container from "../../layouts/container";
 import Navigation from "../../layouts/navigation";
 import SearchFilter from "./search-page-components/filter";
 import { searchActions } from "../../store/slices/search-slice";
-import { ButtonUp } from "../../components/ui/icons/button-up";
+import ButtonUpContainer from "../../components/ButtonUpContainer";
+
 const SearchPage = () => {
   const dispatch = useAppDispatch();
   const location = useLocation();
@@ -112,7 +113,7 @@ const SearchPage = () => {
             )}
           </section>
         )}
-        <ButtonUp classname={styles.ButtonUp} />
+      <ButtonUpContainer isFixed={true} />
       </>
     </Container>
   );
