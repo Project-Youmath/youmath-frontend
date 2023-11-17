@@ -1,0 +1,29 @@
+.ButtonUpContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ButtonUpContainerFixed {
+  margin: 0 auto;
+  max-width: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24em;
+  position: fixed;
+  right: 2%;
+  bottom: 10em;
+}
+
+.ButtonUp {
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  @media (orientation: portrait) {
+    width: 90em;
+  }
+}
+
+.ButtonUpHidden {
+  pointer-events: none;
+  opacity: 0;
+}
