@@ -19,7 +19,6 @@ const Navigation = () => {
   const { categoryId, subcategoryId, taskId } = useParams();
   const navigationPages = pathname
     .split("/")
-    .slice(1)
     .filter((page) => !["category", "subcategory", "task"].includes(page));
 
   return (
