@@ -47,7 +47,12 @@
     background: #12f3af;
     border-radius: 25em;
     color: var(--text-color);
+    transition: all .3s ease-in-out;
   }
+  .link:hover {
+    background: white;
+  }
+
   .taskCount {
     padding: 0.4em 1em;
     color: white;
