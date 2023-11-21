@@ -24,6 +24,13 @@
     width: 65%;
     font-weight: 400;
     font-size: 20em;
+    line-height: normal;
+    -webkit-box-orient: vertical;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
     @media (orientation: portrait) {
       width: 100%;
     }
@@ -47,7 +54,12 @@
     background: #12f3af;
     border-radius: 25em;
     color: var(--text-color);
+    transition: all .3s ease-in-out;
   }
+  .link:hover {
+    background: white;
+  }
+
   .taskCount {
     padding: 0.4em 1em;
     color: white;
