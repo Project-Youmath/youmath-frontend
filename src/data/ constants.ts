@@ -4,7 +4,7 @@ import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
 import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
 
-export const startPage = "/";
+export const startPage = "/youmath-frontend/";
 
 export const team = [
   {
