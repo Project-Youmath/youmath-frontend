@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4fde8640.css",
-    "main.js": "/static/js/main.cea745c4.js",
-    "static/js/787.dda74066.chunk.js": "/static/js/787.dda74066.chunk.js",
-    "static/media/popular-task-bg.jpg": "/static/media/popular-task-bg.1a288b9e62705f3c34b7.jpg",
-    "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
-    "static/media/Ubuntu-Bold.woff": "/static/media/Ubuntu-Bold.fb516a328aa972109935.woff",
-    "static/media/Anastasia_Shchepotina.jpg": "/static/media/Anastasia_Shchepotina.333c831128c7e50794b0.jpg",
-    "static/media/Alexandr_Goykhfis.jpg": "/static/media/Alexandr_Goykhfis.d0a2506d8a415f184bad.jpg",
-    "static/media/Anastasia_Girenko.jpg": "/static/media/Anastasia_Girenko.29ef60e6141c4d38a7fa.jpg",
-    "static/media/Andrey_Smirnov.jpg": "/static/media/Andrey_Smirnov.0bf639908a0824b102b3.jpg",
-    "static/media/Olga_Dondukova.jpg": "/static/media/Olga_Dondukova.d2b40ce2e0f856b9c449.jpg",
-    "index.html": "/index.html",
-    "main.4fde8640.css.map": "/static/css/main.4fde8640.css.map",
-    "main.cea745c4.js.map": "/static/js/main.cea745c4.js.map",
-    "787.dda74066.chunk.js.map": "/static/js/787.dda74066.chunk.js.map"
+    "main.css": "/youmath-frontend/static/css/main.6af1a928.css",
+    "main.js": "/youmath-frontend/static/js/main.db83280f.js",
+    "static/js/787.dda74066.chunk.js": "/youmath-frontend/static/js/787.dda74066.chunk.js",
+    "static/media/popular-task-bg.jpg": "/youmath-frontend/static/media/popular-task-bg.1a288b9e62705f3c34b7.jpg",
+    "static/media/Ubuntu-Bold.ttf": "/youmath-frontend/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
+    "static/media/Ubuntu-Bold.woff": "/youmath-frontend/static/media/Ubuntu-Bold.fb516a328aa972109935.woff",
+    "static/media/Anastasia_Shchepotina.jpg": "/youmath-frontend/static/media/Anastasia_Shchepotina.333c831128c7e50794b0.jpg",
+    "static/media/Alexandr_Goykhfis.jpg": "/youmath-frontend/static/media/Alexandr_Goykhfis.d0a2506d8a415f184bad.jpg",
+    "static/media/Anastasia_Girenko.jpg": "/youmath-frontend/static/media/Anastasia_Girenko.29ef60e6141c4d38a7fa.jpg",
+    "static/media/Andrey_Smirnov.jpg": "/youmath-frontend/static/media/Andrey_Smirnov.0bf639908a0824b102b3.jpg",
+    "static/media/Olga_Dondukova.jpg": "/youmath-frontend/static/media/Olga_Dondukova.d2b40ce2e0f856b9c449.jpg",
+    "index.html": "/youmath-frontend/index.html",
+    "main.6af1a928.css.map": "/youmath-frontend/static/css/main.6af1a928.css.map",
+    "main.db83280f.js.map": "/youmath-frontend/static/js/main.db83280f.js.map",
+    "787.dda74066.chunk.js.map": "/youmath-frontend/static/js/787.dda74066.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4fde8640.css",
-    "static/js/main.cea745c4.js"
+    "static/css/main.6af1a928.css",
+    "static/js/main.db83280f.js"
   ]
 }
