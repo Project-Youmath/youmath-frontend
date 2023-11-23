@@ -7,7 +7,7 @@ import { startPage } from "../../../../data/ constants";
 const FooterLogoContactLine = () => {
   return (
     <div className={styles.logoContactLine}>
-      <Link to={startPage}>
+      <Link to={startPage} onClick={() => window.scrollTo(0, 0)}>
         {" "}
         <img
           src={logo}
@@ -15,7 +15,7 @@ const FooterLogoContactLine = () => {
           className={styles.logoContactLine__logo}
         />
       </Link>
-      <Link to={startPage + "feedback"} style={{ textDecoration: "none" }}>
+      <Link to={startPage + "feedback"} style={{ textDecoration: "none" }} onClick={() => window.scrollTo(0, 0)}>
         <Text
           size={"default"}
           textType={"button"}
