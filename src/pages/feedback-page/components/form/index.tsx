@@ -91,7 +91,7 @@ const EmailForm: React.FC = () => {
         <textarea
           className={styles.text}
           id="message"
-          placeholder="Введите текс сообщения"
+          placeholder="Введите текст сообщения"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required

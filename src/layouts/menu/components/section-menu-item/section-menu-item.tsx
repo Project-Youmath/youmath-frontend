@@ -18,6 +18,7 @@ export const SectionMenuItem: FC<SectionMenuItemProps> = ({
     <div
       onClick={() => {
         navigate(`${startPage}categories/category/${categoryIndex}`);
+        window.scrollTo(0, 0)
       }}
       className={`${styles.sectionMenuItem} ${
         categoryId === categoryIndex.toString() ? styles.active : ""
