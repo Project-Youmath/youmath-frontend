@@ -5,7 +5,7 @@ import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
 import Liya_Vysotskaya from '../assets/images/Liya_Vysotskaya.jpg';
 
-export const startPage = "/youmath-frontend/";
+export const startPage = "/";
 
 export const team = [
   {

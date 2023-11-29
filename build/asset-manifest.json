@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76576eab.css",
+    "main.js": "/static/js/main.950dd0f2.js",
+    "static/js/787.dda74066.chunk.js": "/static/js/787.dda74066.chunk.js",
+    "static/media/Liya_Vysotskaya.jpg": "/static/media/Liya_Vysotskaya.070f3bd8d6a262229bb5.jpg",
+    "static/media/popular-task-bg.jpg": "/static/media/popular-task-bg.1a288b9e62705f3c34b7.jpg",
+    "static/media/Ubuntu-Bold.ttf": "/static/media/Ubuntu-Bold.fec2d0f1431a6114a6ce.ttf",
+    "static/media/Ubuntu-Bold.woff": "/static/media/Ubuntu-Bold.fb516a328aa972109935.woff",
+    "static/media/Anastasia_Popova.jpg": "/static/media/Anastasia_Popova.333c831128c7e50794b0.jpg",
+    "static/media/Alexandr_Goykhfis.jpg": "/static/media/Alexandr_Goykhfis.d0a2506d8a415f184bad.jpg",
+    "static/media/Anastasia_Girenko.jpg": "/static/media/Anastasia_Girenko.29ef60e6141c4d38a7fa.jpg",
+    "static/media/Andrey_Smirnov.jpg": "/static/media/Andrey_Smirnov.0bf639908a0824b102b3.jpg",
+    "static/media/Olga_Dondukova.jpg": "/static/media/Olga_Dondukova.d2b40ce2e0f856b9c449.jpg",
+    "index.html": "/index.html",
+    "main.76576eab.css.map": "/static/css/main.76576eab.css.map",
+    "main.950dd0f2.js.map": "/static/js/main.950dd0f2.js.map",
+    "787.dda74066.chunk.js.map": "/static/js/787.dda74066.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76576eab.css",
+    "static/js/main.950dd0f2.js"
+  ]
+}
