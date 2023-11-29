@@ -1,15 +1,16 @@
-import Anastasia_Shchepotina from "../assets/images/Anastasia_Shchepotina.jpg";
+import Anastasia_Popova from "../assets/images/Anastasia_Popova.jpg";
 import Andrey_Smirnov from "../assets/images/Andrey_Smirnov.jpg";
 import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
 import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
+import Liya_Vysotskaya from '../assets/images/Liya_Vysotskaya.jpg';
 
 export const startPage = "/youmath-frontend/";
 
 export const team = [
   {
-    image: Anastasia_Shchepotina,
-    fullName: "Анастасия Щепотина",
+    image: Anastasia_Popova,
+    fullName: "Анастасия Попова",
     jobTitle: "Project Manager",
     phone: "tel:+79688892210",
     mail: "mailto:shchepad@ya.ru",
@@ -43,6 +44,15 @@ export const team = [
     mail: "mailto:agoykhfis@gmail.com",
     telegram: "https://t.me/Aleksandr_Goykhfis",
     gitHub: "https://github.com/GoykfisAlexander",
+  },
+  {
+    image: Liya_Vysotskaya,
+    fullName: "Лия Высоцкая",
+    jobTitle: "Frontend-разработчик, DevOps",
+    resume: "https://spb.hh.ru/applicant/resumes/view?resume=bcd520b2ff0c8a8a870039ed1f4f4a56513656",
+    mail: "mailto:imredrat@yandex.ru",
+    telegram: "https://t.me/liya_vysockaya",
+    gitHub: "https://github.com/LiyaVysotskaya",
   },
   {
     image: Andrey_Smirnov,
