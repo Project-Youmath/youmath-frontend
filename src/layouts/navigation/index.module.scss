@@ -5,16 +5,22 @@
   height: 60em;
   margin: 24em 0 32em 0;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 8em;
 }
 
 .link {
   height: 100%;
+  flex-shrink: 1;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #888;
   font-size: 20em;
   white-space: nowrap;
+
+  &:not(:last-child):hover {
+    text-decoration: underline;
+  }
 }
