@@ -14,7 +14,7 @@ const SearchFilter = () => {
   }, [active, dispatch]);
   return (
     <section className={styles.section}>
-      {["Все", "Решение", "Подразделы", "Разделы"].map((title, i) => (
+      {["Все", "Решения", "Подразделы", "Разделы"].map((title, i) => (
         <div
           key={title}
           className={active === i ? styles.active : ""}
