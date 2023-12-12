@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
   gap: 24em;
-  overflow: scroll;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    overflow: scroll;
+  }
 
   div {
     min-width: max-content;
