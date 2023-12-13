@@ -13,6 +13,7 @@ const TaskCard: FC<ITaskCardProps> = ({ task }) => {
     <Link
       to={`${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${task.id}`}
       className={styles.link}
+      onClick={async() => window.scroll(0, 0)}
     >
       <section className={styles.section}>
         <div className={styles.title}>
