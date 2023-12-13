@@ -53,7 +53,19 @@ export const api = {
   },
 
   getAllCategories(): Promise<GetAllCategoriesResponse> {
-    return createRequest(`/sections`);
+    return new Promise(async (res, rej) => {
+      try {
+        const data = await createRequest(`/sections`);
+        if (data.next === null) {
+          res(data);
+        } else {
+          const allData = await createRequest(`/sections/?&limit=${data.count}`);
+          res(allData);
+        }
+      } catch (e) {
+        rej(e);
+      }
+    })
   },
 
   getCategory(categoryId: string): Promise<CategoryResource> {
