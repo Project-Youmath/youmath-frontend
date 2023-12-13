@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
@@ -16,10 +16,15 @@ import { startPage } from "./data/ constants";
 import TaskPage from "./pages/task-page";
 
 export const App = () => {
+  const location = useLocation();
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getAllCategoriesThunk());
-  }, [dispatch]);
+
+    if (location.pathname === '/') {
+      window.scroll(0, 0);
+    }
+  }, [dispatch, location.pathname]);
 
   return (
     <section className="app">
