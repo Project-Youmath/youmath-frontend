@@ -16,9 +16,7 @@ const TaskCard: FC<ITaskCardProps> = ({ task }) => {
       onClick={async() => window.scroll(0, 0)}
     >
       <section className={styles.section}>
-        <div className={styles.title}>
-          {task.title.split(" ").slice(1, 2).join(" ") + " Вариант"}
-        </div>
+        <div className={styles.title}>{task.title}</div>
         <div className={styles.subtitle}>{task.subtitle}</div>
         <div className={styles.icon}>
           <ArrowRightSmallIcon />
