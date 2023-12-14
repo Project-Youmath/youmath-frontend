@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
@@ -15,6 +15,16 @@ import SubcategoryPage from "./pages/subcategory-page";
 import { startPage } from "./data/ constants";
 import TaskPage from "./pages/task-page";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 export const App = () => {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -23,6 +33,7 @@ export const App = () => {
 
   return (
     <section className="app">
+      <ScrollToTop />
       <Header />
       <section className="page">
         <Routes>
