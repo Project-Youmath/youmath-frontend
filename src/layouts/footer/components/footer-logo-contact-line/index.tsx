@@ -15,7 +15,7 @@ const FooterLogoContactLine = () => {
           className={styles.logoContactLine__logo}
         />
       </Link>
-      <Link to={startPage + "feedback"} style={{ textDecoration: "none" }}>
+      {/* <Link to={startPage + "feedback"} style={{ textDecoration: "none" }}>
         <Text
           size={"default"}
           textType={"button"}
@@ -24,7 +24,7 @@ const FooterLogoContactLine = () => {
         >
           Связаться с нами
         </Text>
-      </Link>
+      </Link> */}
     </div>
   );
 };

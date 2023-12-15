@@ -1,9 +1,9 @@
 import Anastasia_Popova from "../assets/images/Anastasia_Popova.jpg";
-import Andrey_Smirnov from "../assets/images/Andrey_Smirnov.jpg";
 import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
 import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
 import Liya_Vysotskaya from '../assets/images/Liya_Vysotskaya.jpg';
+import Elena_Serkova from '../assets/images/Elena_Serkova.jpg';
 
 export const startPage = "/";
 
@@ -15,14 +15,13 @@ export const team = [
     phone: "tel:+79688892210",
     mail: "mailto:shchepad@ya.ru",
     telegram: "https://t.me/ShchepotA",
-    linkedin: "https://www.linkedin.com/in/anastasia-shchepotina-566728252/",
+    linkedin: "https://www.linkedin.com/in/anastasia-popova-566728252",
   },
   {
     image: Anastasia_Girenko,
     fullName: "Анастасия Гиренко",
     jobTitle: "UX/UI-дизайнер",
     telegram: "https://t.me/Izorgadina",
-    linkedin: "https://www.linkedin.com/in/anastasia-girenko-98534851/",
     Behance: "https://www.behance.net/izorgadina",
   },
   {
@@ -34,6 +33,13 @@ export const team = [
     phone: "tel:+79063469770",
     mail: "mailto:dondukovaolya@yandex.ru",
     telegram: "https://t.me/dolka14",
+  },
+  {
+    image: Elena_Serkova,
+    fullName: "Елена Серкова",
+    jobTitle: "QA тестировщик",
+    mail: "mailto:helena_sh2001@mail.ru",
+    telegram: "https://t.me/Serkova_Elena",
   },
   {
     image: Alexandr_Goykhfis,
@@ -53,14 +59,5 @@ export const team = [
     mail: "mailto:imredrat@yandex.ru",
     telegram: "https://t.me/liya_vysockaya",
     gitHub: "https://github.com/LiyaVysotskaya",
-  },
-  {
-    image: Andrey_Smirnov,
-    fullName: "Андрей Смирнов",
-    jobTitle: "Backend-разработчик",
-    resume: "https://hh.ru/resume/294dcdeaff02946eac0039ed1f756f4a4b3166",
-    telegram: "https://t.me/aevsmirnov",
-    linkedin: "https://linkedin.com/in/aesmirnov",
-    gitHub: "https://github.com/smirnov-andrey",
   },
 ];
