@@ -1,9 +1,9 @@
 import Anastasia_Popova from "../assets/images/Anastasia_Popova.jpg";
-import Andrey_Smirnov from "../assets/images/Andrey_Smirnov.jpg";
 import Alexandr_Goykhfis from "../assets/images/Alexandr_Goykhfis.jpg";
 import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
 import Liya_Vysotskaya from '../assets/images/Liya_Vysotskaya.jpg';
+import Elena_Serkova from '../assets/images/Elena_Serkova.jpg';
 
 export const startPage = "/";
 
@@ -33,6 +33,13 @@ export const team = [
     phone: "tel:+79063469770",
     mail: "mailto:dondukovaolya@yandex.ru",
     telegram: "https://t.me/dolka14",
+  },
+  {
+    image: Elena_Serkova,
+    fullName: "Елена Серкова",
+    jobTitle: "QA тестировщик",
+    mail: "mailto:helena_sh2001@mail.ru",
+    telegram: "https://t.me/Serkova_Elena",
   },
   {
     image: Alexandr_Goykhfis,
