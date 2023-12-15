@@ -11,16 +11,31 @@
 }
 
 .link {
-  height: 100%;
+  width: auto;
   flex-shrink: 1;
-  display: flex;
-  align-items: center;
   text-decoration: none;
   color: #888;
   font-size: 20em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-  &:not(:last-child):hover {
+  &:first-child,
+  &:nth-of-type(2) {
+    flex-shrink: 0;
+  }
+
+  &:hover {
     text-decoration: underline;
+  }
+}
+
+
+.active {
+  color: var(--dark-green);
+  
+  &:hover {
+    text-decoration: none;
+    cursor: auto;
   }
 }

@@ -3,6 +3,7 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { ArrowForwardIcon } from "../../components/ui/icons/arrow-forward-icon";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 import { startPage } from "../../data/ constants";
+import { useEffect } from "react";
 
 const linkTitle: { [key: string]: string } = {
   // [startPage.slice(1)]: "Главная",
@@ -21,42 +22,43 @@ const Navigation = () => {
     .split("/")
     .filter((page) => !["category", "subcategory", "task"].includes(page));
 
+  useEffect(() => {
+    console.log(navigationPages);
+  })
+
   return (
     <section className={styles.section}>
       {navigationPages.map((navigationPage, i) =>
         navigationPage !== "none" ? (
-          <NavLink
-            key={navigationPage + i}
-            className={styles.link}
-            style={({ isActive }) => {
-              return {
-                color: isActive ? "#245353" : "#888",
-              };
-            }}
-            to={
-              [
-                startPage,
-                `${startPage}${navigationPage}`,
-                `${startPage}categories/category/${categoryId}`,
-                `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
-                `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
-              ][i]
-            }
-            end
-          >
-            <span>
-              {
+          <>
+            <NavLink
+              key={navigationPage + i}
+              className={({ isActive }) =>
+                isActive ? `${styles.link} ${styles.active}` : styles.link
+              }
+              to={
                 [
-                  "Главная",
-                  linkTitle[navigationPage],
-                  category?.title,
-                  subcategory?.title,
-                  task?.title,
+                  startPage,
+                  `${startPage}${navigationPage}`,
+                  `${startPage}categories/category/${categoryId}`,
+                  `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}?subsection=${subcategoryId}`,
+                  `${startPage}categories/category/${categoryId}/subcategory/${subcategoryId}/task/${taskId}`,
                 ][i]
               }
-            </span>
-            <ArrowForwardIcon />
-          </NavLink>
+              end
+            >
+                {
+                  [
+                    "Главная",
+                    linkTitle[navigationPage],
+                    category?.title,
+                    subcategory?.title,
+                    task?.title,
+                  ][i]
+                }
+            </NavLink>
+            {i !== navigationPages.length - 1 && <ArrowForwardIcon />}
+          </>
         ) : (
           <></>
         )
