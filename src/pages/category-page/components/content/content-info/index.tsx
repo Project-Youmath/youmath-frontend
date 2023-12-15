@@ -43,7 +43,13 @@ export const CategorySectionContentInfo = () => {
         ref={textRef}
         className={`${styles.description} ${!isOpen ? styles.overflowed : ""}`}
       >
-        {category?.description}
+        {category?.description.split("\n").map((subStr) => {return (
+      <>
+        {subStr}
+        <br />
+      </>
+    );
+  })}
       </div>
       {isOverflowed && (
         <div className={styles.more} ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
