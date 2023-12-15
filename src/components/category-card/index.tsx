@@ -15,7 +15,6 @@ const CategoryCard: FC<PopularCategoryCardProps> = ({ category }) => {
     <Link
       to={`${startPage}categories/category/${category.id}`}
       className={styles.link}
-      onClick={() => window.scrollTo(0, 0)}
     >
       <div className={styles.section}>
         <div className={styles.info}>
