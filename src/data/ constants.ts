@@ -15,14 +15,13 @@ export const team = [
     phone: "tel:+79688892210",
     mail: "mailto:shchepad@ya.ru",
     telegram: "https://t.me/ShchepotA",
-    linkedin: "https://www.linkedin.com/in/anastasia-shchepotina-566728252/",
+    linkedin: "https://www.linkedin.com/in/anastasia-popova-566728252",
   },
   {
     image: Anastasia_Girenko,
     fullName: "Анастасия Гиренко",
     jobTitle: "UX/UI-дизайнер",
     telegram: "https://t.me/Izorgadina",
-    linkedin: "https://www.linkedin.com/in/anastasia-girenko-98534851/",
     Behance: "https://www.behance.net/izorgadina",
   },
   {
@@ -53,14 +52,5 @@ export const team = [
     mail: "mailto:imredrat@yandex.ru",
     telegram: "https://t.me/liya_vysockaya",
     gitHub: "https://github.com/LiyaVysotskaya",
-  },
-  {
-    image: Andrey_Smirnov,
-    fullName: "Андрей Смирнов",
-    jobTitle: "Backend-разработчик",
-    resume: "https://hh.ru/resume/294dcdeaff02946eac0039ed1f756f4a4b3166",
-    telegram: "https://t.me/aevsmirnov",
-    linkedin: "https://linkedin.com/in/aesmirnov",
-    gitHub: "https://github.com/smirnov-andrey",
   },
 ];
