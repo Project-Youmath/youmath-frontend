@@ -3,7 +3,6 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { ArrowForwardIcon } from "../../components/ui/icons/arrow-forward-icon";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 import { startPage } from "../../data/ constants";
-import { useEffect } from "react";
 
 const linkTitle: { [key: string]: string } = {
   // [startPage.slice(1)]: "Главная",
@@ -21,10 +20,6 @@ const Navigation = () => {
   const navigationPages = pathname
     .split("/")
     .filter((page) => !["category", "subcategory", "task"].includes(page));
-
-  useEffect(() => {
-    console.log(navigationPages);
-  })
 
   return (
     <section className={styles.section}>
