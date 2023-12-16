@@ -4,6 +4,7 @@ import Anastasia_Girenko from "../assets/images/Anastasia_Girenko.jpg";
 import Olga_Dondukova from "../assets/images/Olga_Dondukova.jpg";
 import Liya_Vysotskaya from '../assets/images/Liya_Vysotskaya.jpg';
 import Elena_Serkova from '../assets/images/Elena_Serkova.jpg';
+import Pavel_Denisov from '../assets/images/Pavel_Denisov.jpg';
 
 export const startPage = "/";
 
@@ -40,6 +41,14 @@ export const team = [
     jobTitle: "QA тестировщик",
     mail: "mailto:helena_sh2001@mail.ru",
     telegram: "https://t.me/Serkova_Elena",
+  },
+  {
+    image: Pavel_Denisov,
+    fullName: "Павел Денисов",
+    jobTitle: "QA тестировщик",
+    mail: "mailto:Waste11@mail.ru",
+    telegram: "https://t.me/SayhiPash",
+    linkedin: "https://www.linkedin.com/in/%D0%BF%D0%B0%D0%B2%D0%B5%D0%BB-%D0%B4%D0%B5%D0%BD%D0%B8%D1%81%D0%BE%D0%B2-b3a8b4276",
   },
   {
     image: Alexandr_Goykhfis,
