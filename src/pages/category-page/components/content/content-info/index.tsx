@@ -10,7 +10,6 @@ export const CategorySectionContentInfo = () => {
   const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const textRef = useRef<HTMLParagraphElement | null>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const textElement = textRef.current;
@@ -29,12 +28,6 @@ export const CategorySectionContentInfo = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (!isOpen) {
-      window.scrollTo(0, buttonRef.current ? buttonRef.current.scrollHeight : 0);
-    }
-  }, [isOpen]);
-
   return (
     <section className={styles.section}>
       <div className={styles.title}>{category?.title}</div>
@@ -52,7 +45,7 @@ export const CategorySectionContentInfo = () => {
   })}
       </div>
       {isOverflowed && (
-        <div className={styles.more} ref={buttonRef} onClick={() => setIsOpen(!isOpen)}>
+        <div className={styles.more} onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? "Скрыть" : "Подробнее..."}
           {isOpen ? <UpArrowIcon /> : <DownArrowIcon classname={styles.icon} />}
         </div>

@@ -1,5 +1,5 @@
-import { Outlet, ScrollRestoration } from "react-router-dom";
-import { useEffect } from "react";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
 import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
 import Header from "./layouts/header";
@@ -11,6 +11,11 @@ export const App = () => {
     dispatch(getAllCategoriesThunk());
   }, [dispatch]);
 
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <section className="app">
       <Header />
@@ -18,11 +23,7 @@ export const App = () => {
         <Outlet />
       </section>
       <Footer />
-      <ScrollRestoration
-        getKey={(location, matches) => {
-          return location.key;
-        }}
-      />
+      <ScrollRestoration />
     </section>
   );
 };
