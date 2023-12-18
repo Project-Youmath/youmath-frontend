@@ -3,31 +3,42 @@ import { NavLink, useLocation, useParams } from "react-router-dom";
 import { ArrowForwardIcon } from "../../components/ui/icons/arrow-forward-icon";
 import { useAppSelector } from "../../store/hooks/use-app-selector";
 import { startPage } from "../../data/ constants";
+import { useEffect } from "react";
+import { useAppDispatch } from "../../store/hooks/use-app-dispatch";
+import { getCategoryThunk, getSubcategoryThunk } from "../../store/thunks";
 
 const linkTitle: { [key: string]: string } = {
-  // [startPage.slice(1)]: "Главная",
   categories: "Разделы",
   about: "О проекте",
   feedback: "Связаться с нами",
   search: "Результаты поиска",
 };
 const Navigation = () => {
-  const { category } = useAppSelector((state) => state.categoryReducer);
-  const { subcategory } = useAppSelector((state) => state.subcategoryReducer);
-  const { task } = useAppSelector((state) => state.getTaskReducer);
+  let { category } = useAppSelector((state) => state.categoryReducer);
+  let { subcategory } = useAppSelector((state) => state.subcategoryReducer);
+  let { task } = useAppSelector((state) => state.getTaskReducer);
+  const dispatch = useAppDispatch();
   const { pathname } = useLocation();
   const { categoryId, subcategoryId, taskId } = useParams();
   const navigationPages = pathname
     .split("/")
     .filter((page) => !["category", "subcategory", "task"].includes(page));
 
+    useEffect(() => {
+      dispatch(getCategoryThunk(categoryId ?? ""));
+    }, [dispatch, categoryId]);
+
+    useEffect(() => {
+      dispatch(getSubcategoryThunk(subcategoryId ?? ""));
+    }, [dispatch, subcategoryId]);
+
   return (
     <section className={styles.section}>
       {navigationPages.map((navigationPage, i) =>
-        navigationPage !== "none" ? (
+        (navigationPage !== "none" && navigationPage !== 'undefined') ? (
           <>
             <NavLink
-              key={navigationPage + i}
+              key={'navigationPage' + i}
               className={({ isActive }) =>
                 isActive ? `${styles.link} ${styles.active}` : styles.link
               }
