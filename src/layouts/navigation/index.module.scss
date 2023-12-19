@@ -5,16 +5,37 @@
   height: 60em;
   margin: 24em 0 32em 0;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 8em;
 }
 
 .link {
-  height: 100%;
-  display: flex;
-  align-items: center;
+  width: auto;
+  flex-shrink: 1;
   text-decoration: none;
   color: #888;
   font-size: 20em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:first-child,
+  &:nth-of-type(2) {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.active {
+  color: var(--text-dark-green-color);
+  
+  &:hover {
+    text-decoration: none;
+    cursor: auto;
+  }
 }

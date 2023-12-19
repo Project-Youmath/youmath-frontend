@@ -1,6 +1,6 @@
 import styles from "./index.module.scss";
 import logo from "../../../../assets/images/logo.png";
-import { Text } from "../../../../components/ui/typography/text/text";
+// import { Text } from "../../../../components/ui/typography/text/text";
 import { Link } from "react-router-dom";
 import { startPage } from "../../../../data/ constants";
 
