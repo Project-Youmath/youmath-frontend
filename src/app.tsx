@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useEffect, useLayoutEffect } from "react";
 import { useAppDispatch } from "./store/hooks/use-app-dispatch";
 import { getAllCategoriesThunk } from "./store/thunks";
@@ -23,7 +23,6 @@ export const App = () => {
         <Outlet />
       </section>
       <Footer />
-      <ScrollRestoration />
     </section>
   );
 };

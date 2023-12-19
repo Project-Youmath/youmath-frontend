@@ -36,7 +36,7 @@ export const CategorySectionContentInfo = () => {
         ref={textRef}
         className={`${styles.description} ${!isOpen ? styles.overflowed : ""}`}
       >
-        {category?.description.split("\n").map((subStr) => {return (
+        {category?.description?.split("\n").map((subStr) => {return (
       <>
         {subStr}
         <br />
