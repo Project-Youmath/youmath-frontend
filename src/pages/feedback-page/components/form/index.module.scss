@@ -29,8 +29,19 @@
       align-items: flex-start;
       resize: none;
     }
+    
+    .error{
+      outline: #c51717;
+      border: #c51717 1px solid;
+      box-shadow: 0px 2px 3px rgba(197, 23, 23, 0.1);
+
+    }
+    .success{
+      border-color: #4BB34B;
+    }
   }
-  label {
+  .error_massage {
+    margin-top: 4px;
     color: #c51717;
     font-family: "Roboto Flex";
     font-style: normal;
@@ -61,6 +72,17 @@
     font-size: 16em;
     .link {
       text-decoration: none;
+      color: #127AF3;
     }
+  }
+  .recaptcha__error{
+    border: #FF0101 1px solid;
+    padding: 8px;
+    width: min-content;
+  }
+  .recaptcha__success{
+    border: #4BB34B 1px solid;
+    padding: 8px;
+    width: min-content;
   }
 }
