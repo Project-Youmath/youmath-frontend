@@ -5,7 +5,6 @@ import { useAppSelector } from "../../../../store/hooks/use-app-selector";
 
 import Loader from "../../../../components/Loader";
 import TaskCard from "../../../../components/task-card";
-import ButtonUpContainer from "../../../../components/ButtonUpContainer";
 
 export const CategorySectionContent = () => {
   const { isLoading, category } = useAppSelector(
@@ -40,7 +39,6 @@ export const CategorySectionContent = () => {
           )}
         </section>
       )}
-      <ButtonUpContainer isFixed={true} />
     </>
   );
 };
