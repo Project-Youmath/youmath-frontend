@@ -1,22 +1,28 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { ButtonUp } from "../ui/icons/button-up";
 import styles from "./index.module.scss";
+import { useLocation } from "react-router-dom";
 
-interface IProps {
-    isFixed: boolean;
-}
+const ButtonUpContainer = ({footerHeight}: {footerHeight: number}) => {
+    const [buttonClass, setButtonClass] = useState(styles.ButtonUpHidden);
+    const [offsetFooter, setOffsetFooter] = useState(10);
 
-const ButtonUpContainer = (props: IProps) => {
-    const [buttonClass, isButtonClass] = useState(styles.ButtonUpHidden);
+    const { pathname } = useLocation();
+    useLayoutEffect(() => {
+        setOffsetFooter(10);
+    }, [pathname]);
 
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY || document.documentElement.scrollTop;
-        scrollY > document.documentElement.clientHeight ? isButtonClass(styles.ButtonUp) : isButtonClass(styles.ButtonUpHidden);
+        if ((scrollY + document.documentElement.clientHeight) - (document.documentElement.offsetHeight - footerHeight) > 0) {
+            setOffsetFooter((scrollY + document.documentElement.clientHeight) - (document.documentElement.offsetHeight - footerHeight))
+        }
+        scrollY > document.documentElement.clientHeight ? setButtonClass(styles.ButtonUp) : setButtonClass(styles.ButtonUpHidden);
     })
 
     return (
-        <section className={props.isFixed ? styles.ButtonUpContainerFixed : styles.ButtonUpContainer}>
-            <ButtonUp classname={props.isFixed ? buttonClass : styles.ButtonUp} />
+        <section className={styles.ButtonUpContainerFixed} style={{bottom: `${offsetFooter}px`}}>
+            <ButtonUp classname={buttonClass} />
         </section>
     );
 };

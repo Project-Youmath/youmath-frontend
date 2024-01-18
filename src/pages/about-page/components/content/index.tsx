@@ -1,11 +1,9 @@
 import styles from "./index.module.scss";
 import { team } from "../../../../data/ constants";
 import EmployeeСard from "../employee-card";
-import ButtonUpContainer from "../../../../components/ButtonUpContainer";
 
 const AboutPageContent = () => {
   return (
-    <>
       <section className={styles.section}>
         <div className={styles.title}>О проекте</div>
         <div className={styles.subtitle}>Цель проекта</div>
@@ -30,8 +28,6 @@ const AboutPageContent = () => {
           ))}
         </section>
       </section>
-      <ButtonUpContainer isFixed={false} />
-    </>
   );
 };
 export default AboutPageContent;

@@ -4,7 +4,10 @@ import { IIconProps } from "./icon-props-interface";
 export const ButtonUp: FC<IIconProps> = ({ classname }) => {
   return (
     <svg
-      onClick={() => window.scrollTo(0, 0)}
+      onClick={() => window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })}
       className={classname}
       width="134em"
       height="134em"
@@ -13,7 +16,7 @@ export const ButtonUp: FC<IIconProps> = ({ classname }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_651_4121)">
-        <circle cx="67" cy="67" r="60" fill="#D3D6D5" />
+        <circle cx="67" cy="67" r="60" />
         <path
           d="M67.2071 47.7928L82.6213 63.207L81.2071 64.6212L68.2071 51.6214V86.207H66.2071V51.6212L53.2071 64.6212L51.7928 63.207L67.2071 47.7928Z"
           fill="#282A2E"
